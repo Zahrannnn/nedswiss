@@ -29,10 +29,10 @@ const Card = ({i, title, description, src, url, color, progress, range, targetSc
         }} 
         className="flex flex-col relative 
                    h-[400px] w-full max-w-[350px] 
-                   sm:h-[450px] sm:max-w-[450px] 
-                   md:h-[500px] md:max-w-[600px] 
-                   lg:h-[500px] lg:max-w-[800px] 
-                   xl:h-[500px] xl:max-w-[1000px] 
+                   sm:h-[450px] sm:max-w-[600px] 
+                   md:h-[500px] md:max-w-[800px] 
+                   lg:h-[500px] lg:max-w-[1000px] 
+                   xl:h-[500px] xl:max-w-[1200px] 
                    rounded-[15px] sm:rounded-[20px] lg:rounded-[25px] 
                    p-4 sm:p-6 md:p-8 lg:p-12 xl:p-[50px] 
                    origin-top"
