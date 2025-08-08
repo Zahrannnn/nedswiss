@@ -26,7 +26,7 @@ const HeroSection = () => {
         mouseInteractionRadius={1.5}
         opacity={0.8}
       />
-      <div className="container ml-4 md:ml-10 absolute top-1/4 left-0 w-full h-full flex flex-col gap-6 md:gap-10">
+      <div className="container ml-4 md:ml-10 absolute top-1/4 left-0 w-full min-h-screen flex flex-col gap-6 md:gap-10 mb-10">
         <div className="px-4 h-full">
           <div className="text-white font-bold flex flex-col gap-3 md:gap-5">
             <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
@@ -64,7 +64,7 @@ const HeroSection = () => {
               </Magnet>
             </div>
           </div>
-          <div className="flex items-center justify-center gap-4 mt-8 md:mt-0">
+          <div className="flex items-center justify-center gap-4  ">
             <CounterCards />
           </div>
         </div>

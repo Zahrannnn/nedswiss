@@ -27,7 +27,7 @@ const Card = ({i, title, description, src, url, color, progress, range, targetSc
           skewY: `${skewY}deg`,
           rotateY: i % 2 === 0 ? 2 : -2,
         }} 
-        className="flex flex-col relative h-[500px] w-[550px] md:w-[1200px] rounded-[25px] p-[50px] origin-top"
+        className="flex flex-col relative h-[500px] w-[500px] md:w-[1200px] rounded-[25px] p-[50px] origin-top"
       >
         {/* Search Icon */}
         <div className="flex justify-center mb-8">
