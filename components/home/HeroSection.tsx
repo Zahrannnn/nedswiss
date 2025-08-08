@@ -11,52 +11,7 @@ import Link from "next/link";
 const HeroSection = () => {
   const t = useTranslations("HeroSection");
 
-  // Mobile Hero Component
-  const MobileHero = () => (
-    <div className=" p-8 w-full bg-[#1b1b1b] flex items-center justify-center px-4">
-      <div className="text-center text-white space-y-6 max-w-sm">
-        <div className="space-y-4">
-          <h1 className="text-4xl font-bold leading-tight">
-            {t("mainText")}
-          </h1>
-          <div className="bg-slate-200 text-red-600 px-3 py-2 rounded-md font-bold text-lg">
-            {t("services.graphicDesign")}
-          </div>
-          <div className="bg-slate-200 text-red-600 px-3 py-2 rounded-md font-bold text-lg">
-            {t("services.printing")}
-          </div>
-          <div className="bg-slate-200 text-red-600 px-3 py-2 rounded-md font-bold text-lg">
-            {t("services.webDevelopment")}
-          </div>
-          <div className="bg-slate-200 text-red-600 px-3 py-2 rounded-md font-bold text-lg">
-            {t("services.socialMedia")}
-          </div>
-          <div className="bg-slate-200 text-red-600 px-3 py-2 rounded-md font-bold text-lg">
-            {t("services.3dInstallations")}
-          </div>
-          <h3 className="text-red-500 text-lg font-semibold">
-            {t("subtitle")}
-          </h3>
-        </div>
-        
-        <div className="pt-4">
-          <Link 
-            href="/contact" 
-            className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md transition-all duration-300 w-full text-center"
-          >
-            {t("cta")}
-          </Link>
-        </div>
-        
-        <div className="pt-6 scale-75">
-          <CounterCards />
-        </div>
-      </div>
-    </div>
-  );
-
-  // Desktop Hero Component  
-  const DesktopHero = () => (
+  return (
     <div
       className="h-screen w-full bg-[#1b1b1b]"
       style={{ position: "relative", overflow: "hidden" }}
@@ -71,10 +26,10 @@ const HeroSection = () => {
         mouseInteractionRadius={1.5}
         opacity={0.8}
       />
-      <div className="container ml-10 absolute top-1/4 left-0 w-full h-full flex flex-col gap-10">
+      <div className="container ml-4 md:ml-10 absolute top-1/4 left-0 w-full h-full flex flex-col gap-6 md:gap-10">
         <div className="px-4 h-full">
-          <div className="text-white font-bold flex flex-col gap-5">
-            <h1 className="text-8xl font-bold">
+          <div className="text-white font-bold flex flex-col gap-3 md:gap-5">
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
               {t("mainText")}{" "}
               <RotatingText
                 texts={[
@@ -97,38 +52,24 @@ const HeroSection = () => {
                 rotationInterval={4000}
               />
             </h1>
-            <h3 className="text-red-600 ml-3 text-2xl font-bold">
+            <h3 className="text-red-600 ml-1 md:ml-3 text-lg md:text-xl lg:text-2xl font-bold">
               {t("subtitle")}
             </h3>
 
-            <div className="mt-6 ml-3">
+            <div className="mt-4 md:mt-6 ml-1 md:ml-3">
               <Magnet padding={50} disabled={false} magnetStrength={5}>
-              <Link href="/contact" className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-3 rounded-md transition-all duration-300 transform hover:scale-105">
+              <Link href="/contact" className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-md transition-all duration-300 transform hover:scale-105 inline-block">
                 {t("cta")}
               </Link>
               </Magnet>
             </div>
           </div>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4 mt-8 md:mt-0">
             <CounterCards />
           </div>
         </div>
       </div>
     </div>
-  );
-
-  return (
-    <>
-      {/* Mobile Version - Show on screens smaller than lg (1024px) */}
-      <div className="block lg:hidden">
-        <MobileHero />
-      </div>
-      
-      {/* Desktop Version - Show on lg screens and larger */}
-      <div className="hidden lg:block">
-        <DesktopHero />
-      </div>
-    </>
   );
 };
 
