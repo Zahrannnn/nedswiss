@@ -1,0 +1,204 @@
+{
+  "Navigation": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "ourStory": "Notre Histoire",
+    "team": "Équipe",
+    "valuesPhilosophy": "Valeurs & Philosophie",
+    "ourProcess": "Notre Processus",
+    "services": "Services",
+    "graphicDesign": "Conception Graphique",
+    "webDevelopment": "Développement Web",
+    "socialMediaManagement": "Gestion des Médias Sociaux",
+    "seoServices": "Services SEO",
+    "softwareSolutions": "Solutions Logiciels",
+    "advertisingSolutions": "Solutions Publicitaires",
+    "portfolio": "Portfolio",
+    "caseStudies": "Études de Cas",
+    "projectGallery": "Galerie de Projets",
+    "blog": "Blog",
+    "contact": "Contact",
+    "letsTalk": "PARLONS-EN",
+    "careers": "Carrières",
+    "clientPortal": "Portail Client",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfService": "Conditions d'Utilisation"
+  },
+  "HomePage": {
+    "meta": {
+      "title": "NED Swiss | Excellence Digitale, Précision Suisse",
+      "description": "NED Swiss est une agence digitale offrant des services exceptionnels de développement web, de design et de marketing digital avec la précision et l'excellence suisse."
+    },
+    "hero": {
+      "tagline": "Excellence Digitale, Précision Suisse",
+      "headline": "Transformer les Idées en Succès Digital",
+      "subtitle": "Nous créons des expériences digitales exceptionnelles qui génèrent des résultats pour les entreprises tournées vers l'avenir",
+      "cta": "Démarrer Votre Projet"
+    },
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Solutions digitales complètes adaptées à vos besoins",
+      "graphicDesign": {
+        "title": "Conception Graphique",
+        "description": "Identité visuelle qui marque les esprits"
+      },
+      "webDevelopment": {
+        "title": "Développement Web",
+        "description": "Sites web et applications web personnalisés"
+      },
+      "socialMediaManagement": {
+        "title": "Gestion des Médias Sociaux",
+        "description": "Présence sociale engageante et stratégie"
+      },
+      "seoServices": {
+        "title": "Services SEO",
+        "description": "Améliorer la visibilité et le trafic organique"
+      },
+      "softwareSolutions": {
+        "title": "Solutions Logiciels",
+        "description": "Logiciels personnalisés pour les besoins de l'entreprise"
+      },
+      "advertisingSolutions": {
+        "title": "Solutions Publicitaires",
+        "description": "Campagnes stratégiques qui convertissent"
+      }
+    },
+    "about": {
+      "title": "À Propos de NED Swiss",
+      "mission": "Accompagner les entreprises grâce à des solutions digitales innovantes",
+      "description": "Nous combinons la précision suisse avec l'innovation digitale pour offrir des résultats exceptionnels à nos clients.",
+      "cta": "En Savoir Plus Sur Nous"
+    },
+    "socialProof": {
+      "title": "Témoignages Clients",
+      "subtitle": "NED Swiss à travers les yeux de nos clients – Découvrez comment nous avons fait la différence dans leurs projets.",
+      "clientsRating": "Note des Clients",
+      "clientsSubtitle": "Sur le Marché Européen",
+      "projectsCompleted": "Projets Réalisés",
+      "projectsSubtitle": "Sur le Marché Européen",
+      "deliveringResults": "Résultats Livrés",
+      "deliveringResultsSubtitle": "Sur le Marché Européen",
+      "testimonials": {
+        "title": "Ce que Disent Nos Clients",
+        "items": [
+          {
+            "quote": "NED Swiss a transformé notre présence digitale avec précision et créativité. Fortement recommandé !",
+            "author": "Jane Smith",
+            "position": "PDG, TechCorp"
+          },
+          {
+            "quote": "Travailler avec NED Swiss a changé la donne pour notre marque. Ils ont livré au-delà de nos attentes.",
+            "author": "John Davis",
+            "position": "Directeur Marketing, GrowthBrand"
+          },
+          {
+            "quote": "L'attention aux détails et l'approche stratégique distinguent NED Swiss des autres agences.",
+            "author": "Anna Miller",
+            "position": "Fondatrice, StartupSuccess"
+          }
+        ]
+      }
+    },
+    "cta": {
+      "title": {
+        "prefix": "Prêt à Démarrer Votre",
+        "highlight": "Projet",
+        "suffix": "?"
+      },
+      "subtitle": "Discutons de votre vision et créons quelque chose d'extraordinaire ensemble. Contactez-nous dès aujourd'hui pour une consultation gratuite et un devis.",
+      "contact": {
+        "address": {
+          "title": "Adresse",
+          "street": "Bahnhofstrasse 123",
+          "city": "8001 Zürich, Suisse"
+        },
+        "phone": {
+          "title": "Téléphone",
+          "number": "+41 44 123 45 67"
+        },
+        "email": {
+          "title": "E-mail",
+          "address": "info@nedswiss.com"
+        },
+        "hours": {
+          "title": "Heures d'Ouverture",
+          "weekdays": "Lun - Ven : 9h00 - 18h00",
+          "saturday": "Sam : 10h00 - 16h00",
+          "sunday": "Dim : Fermé"
+        }
+      },
+      "form": {
+        "title": "Envoyer un Message",
+        "fields": {
+          "firstName": "Prénom *",
+          "lastName": "Nom de Famille *",
+          "email": "E-mail *",
+          "phone": "Téléphone *",
+          "company": "Entreprise *",
+          "service": "Service *",
+          "message": "Message *"
+        },
+        "placeholders": {
+          "firstName": "Votre prénom",
+          "lastName": "Votre nom de famille",
+          "email": "Votre e-mail",
+          "phone": "Votre numéro de téléphone",
+          "company": "Votre entreprise",
+          "service": "Service recherché",
+          "message": "Votre message"
+        },
+        "button": {
+          "send": "Envoyer un Message",
+          "sending": "Envoi en cours..."
+        },
+        "success": {
+          "title": "Merci pour votre message !",
+          "message": "Nous vous répondrons dans les 24 heures."
+        },
+        "privacy": {
+          "text": "En soumettant ce formulaire, vous acceptez notre Politique de Confidentialité et nos Conditions d'Utilisation.",
+          "response": "Nous vous répondrons dans les 24 heures ouvrables."
+        }
+      }
+    },
+    "process": {
+      "description": "Nous suivons un processus précis pour fournir des résultats exceptionnels à nos clients.",
+      "title": "Notre Processus",
+      "subtitle": "Nous suivons un processus précis pour fournir des résultats exceptionnels à nos clients.",
+      "step1": {
+        "title": "Découverte",
+        "description": "Nous commençons par comprendre votre entreprise et vos objectifs."
+      },
+      "step2": {
+        "title": "Stratégie",
+        "description": "Nous développons une stratégie sur mesure pour atteindre vos objectifs."
+      },
+      "step3": {
+        "title": "Conception",
+        "description": "Nous créons un design visuellement époustouflant et convivial."
+      },
+      "step4": {
+        "title": "Développement",
+        "description": "Nous développons une stratégie sur mesure pour atteindre vos objectifs."
+      }
+    }
+  },
+  "HeroSection": {
+    "mainText": "DU CONCEPT À LA RÉALITÉ GRÂCE À",
+    "subtitle": "Agence Marketing",
+    "cta": "Démarrer Votre Projet",
+    "services": {
+      "graphicDesign": "Conception Graphique",
+      "printing": "Impression",
+      "webDevelopment": "Développement Web",
+      "socialMedia": "Médias Sociaux",
+      "3dInstallations": "Installations 3D",
+      "paidAds": "Publicités Payantes",
+      "seo": "SEO"
+    },
+    "servicesScrollStack": {
+      "title": "Services Digitaux qui Génèrent des Résultats",
+      "subtitle": "Solutions digitales complètes adaptées aux entreprises suisses. De la conception créative au développement technique, nous gérons tout avec précision et excellence."
+    }
+  }
+}
