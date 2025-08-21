@@ -96,7 +96,7 @@ export default function Stack({
 
   return (
     <div
-      className={`relative mb-10 -ml-20  lg:w-[${cardDimensions.width}px] lg:h-[${cardDimensions.height}px] md:w-[${cardDimensions.width * 0.8}px] md:h-[${cardDimensions.height * 0.8}px] sm:w-[${cardDimensions.width * 0.7}px] sm:h-[${cardDimensions.height * 0.7}px] w-[${cardDimensions.width * 0.5}px] h-[${cardDimensions.height * 0.5}px]`}
+      className={`relative mb-10 -ml-14  lg:w-[${cardDimensions.width}px] lg:h-[${cardDimensions.height}px] md:w-[${cardDimensions.width * 0.8}px] md:h-[${cardDimensions.height * 0.8}px] sm:w-[${cardDimensions.width * 0.7}px] sm:h-[${cardDimensions.height * 0.7}px] w-[${cardDimensions.width * 0.5}px] h-[${cardDimensions.height * 0.5}px]`}
       style={{
         width: cardDimensions.width,
         height: cardDimensions.height,
