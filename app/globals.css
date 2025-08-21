@@ -156,13 +156,11 @@
     
   }
   .scrollbar-hide::-webkit-scrollbar {
-    display: none;
     
   }
   
   /* Hide scrollbars but keep functionality */
   body::-webkit-scrollbar {
-    display: none;
   }
   
   /* Optimize transforms for smooth animations */
