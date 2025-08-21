@@ -29,7 +29,7 @@ export default function ServicesScrollStack() {
 
   return (
     <main ref={container} className="flex flex-col items-center justify-center p-20">
-      <div className="flex flex-col gap-7 items-center justify-center max-w-[1000px] -mb-40">
+      <div className="flex flex-col gap-7 items-center justify-center max-w-[1000px] -mb-20">
         <h2 className="text-center text-4xl md:text-6xl font-bold">{t('title')} <span className='text-red-600'> {t('titleHighlight')}</span> </h2>
       </div>
       {

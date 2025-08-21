@@ -56,7 +56,7 @@ const Services = () => {
 
   
   return (
-    <section id="services" className="min-h-screen  rounded-t-4xl tracking-wide -mt-10 ">
+    <section id="services" className="min-h-screen  rounded-t-4xl -mt-10 tracking-wide  ">
      <div className="p-10">
         
      <AnimatedHeaderSection
@@ -87,8 +87,8 @@ const Services = () => {
                 <h1 className="text-4xl lg:text-5xl font-bold border-r-2 border-gray-200 pr-4 h-full">0{index + 1}</h1>
       
             <div className="flex flex-col gap-6">
-              <h2 className="text-4xl lg:text-5xl font-bold">{service.title}</h2>
-              <p className="text-xl leading-relaxed tracking-widest lg:text-2xl text-black text-pretty">
+              <h2 className="text-3xl lg:text-4xl font-bold">{service.title}</h2>
+              <p className="text-lg leading-relaxed tracking-widest lg:text-xl text-black text-pretty">
                 {service.description}
               </p>
              
