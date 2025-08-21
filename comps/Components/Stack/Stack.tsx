@@ -96,7 +96,7 @@ export default function Stack({
 
   return (
     <div
-      className="relative "
+      className="relative overflow-hidden "
       style={{
         width: cardDimensions.width,
         height: cardDimensions.height,
@@ -113,7 +113,7 @@ export default function Stack({
             sensitivity={sensitivity}
           >
             <motion.div
-              className="rounded-2xl overflow-hidden border-4 border-white"
+              className={`rounded-2xl overflow-hidden border-4 border-white lg:w-[${cardDimensions.width}px] lg:h-[${cardDimensions.height}px] w-[${cardDimensions.width * 0.7}px] h-[${cardDimensions.height * 0.7}px] md:w-[${cardDimensions.width * 0.8}px] md:h-[${cardDimensions.height * 0.8}px]`}
               onClick={() => sendToBackOnClick && sendToBack(card.id)}
               animate={{
                 rotateZ: (cards.length - index - 1) * 4 + randomRotate,
@@ -127,8 +127,8 @@ export default function Stack({
                 damping: animationConfig.damping,
               }}
               style={{
-                width: cardDimensions.width * (window.innerWidth >= 1024 ? 1 : 0.75),
-                height: cardDimensions.height * (window.innerWidth >= 1024 ? 1 : 0.75),
+                // width: cardDimensions.width * 0.8,
+                // height: cardDimensions.height * 0.8,
               }}
             >
               <img
