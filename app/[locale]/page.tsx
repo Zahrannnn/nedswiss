@@ -40,7 +40,7 @@ export async function generateMetadata({
 export default async function HomePage({ params }: HomePageProps) {
   return (
     <>
-    <div className=" " >
+    <div className="bg-amber-600 " >
 
    
       <HeroSection />
