@@ -61,9 +61,8 @@ const Services = () => {
         
      <AnimatedHeaderSection
         subTitle={"Behind the scene, Beyond the screen"}
-        title={t('processHeader.title')}
-        titleHighlight={t('processHeader.titleHighlight')}
-        text={text}
+        title={t('title')}
+        text={t('subtitle')}
         textColor={"text-black"}
         withScrollTrigger={true}
       />
