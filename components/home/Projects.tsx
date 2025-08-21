@@ -141,7 +141,7 @@ const Projects = () => {
                   
                   sensitivity={180}
                   sendToBackOnClick={true}
-                  cardDimensions={{ width: 500, height: 600 }}
+                  cardDimensions={{ width: 450, height: 600 }}
                   cardsData={currentCategory?.images || []}
                 />
               </motion.div>

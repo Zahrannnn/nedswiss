@@ -33,7 +33,7 @@ const Services = () => {
      
      
     });
-  }, [servicesDataa]); // Keep services as dependency for consistency
+  }, [servicesDataa]); 
 
   useGSAP(() => {
     gsap.set("#services", {
