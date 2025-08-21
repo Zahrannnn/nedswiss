@@ -357,7 +357,7 @@
     "detailedServices": {
       "consultation": {
         "title": "Consultation",
-        "description": "We start by identifying client goals with precision, carefully analyzing the brand's current market position, and uncovering opportunities for growth. From there, we propose tailored strategies designed to meet specific objectives, enhance visibility, and strengthen brand identity. Finally, we demonstrate in detail how our agency's expertise, tools, and creative approach can deliver measurable results and long-term success.",
+        "description": "We begin by defining client goals, analyzing market position, and spotting growth opportunities. Then, we craft tailored strategies to boost visibility and brand identity, showcasing how our expertise delivers measurable results and lasting success.",
         "items": [
           {
             "title": "Next.js Excellence",
@@ -375,7 +375,7 @@
       },
       "strategy": {
         "title": "Strategy",
-        "description": "We focus on developing customized plans by deeply understanding client objectives, carefully analyzing market trends, and crafting effective, data-driven approaches that not only address immediate needs but also drive long-term, sustainable growth.",
+        "description": "We create customized, data-driven plans that align with client goals, respond to market trends, and drive both immediate impact and long-term growth.",
         "items": [
           {
             "title": "Design Systems",
@@ -393,7 +393,7 @@
       },
       "execution": {
         "title": "Execution",
-        "description": "We are committed to achieving client satisfaction by delivering innovative solutions tailored to their unique needs, ensuring measurable results that reflect real impact, and building long-term growth partnerships founded on trust, collaboration, and shared success.",
+        "description": "We deliver innovative, tailored solutions that drive measurable impact and build lasting partnerships based on trust and collaboration.",
         "items": [
           {
             "title": "Server Components",
@@ -411,7 +411,7 @@
       },
       "success": {
         "title": "Success",
-        "description": "We turn strategies into action by implementing effective, results-oriented solutions, managing processes with efficiency and precision, and consistently delivering measurable outcomes that drive meaningful progress and long-term success.",
+        "description": "We turn strategies into action with efficient execution, delivering measurable results that drive progress and lasting success.",
         "items": [
           {
             "title": "Animation Libraries",

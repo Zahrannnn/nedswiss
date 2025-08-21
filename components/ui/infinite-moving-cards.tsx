@@ -90,15 +90,15 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[140px] h-[80px] sm:w-[160px] sm:h-[100px] md:w-[200px] md:h-[120px] lg:w-[240px] lg:h-[140px] xl:w-[280px] xl:h-[160px] max-w-full shrink-0 rounded-xl sm:rounded-2xl bg-white/50 backdrop-blur-sm p-2 sm:p-3 md:p-4 dark:border-zinc-700 dark:bg-zinc-900/50 flex items-center justify-center group hover:scale-105 transition-transform duration-300"
+            className="relative w-[240px] h-[140px] sm:w-[160px] sm:h-[100px] md:w-[200px] md:h-[220px] lg:w-[240px] lg:h-[140px] xl:w-[280px] xl:h-[160px] max-w-full shrink-0 rounded-xl sm:rounded-2xl bg-white/50 backdrop-blur-sm p-2 sm:p-3 md:p-4 dark:border-zinc-700 dark:bg-zinc-900/50 flex items-center justify-center group hover:scale-105 transition-transform duration-300"
             key={`${item.src}-${idx}`}
           >
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
                 src={item.src}
                 alt={item.alt}
-                width={item.width || 160}
-                height={item.height || 80}
+                width={ 200}
+                height={  120}
                 className="object-contain max-w-full max-h-full transition-all duration-300"
                 priority={idx < 4} // Prioritize first 4 images for better performance
               />

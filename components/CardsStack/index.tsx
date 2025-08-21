@@ -65,7 +65,7 @@ const Card = ({
           scale, 
           top:`calc(-5vh + ${i * 25}px)`,
         }} 
-        className="flex relative h-[400px] w-[400px] sm:h-[500px] sm:w-[500px] md:w-[1300px] md:h-[600px] rounded-[25px] overflow-hidden origin-top"
+        className="flex relative h-[350px] w-[350px] sm:h-[500px] sm:w-[500px] md:w-[1300px] md:h-[600px] rounded-[25px] overflow-hidden origin-top"
       >
         {/* Content Section - Full width on mobile, left side on desktop */}
         <div className="w-full md:flex-1 p-6 sm:p-8 md:p-12 flex flex-col justify-center relative z-10">

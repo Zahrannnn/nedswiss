@@ -40,6 +40,9 @@ export async function generateMetadata({
 export default async function HomePage({ params }: HomePageProps) {
   return (
     <>
+    <div className=" " >
+
+   
       <HeroSection />
       <div className="h-15"/>
       <div className="  border-red-500 border-b-2 border-t-2 py-10  ">
@@ -50,7 +53,7 @@ export default async function HomePage({ params }: HomePageProps) {
       />
       </div>
       <ServicesScrollStack />
-      <div className="  border-red-500 border-b-2 border-t-2">
+      <div className="  border-red-500 border-b-2 border-t-2 -mt-10">
       <ScrollVelocity
         texts={["NedSwiss"]}
         velocity={200}
@@ -83,7 +86,7 @@ export default async function HomePage({ params }: HomePageProps) {
       />
       </div>
       <div className="h-15"/>
-
+      </div>
     </>
   );
 }

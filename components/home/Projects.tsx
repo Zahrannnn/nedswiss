@@ -89,7 +89,7 @@ const Projects = () => {
         <div className="flex flex-col lg:flex-row items-center lg:justify-between justify-center">
           {/* Left Side - Category Navigation */}
           <div className="space-y-6 w-full">
-            <div className="md:hidden flex overflow-x-auto pb-4 gap-3 scrollbar-hide">
+            <div className="md:hidden grid grid-cols-2 overflow-x-auto pb-4 gap-3 scrollbar-hide">
               {projectCategories.map((category: ProjectCategory) => (
                 <motion.button
                   key={category.id}

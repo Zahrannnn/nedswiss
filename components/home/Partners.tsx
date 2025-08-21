@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 const Partners = () => {
   const t = useTranslations('HomePage.partnersHeaders');
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center py-20">
+    <div className="w-full h-full flex flex-col items-center justify-center pt-10">
       
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 ">{t('title')} <span className="text-red-500">{t('titleHighlight')}</span></h1>
       <InfiniteMovingCards

@@ -35,28 +35,28 @@ const Services = () => {
     });
   }, [servicesDataa]); 
 
-  useGSAP(() => {
-    gsap.set("#services", {
-      scale: 0.80,
+  // useGSAP(() => {
+  //   gsap.set("#services", {
+  //     scale: 1,
       
-    });
-    gsap.to("#services", {
-      scale: 1,
-      scrollTrigger: {
-        trigger: "#services",
-        start: "top 90%",
-        end: "top 40%",
-        scrub: true,
-        markers: false,
-      },
-      ease: "power1.inOut",
-    });
-  }, []);
+  //   });
+  //   gsap.to("#services", {
+  //     scale: 1,
+  //     scrollTrigger: {
+  //       trigger: "#services",
+  //       start: "top 90%",
+  //       end: "top 40%",
+  //       scrub: true,
+  //       markers: false,
+  //     },
+  //     ease: "power1.inOut",
+  //   });
+  // }, []);
 
 
   
   return (
-    <section id="services" className="min-h-screen  rounded-t-4xl tracking-wide ">
+    <section id="services" className="min-h-screen  rounded-t-4xl tracking-wide -mt-10 ">
      <div className="p-10">
         
      <AnimatedHeaderSection
