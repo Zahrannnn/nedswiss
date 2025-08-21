@@ -127,8 +127,8 @@ export default function Stack({
                 damping: animationConfig.damping,
               }}
               style={{
-                width: cardDimensions.width * 0.8,
-                height: cardDimensions.height * 0.8,
+                width: cardDimensions.width * (window.innerWidth >= 1024 ? 1 : 0.75),
+                height: cardDimensions.height * (window.innerWidth >= 1024 ? 1 : 0.75),
               }}
             >
               <img
