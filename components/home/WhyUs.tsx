@@ -55,7 +55,7 @@ const WhyUs = () => {
           {/* Circle Shadow */}
           {/* <div className="absolute -bottom-8 w-[280px] h-[40px] sm:w-[360px] sm:h-[50px] md:w-[460px] md:h-[60px] lg:w-[560px] lg:h-[70px] bg-black/20 rounded-full blur-md transform translate-y-4 z-[-1]"></div> */}
            
-           <Image src="/shadow.png" alt="Why Us" width={500} height={500} className='absolute bottom-0 left-1/2 -translate-x-1/2 ' />
+           {/* <Image src="/shadow.png" alt="Why Us" width={500} height={500} className='absolute bottom-0 left-1/2 -translate-x-1/2 ' /> */}
         
         </div>
       </div>
