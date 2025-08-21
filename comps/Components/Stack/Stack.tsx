@@ -96,7 +96,7 @@ export default function Stack({
 
   return (
     <div
-      className={`relative mb-10 -ml-10  lg:w-[${cardDimensions.width}px] lg:h-[${cardDimensions.height}px] md:w-[${cardDimensions.width * 0.8}px] md:h-[${cardDimensions.height * 0.8}px] sm:w-[${cardDimensions.width * 0.7}px] sm:h-[${cardDimensions.height * 0.7}px] w-[${cardDimensions.width * 0.5}px] h-[${cardDimensions.height * 0.5}px]`}
+      className={`relative mb-10 -ml-10   lg:w-[${cardDimensions.width}px] lg:h-[${cardDimensions.height}px] md:w-[${cardDimensions.width * 0.8}px] md:h-[${cardDimensions.height * 0.8}px] sm:w-[${cardDimensions.width * 0.7}px] sm:h-[${cardDimensions.height * 0.7}px] w-[${cardDimensions.width * 0.3}px] h-[${cardDimensions.height * 0.3}px]`}
       style={{
         width: cardDimensions.width,
         height: cardDimensions.height,
@@ -113,7 +113,7 @@ export default function Stack({
             sensitivity={sensitivity}
           >
             <motion.div
-              className={`rounded-2xl overflow-hidden border-4 border-white lg:w-[${cardDimensions.width}px] lg:h-[${cardDimensions.height}px] md:w-[${cardDimensions.width * 0.8}px] md:h-[${cardDimensions.height * 0.8}px] sm:w-[${cardDimensions.width * 0.7}px] sm:h-[${cardDimensions.height * 0.7}px] w-[${cardDimensions.width * 0.5}px] h-[${cardDimensions.height * 0.5}px]`}
+              className={`rounded-2xl overflow-hidden border-4 border-white lg:w-[${cardDimensions.width * 0.6}px] lg:h-[${cardDimensions.height}px] md:w-[${cardDimensions.width * 0.8}px] md:h-[${cardDimensions.height * 0.8}px] sm:w-[${cardDimensions.width * 0.6}px] sm:h-[${cardDimensions.height * 0.7}px] w-[${cardDimensions.width * 0.5}px] h-[${cardDimensions.height * 0.5}px]`}
               onClick={() => sendToBackOnClick && sendToBack(card.id)}
               animate={{
                 rotateZ: (cards.length - index - 1) * 4 + randomRotate,
