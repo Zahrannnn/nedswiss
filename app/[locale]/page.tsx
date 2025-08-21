@@ -57,7 +57,10 @@ export default async function HomePage({ params }: HomePageProps) {
         className=""
       />
       </div>
+      <div className="overflow-hidden w-full">
+
       <Partners />
+      </div>
       {/* <ServicesOverview /> */}
       <Process />
       {/* !TODO Our Projects */}
