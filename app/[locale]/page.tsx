@@ -11,6 +11,7 @@ import ProcessPrecision from "@/components/home/ProcessPercission";
 import Partners from "@/components/home/Partners";
 import Process from "@/components/home/Process";
 import WhyUs from "@/components/home/WhyUs";
+import Projects from "@/components/home/Projects";
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -64,6 +65,7 @@ export default async function HomePage({ params }: HomePageProps) {
       {/* <ServicesOverview /> */}
       <Process />
       {/* !TODO Our Projects */}
+      <Projects />
       <WhyUs />
       {/* <ProcessPrecision /> */}
       <SocialProof />

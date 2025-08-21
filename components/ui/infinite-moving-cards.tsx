@@ -76,21 +76,21 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 w-full max-w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className,
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
+          "flex w-max min-w-full shrink-0 flex-nowrap gap-2 py-2 sm:gap-3 sm:py-3 md:gap-4 md:py-4 lg:gap-6",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[200px] h-[120px] max-w-full shrink-0 rounded-2xl  bg-white/50 backdrop-blur-sm p-4 md:w-[240px] md:h-[140px] dark:border-zinc-700 dark:bg-zinc-900/50 flex items-center justify-center group hover:scale-105 transition-transform duration-300"
+            className="relative w-[140px] h-[80px] sm:w-[160px] sm:h-[100px] md:w-[200px] md:h-[120px] lg:w-[240px] lg:h-[140px] xl:w-[280px] xl:h-[160px] max-w-full shrink-0 rounded-xl sm:rounded-2xl bg-white/50 backdrop-blur-sm p-2 sm:p-3 md:p-4 dark:border-zinc-700 dark:bg-zinc-900/50 flex items-center justify-center group hover:scale-105 transition-transform duration-300"
             key={`${item.src}-${idx}`}
           >
             <div className="relative w-full h-full flex items-center justify-center">
@@ -99,10 +99,9 @@ export const InfiniteMovingCards = ({
                 alt={item.alt}
                 width={item.width || 160}
                 height={item.height || 80}
-                className="object-contain max-w-full max-h-full  transition-all duration-300 "
+                className="object-contain max-w-full max-h-full transition-all duration-300"
                 priority={idx < 4} // Prioritize first 4 images for better performance
               />
-            
             </div>
           </li>
         ))}

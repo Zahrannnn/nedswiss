@@ -1,0 +1,149 @@
+'use client';
+
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Stack from '../../comps/Components/Stack/Stack';
+
+interface ProjectCategory {
+  id: string;
+  name: string;
+  images: { id: number; img: string }[];
+}
+
+const projectCategories: ProjectCategory[] = [
+  {
+    id: 'printing',
+    name: 'Printing Service',
+    images: [
+      { id: 1, img: '/projects/printing-1.jpg' },
+      { id: 2, img: '/projects/printing-2.jpg' }, 
+      { id: 3, img: '/projects/printing-3.jpg' }
+    ]
+  },
+  {
+    id: 'graphic',
+    name: 'Graphic Design',
+    images: [
+      { id: 1, img: '/projects/graphic-1.jpg' },
+      { id: 2, img: '/projects/graphic-2.jpg' },
+      { id: 3, img: '/projects/graphic-3.jpg' }
+    ]
+  },
+  {
+    id: 'web',
+    name: 'Web Development',
+    images: [
+      { id: 1, img: '/projects/web-1.jpg' },
+      { id: 2, img: '/projects/web-2.jpg' },
+      { id: 3, img: '/projects/web-3.jpg' }
+    ]
+  },
+  {
+    id: 'social',
+    name: 'Social Media Management',
+    images: [
+      { id: 1, img: '/projects/social-1.jpg' },
+      { id: 2, img: '/projects/social-2.jpg' },
+      { id: 3, img: '/projects/social-3.jpg' }
+    ]
+  },
+  {
+    id: 'digital',
+    name: 'Digital Marketing',
+    images: [
+      { id: 1, img: '/projects/digital-1.jpg' },
+      { id: 2, img: '/projects/digital-2.jpg' },
+      { id: 3, img: '/projects/graphic-2.jpg' }
+    ]
+  },
+  {
+    id: 'software',
+    name: 'Internal Software Solutions',
+    images: [
+      { id: 1, img: '/projects/software-1.jpg' },
+      { id: 2, img: '/projects/software-2.jpg' },
+      { id: 3, img: '/projects/software-3.jpg' }
+    ]
+  }
+];
+
+const Projects = () => {
+  const [activeCategory, setActiveCategory] = useState('printing');
+
+  const currentCategory = projectCategories.find(cat => cat.id === activeCategory);
+
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Our <span className="text-red-500">Projects</span>
+          </h2>
+          <div className="w-24 h-1 bg-red-500 mx-auto"></div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Category Navigation */}
+          <div className="space-y-6">
+            {projectCategories.map((category) => (
+              <motion.button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`w-full text-left p-6 rounded-lg transition-all duration-300 ${
+                  activeCategory === category.id
+                    ? 'bg-red-500 text-white shadow-lg'
+                    : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                }`}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <h3 className="text-xl font-semibold">{category.name}</h3>
+              </motion.button>
+            ))}
+          </div>
+
+          {/* Right Side - Stack Component */}
+          <div className="flex flex-col items-center justify-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeCategory}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="mb-8"
+              >
+                <Stack
+                  randomRotation={true}
+                  
+                  sensitivity={180}
+                  sendToBackOnClick={true}
+                  cardDimensions={{ width: 500, height: 600 }}
+                  cardsData={currentCategory?.images || []}
+                />
+              </motion.div>
+            </AnimatePresence>
+            
+            {/* Explore Now Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: 0.3,
+                ease: "easeOut"
+              }}
+            >
+              <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
+                Explore Now
+              </button>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
