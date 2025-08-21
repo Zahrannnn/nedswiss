@@ -96,7 +96,7 @@ export default function Stack({
 
   return (
     <div
-      className="relative"
+      className="relative "
       style={{
         width: cardDimensions.width,
         height: cardDimensions.height,
@@ -127,8 +127,8 @@ export default function Stack({
                 damping: animationConfig.damping,
               }}
               style={{
-                width: cardDimensions.width,
-                height: cardDimensions.height,
+                width: cardDimensions.width * 0.8,
+                height: cardDimensions.height * 0.8,
               }}
             >
               <img
