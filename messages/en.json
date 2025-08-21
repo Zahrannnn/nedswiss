@@ -148,21 +148,21 @@
       "contact": {
         "address": {
           "title": "Address",
-          "street": "Bahnhofstrasse 123",
-          "city": "8001 Zürich, Switzerland"
+          "street": "Dörfliweg 3",
+          "city": "3098 Köniz"
         },
         "phone": {
           "title": "Phone",
-          "number": "+41 44 123 45 67"
+          "number": "+41782601498"
         },
         "email": {
           "title": "Email",
-          "address": "info@nedswiss.com"
+          "address": "info@ned-swiss.ch"
         },
         "hours": {
           "title": "Business Hours",
           "weekdays": "Mon - Fri: 9:00 AM - 6:00 PM",
-          "saturday": "Sat: 10:00 AM - 4:00 PM",
+          "saturday": "Sat: 10:00 AM - 4:00 PM", 
           "sunday": "Sun: Closed"
         }
       },
@@ -186,6 +186,14 @@
           "service": "Service needed",
           "message": "Your message"
         },
+        "services": {
+          "graphicDesign": "Graphic Design",
+          "webDevelopment": "Web Development",
+          "socialMedia": "Social Media Management",
+          "seo": "SEO Services",
+          "software": "Software Solutions",
+          "advertising": "Advertising Solutions"
+        },
         "button": {
           "send": "Send a Message",
           "sending": "Sending..."
@@ -195,7 +203,10 @@
           "message": "We'll get back to you within 24 hours."
         },
         "privacy": {
-          "text": "By submitting this form, you agree to our Privacy Policy and Terms of Service.",
+          "text": "By submitting this form, you agree to our",
+          "privacyPolicy": "Privacy Policy",
+          "and": "and",
+          "termsOfService": "Terms of Service",
           "response": "We'll respond within 24 hours during business days."
         }
       }
@@ -265,6 +276,17 @@
           "3": "Display & Retargeting Campaigns"
         }
       }
+    },
+    "whyUs": {
+      "title": "Why us ?",
+      "quickDelivery": "We deliver projects quickly—without compromising on quality.",
+      "internationalTeam": "An international, professional team works efficiently from remote locations.",
+      "flexiblePricing": "Flexible pricing—tailored to the scope of each project.",
+      "platform": {
+        "intro": "We use our own internal work platform:",
+        "name": "NED Swiss Software."
+      },
+      "cta": "Contact us"
     }
   },
   "ServicesPage": {
@@ -296,6 +318,68 @@
           "description": "Final files delivery and ongoing design support"
         }
       }
+    }
+  },
+  "ServiceCards": {
+    "SocialMediaManagement": {
+      "title": "Social Media & Digital Marketing",
+      "subtitle": "Complete social media strategy, content creation, and community management services.",
+      "services": [
+        "Profile Setup & Branding",
+        "Content Planning & Scheduling",
+        "Custom Post & Story Designs"
+      ],
+      "buttonText": "From Concept to Success"
+    },
+    "WebDevelopment": {
+      "title": "Web Development & Design",
+      "subtitle": "Custom websites and web applications built with modern technologies and best practices.",
+      "services": [
+        "Responsive Web Design",
+        "E-commerce Solutions", 
+        "Performance Optimization"
+      ],
+      "buttonText": "Build Your Vision"
+    },
+    "GraphicDesign": {
+      "title": "Graphic Design & Branding",
+      "subtitle": "Visual identity solutions that make your brand stand out and connect with your audience.",
+      "services": [
+        "Logo Design & Brand Identity",
+        "Print & Digital Materials",
+        "Brand Guidelines & Style"
+      ],
+      "buttonText": "Create Your Brand"
+    },
+    "SEOServices": {
+      "title": "SEO & Digital Strategy",
+      "subtitle": "Comprehensive SEO services to improve your search rankings and online visibility.",
+      "services": [
+        "Long-form & Analytical Blog Articles",
+        "On-page SEO Optimization",
+        "Technical SEO & Performance Reports"
+      ],
+      "buttonText": "Boost Your Rankings"
+    },
+    "SoftwareSolutions": {
+      "title": "Software Solutions",
+      "subtitle": "Custom software development and digital tools to streamline your business operations.",
+      "services": [
+        "Custom Application Development",
+        "API Integration & Development",
+        "Database Design & Management"
+      ],
+      "buttonText": "Scale Your Business"
+    },
+    "AdvertisingSolutions": {
+      "title": "Advertising & Marketing",
+      "subtitle": "Strategic advertising campaigns that drive conversions and maximize your ROI.",
+      "services": [
+        "Google Ads & PPC Campaigns",
+        "Social Media Advertising",
+        "Campaign Analytics & Optimization"
+      ],
+      "buttonText": "Drive Results"
     }
   }
 } 

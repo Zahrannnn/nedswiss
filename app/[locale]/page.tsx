@@ -8,6 +8,9 @@ import SocialProof from "@/components/home/SocialProof";
 import ServicesScrollStack from "@/components/home/ServicesScrollStack";
 import ScrollVelocity from "@/comps/TextAnimations/ScrollVelocity/ScrollVelocity";
 import ProcessPrecision from "@/components/home/ProcessPercission";
+import Partners from "@/components/home/Partners";
+import Process from "@/components/home/Process";
+import WhyUs from "@/components/home/WhyUs";
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -38,6 +41,14 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <>
       <HeroSection />
+      <div className="h-15"/>
+      <div className="  border-red-500 border-b-2 border-t-2 py-10  ">
+      <ScrollVelocity
+        texts={["NedSwiss"]}
+        velocity={200}
+        className=""
+      />
+      </div>
       <ServicesScrollStack />
       <div className="  border-red-500 border-b-2 border-t-2">
       <ScrollVelocity
@@ -46,10 +57,30 @@ export default async function HomePage({ params }: HomePageProps) {
         className=""
       />
       </div>
+      <Partners />
       {/* <ServicesOverview /> */}
-      <ProcessPrecision />
+      <Process />
+      {/* !TODO Our Projects */}
+      <WhyUs />
+      {/* <ProcessPrecision /> */}
       <SocialProof />
+      <div className="  border-red-500 border-b-2 border-t-2 py-10  ">
+      <ScrollVelocity
+        texts={["NedSwiss"]}
+        velocity={200}
+        className=""
+      />
+      </div>
       <CallToAction />
+      <div className="  border-red-500 border-b-2 border-t-2 py-10  ">
+      <ScrollVelocity
+        texts={["NedSwiss"]}
+        velocity={200}
+        className=""
+      />
+      </div>
+      <div className="h-15"/>
+
     </>
   );
 }

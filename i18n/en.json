@@ -25,6 +25,20 @@
     "termsOfService": "Terms of Service"
   },
   "HomePage": {
+    "whyUs": {
+      "title": "Why us ?",
+      "quickDelivery": "We deliver projects quickly—without compromising on quality.",
+      "internationalTeam": "An international, professional team works efficiently from remote locations.",
+      "flexiblePricing": "Flexible pricing—tailored to the scope of each project.",
+      "qualityAssurance": "We use our own internal work platform",
+      "cta": "Contact Us",
+      "platform": {
+        "name": "NED Swiss Software",
+        "intro": "NED Swiss Software is a platform that allows you to manage your projects and tasks efficiently."
+        
+    }
+  },
+    
     "meta": {
       "title": "NED Swiss | Digital Excellence, Swiss Precision",
       "description": "NED Swiss is a digital agency delivering exceptional web development, design, and digital marketing services with Swiss precision and excellence."
@@ -128,6 +142,7 @@
         }
       },
       "form": {
+        
         "title": "Send a Message",
         "fields": {
           "firstName": "First Name *",
@@ -156,6 +171,9 @@
           "message": "We'll get back to you within 24 hours."
         },
         "privacy": {
+          "and": "and",
+          "privacyPolicy": "Privacy Policy",
+          "termsOfService": "Terms of Service",
           "text": "By submitting this form, you agree to our Privacy Policy and Terms of Service.",
           "response": "We'll respond within 24 hours during business days."
         }

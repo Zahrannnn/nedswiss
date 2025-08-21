@@ -112,6 +112,21 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* Infinite Moving Cards Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s) linear infinite;
+  animation-direction: var(--animation-direction, forwards);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -182,4 +197,21 @@
     backface-visibility: hidden;
     perspective: 1000px;
   }
+}
+
+/* Custom Animations */
+@keyframes bounce-slow {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
 }

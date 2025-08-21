@@ -28,14 +28,28 @@ export default function ServicesScrollStack() {
 
   return (
     <main ref={container} className="flex flex-col items-center justify-center p-20">
-      <div className="flex flex-col gap-7 items-center justify-center max-w-[1000px]">
-        <h2 className="text-center text-4xl font-bold">Digital Services that Drive Results</h2>
-        <p className="text-center text-lg line-clamp-3">Comprehensive digital solutions tailored for Swiss businesses. From creative design to technical development, we handle everything with precision and excellence.</p>
+      <div className="flex flex-col gap-7 items-center justify-center max-w-[1000px] mb-10">
+        <h2 className="text-center text-4xl md:text-6xl font-bold">Digital Services that Drive <span className='text-red-600'> Results</span> </h2>
       </div>
       {
         services.map( (service, i) => {
           const targetScale = 1 - ( (services.length - i) * 0.05);
-          return <Card url={service.link} key={`p_${i}`} i={i} {...service} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale}/>
+          return (
+            <Card 
+              key={`service_${i}`} 
+              i={i} 
+              title={service.title}
+              subtitle={service.subtitle}
+              services={service.services}
+              buttonText={service.buttonText}
+              backgroundColor={service.backgroundColor}
+              laptopImage={service.laptopImage}
+              backgroundMask={service.backgroundMask}
+              progress={scrollYProgress} 
+              range={[i * .25, 1]} 
+              targetScale={targetScale}
+            />
+          );
         })
       }
     </main>
