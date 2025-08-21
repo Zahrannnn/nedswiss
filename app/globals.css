@@ -152,7 +152,8 @@
     will-change: scroll-position;
     /* Prevent scroll bounce on iOS */
     -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
