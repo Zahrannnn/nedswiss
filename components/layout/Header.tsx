@@ -100,7 +100,7 @@ export const Header = () => {
               className="w-8 h-8 lg:w-10 lg:h-10"
             />
             <span className="text-lg lg:text-xl font-light tracking-wide text-white">
-              <span className='font-bold text-red-500'>NED</span>SWISS
+              <span className='font-bold text-red-500'>NED</span><span className='text-red-500 font-light'>SWISS</span>
             </span>
           </Link>
 
