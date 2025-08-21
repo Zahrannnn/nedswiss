@@ -76,7 +76,7 @@ const Projects = () => {
   const currentCategory = projectCategories.find((cat: ProjectCategory) => cat.id === activeCategory);
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 overflow-x-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">

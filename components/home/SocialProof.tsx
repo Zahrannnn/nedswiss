@@ -136,7 +136,7 @@ const SocialProof = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 md:px-8 lg:px-12 overflow-hidden">
+    <section ref={sectionRef} className="py-20 px-4 md:px-8 lg:px-12 overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 ref={titleRef} className="text-4xl md:text-5xl font-bold mb-4">

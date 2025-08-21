@@ -8,7 +8,7 @@ const WhyUs = () => {
   const t = useTranslations('HomePage.whyUs');
 
   return (
-    <section className="py-16 px-4 ">
+    <section className="py-16 px-4 overflow-x-hidden ">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center flex-col justify-center ">
           {/* Bouncing Circle Container */}
