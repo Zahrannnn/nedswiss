@@ -14,7 +14,7 @@ const WhyUs = () => {
           {/* Bouncing Circle Container */}
           <div className="relative">
             {/* Animated Circle */}
-            <div className="w-[420px] h-[420px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] rounded-full bg-black relative overflow-hidden animate-bounce-slow shadow-2xl border-4 border-red-500">
+            <div className="w-[380px] h-[380px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] rounded-full bg-black relative overflow-hidden animate-bounce-slow shadow-2xl border-4 border-red-500">
               {/* Gradient Border Effect */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-500 via-pink-500 to-red-600 p-1">
                 <div className="w-full h-full rounded-full bg-black flex flex-col items-center justify-center text-white px-6 sm:px-8 lg:px-12">
