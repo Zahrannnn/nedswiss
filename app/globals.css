@@ -139,7 +139,9 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
-  
+  *{
+    overflow-x: hidden !important;
+  }
   body {
     @apply bg-background text-foreground;
     /* Performance optimizations for smooth scrolling */
