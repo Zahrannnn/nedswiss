@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Stack from '../../comps/Components/Stack/Stack';
 
 interface ProjectCategory {
@@ -10,10 +11,10 @@ interface ProjectCategory {
   images: { id: number; img: string }[];
 }
 
-const projectCategories: ProjectCategory[] = [
+const getProjectCategories = (t: ReturnType<typeof useTranslations>): ProjectCategory[] => [
   {
     id: 'printing',
-    name: 'Printing Service',
+    name: t('categories.printing'),
     images: [
       { id: 1, img: '/projects/printing-1.jpg' },
       { id: 2, img: '/projects/printing-2.jpg' }, 
@@ -22,7 +23,7 @@ const projectCategories: ProjectCategory[] = [
   },
   {
     id: 'graphic',
-    name: 'Graphic Design',
+    name: t('categories.graphic'),
     images: [
       { id: 1, img: '/projects/graphic-1.jpg' },
       { id: 2, img: '/projects/graphic-2.jpg' },
@@ -31,7 +32,7 @@ const projectCategories: ProjectCategory[] = [
   },
   {
     id: 'web',
-    name: 'Web Development',
+    name: t('categories.web'),
     images: [
       { id: 1, img: '/projects/web-1.jpg' },
       { id: 2, img: '/projects/web-2.jpg' },
@@ -40,7 +41,7 @@ const projectCategories: ProjectCategory[] = [
   },
   {
     id: 'social',
-    name: 'Social Media Management',
+    name: t('categories.social'),
     images: [
       { id: 1, img: '/projects/social-1.jpg' },
       { id: 2, img: '/projects/social-2.jpg' },
@@ -49,7 +50,7 @@ const projectCategories: ProjectCategory[] = [
   },
   {
     id: 'digital',
-    name: 'Digital Marketing',
+    name: t('categories.digital'),
     images: [
       { id: 1, img: '/projects/digital-1.jpg' },
       { id: 2, img: '/projects/digital-2.jpg' },
@@ -58,7 +59,7 @@ const projectCategories: ProjectCategory[] = [
   },
   {
     id: 'software',
-    name: 'Internal Software Solutions',
+    name: t('categories.software'),
     images: [
       { id: 1, img: '/projects/software-1.jpg' },
       { id: 2, img: '/projects/software-2.jpg' },
@@ -68,9 +69,11 @@ const projectCategories: ProjectCategory[] = [
 ];
 
 const Projects = () => {
+  const t = useTranslations('Projects');
   const [activeCategory, setActiveCategory] = useState('printing');
 
-  const currentCategory = projectCategories.find(cat => cat.id === activeCategory);
+  const projectCategories = getProjectCategories(t);
+  const currentCategory = projectCategories.find((cat: ProjectCategory) => cat.id === activeCategory);
 
   return (
     <section className="py-20 bg-gray-50">
@@ -78,7 +81,7 @@ const Projects = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-red-500">Projects</span>
+            {t('title')} <span className="text-red-500">{t('titleHighlight')}</span>
           </h2>
           <div className="w-24 h-1 bg-red-500 mx-auto"></div>
         </div>
@@ -87,7 +90,7 @@ const Projects = () => {
           {/* Left Side - Category Navigation */}
           <div className="space-y-6 w-full">
             <div className="md:hidden flex overflow-x-auto pb-4 gap-3 scrollbar-hide">
-              {projectCategories.map((category) => (
+              {projectCategories.map((category: ProjectCategory) => (
                 <motion.button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
@@ -104,7 +107,7 @@ const Projects = () => {
               ))}
             </div>
             <div className="hidden md:flex md: flex-col space-y-3">
-              {projectCategories.map((category) => (
+              {projectCategories.map((category: ProjectCategory) => (
                 <motion.button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
@@ -155,7 +158,7 @@ const Projects = () => {
               }}
             >
               <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
-                Explore Now
+                {t('exploreNow')}
               </button>
             </motion.div>
           </div>

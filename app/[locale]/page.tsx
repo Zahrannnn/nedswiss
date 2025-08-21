@@ -7,7 +7,6 @@ import CallToAction from "@/components/home/CallToAction";
 import SocialProof from "@/components/home/SocialProof";
 import ServicesScrollStack from "@/components/home/ServicesScrollStack";
 import ScrollVelocity from "@/comps/TextAnimations/ScrollVelocity/ScrollVelocity";
-import ProcessPrecision from "@/components/home/ProcessPercission";
 import Partners from "@/components/home/Partners";
 import Process from "@/components/home/Process";
 import WhyUs from "@/components/home/WhyUs";
@@ -62,7 +61,6 @@ export default async function HomePage({ params }: HomePageProps) {
 
       <Partners />
       </div>
-      {/* <ServicesOverview /> */}
       <Process />
       {/* !TODO Our Projects */}
       <Projects />

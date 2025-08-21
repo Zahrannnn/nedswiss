@@ -1,7 +1,7 @@
 {
   "Navigation": {
     "home": "Startseite",
-    "about": "Über Uns",
+    "about": "Über uns",
     "ourStory": "Unsere Geschichte",
     "team": "Team",
     "valuesPhilosophy": "Werte & Philosophie",
@@ -10,7 +10,7 @@
     "graphicDesign": "Grafikdesign",
     "webDevelopment": "Webentwicklung",
     "socialMediaManagement": "Social Media Management",
-    "seoServices": "SEO-Dienstleistungen",
+    "seoServices": "SEO Dienstleistungen",
     "softwareSolutions": "Softwarelösungen",
     "advertisingSolutions": "Werbelösungen",
     "portfolio": "Portfolio",
@@ -25,38 +25,63 @@
     "termsOfService": "Nutzungsbedingungen"
   },
   "HomePage": {
+    "processHeader": {
+      "title": "Unser",
+      "titleHighlight": "Prozess",
+      "subtitle": "Wir folgen einem präzisen Prozess, um aussergewöhnliche Ergebnisse für unsere Kunden zu erzielen."
+    },
+    "partnersHeaders": {
+      "title": "Unsere",
+      "titleHighlight": "Partner"
+    },
+    "servicesHeader": {
+      "title": "Digitale Dienstleistungen, die ",
+      "titleHighlight": "Ergebnisse liefern"
+    },
+    "whyUs": {
+      "title": "Warum wir?",
+      "quickDelivery": "Wir liefern Projekte schnell – ohne Kompromisse bei der Qualität.",
+      "internationalTeam": "Ein internationales, professionelles Team arbeitet effizient aus der Ferne.",
+      "flexiblePricing": "Flexible Preise – auf den Umfang jedes Projekts zugeschnitten.",
+      "qualityAssurance": "Wir nutzen unsere eigene interne Arbeitsplattform",
+      "cta": "Kontaktieren Sie uns",
+      "platform": {
+        "name": "NED Swiss Software",
+        "intro": "NED Swiss Software ist eine Plattform, die es Ihnen ermöglicht, Ihre Projekte und Aufgaben effizient zu verwalten."
+      }
+    },
     "meta": {
       "title": "NED Swiss | Digitale Exzellenz, Schweizer Präzision",
-      "description": "NED Swiss ist eine Digitalagentur, die außergewöhnliche Webentwicklungs-, Design- und digitales Marketing-Dienstleistungen mit Schweizer Präzision und Exzellenz liefert."
+      "description": "NED Swiss ist eine Digitalagentur, die aussergewöhnliche Webentwicklungs-, Design- und digitales Marketing-Dienstleistungen mit Schweizer Präzision und Exzellenz liefert."
     },
     "hero": {
       "tagline": "Digitale Exzellenz, Schweizer Präzision",
       "headline": "Ideen in digitalen Erfolg verwandeln",
-      "subtitle": "Wir schaffen außergewöhnliche digitale Erlebnisse, die Ergebnisse für zukunftsorientierte Unternehmen liefern",
-      "cta": "Starten Sie Ihr Projekt"
+      "subtitle": "Wir schaffen aussergewöhnliche digitale Erlebnisse, die Ergebnisse für zukunftsorientierte Unternehmen liefern",
+      "cta": "Projekt starten"
     },
     "services": {
       "title": "Unsere Dienstleistungen",
-      "subtitle": "Umfassende digitale Lösungen, zugeschnitten auf Ihre Bedürfnisse",
+      "subtitle": "Umfassende digitale Lösungen, massgeschneidert für Ihre Bedürfnisse",
       "graphicDesign": {
         "title": "Grafikdesign",
-        "description": "Visuelle Identität, die Wirkung zeigt"
+        "description": "Visuelle Identität, die Eindruck hinterlässt"
       },
       "webDevelopment": {
         "title": "Webentwicklung",
-        "description": "Individuelle Websites und Webanwendungen"
+        "description": "Massgeschneiderte Websites und Webanwendungen"
       },
       "socialMediaManagement": {
         "title": "Social Media Management",
-        "description": "Engagierte soziale Präsenz und Strategie"
+        "description": "Engagierende Social-Media-Präsenz und -Strategie"
       },
       "seoServices": {
-        "title": "SEO-Dienstleistungen",
+        "title": "SEO Dienstleistungen",
         "description": "Verbesserung der Sichtbarkeit und des organischen Traffics"
       },
       "softwareSolutions": {
         "title": "Softwarelösungen",
-        "description": "Kundenspezifische Software für Geschäftsanforderungen"
+        "description": "Massgeschneiderte Software für Geschäftsanforderungen"
       },
       "advertisingSolutions": {
         "title": "Werbelösungen",
@@ -66,23 +91,23 @@
     "about": {
       "title": "Über NED Swiss",
       "mission": "Unternehmen durch innovative digitale Lösungen stärken",
-      "description": "Wir kombinieren Schweizer Präzision mit digitaler Innovation, um außergewöhnliche Ergebnisse für unsere Kunden zu liefern.",
+      "description": "Wir verbinden Schweizer Präzision mit digitaler Innovation, um aussergewöhnliche Ergebnisse für unsere Kunden zu erzielen.",
       "cta": "Erfahren Sie mehr über uns"
     },
     "socialProof": {
-      "title": "Kundenfeedback",
-      "subtitle": "NED Swiss aus der Sicht unserer Kunden – Entdecken Sie, wie wir bei ihren Projekten einen Unterschied gemacht haben.",
+      "title": "Kunden-Feedback",
+      "subtitle": "NED Swiss durch die Augen unserer Kunden – Entdecken Sie, wie wir in ihren Projekten einen Unterschied gemacht haben.",
       "clientsRating": "Kundenbewertung",
-      "clientsSubtitle": "Auf dem gesamten europäischen Markt",
+      "clientsSubtitle": "Auf dem europäischen Markt",
       "projectsCompleted": "Abgeschlossene Projekte",
-      "projectsSubtitle": "Auf dem gesamten europäischen Markt",
+      "projectsSubtitle": "Auf dem europäischen Markt",
       "deliveringResults": "Ergebnisse liefern",
-      "deliveringResultsSubtitle": "Auf dem gesamten europäischen Markt",
+      "deliveringResultsSubtitle": "Auf dem europäischen Markt",
       "testimonials": {
         "title": "Was unsere Kunden sagen",
         "items": [
           {
-            "quote": "NED Swiss hat unsere digitale Präsenz mit Präzision und Kreativität transformiert. Sehr empfehlenswert!",
+            "quote": "NED Swiss hat unsere digitale Präsenz mit Präzision und Kreativität verändert. Sehr empfehlenswert!",
             "author": "Jane Smith",
             "position": "CEO, TechCorp"
           },
@@ -105,7 +130,7 @@
         "highlight": "Projekt",
         "suffix": " zu starten?"
       },
-      "subtitle": "Lassen Sie uns Ihre Vision besprechen und gemeinsam etwas Außergewöhnliches schaffen. Kontaktieren Sie uns noch heute für eine kostenlose Beratung und ein Angebot.",
+      "subtitle": "Lassen Sie uns Ihre Vision besprechen und gemeinsam etwas Aussergewöhnliches schaffen. Kontaktieren Sie uns noch heute für eine kostenlose Beratung und ein Angebot.",
       "contact": {
         "address": {
           "title": "Adresse",
@@ -121,7 +146,7 @@
           "address": "info@nedswiss.com"
         },
         "hours": {
-          "title": "Geschäftszeiten",
+          "title": "Öffnungszeiten",
           "weekdays": "Mo - Fr: 9:00 - 18:00 Uhr",
           "saturday": "Sa: 10:00 - 16:00 Uhr",
           "sunday": "So: Geschlossen"
@@ -149,29 +174,32 @@
         },
         "button": {
           "send": "Nachricht senden",
-          "sending": "Wird gesendet..."
+          "sending": "Senden..."
         },
         "success": {
           "title": "Vielen Dank für Ihre Nachricht!",
           "message": "Wir werden uns innerhalb von 24 Stunden bei Ihnen melden."
         },
         "privacy": {
-          "text": "Mit dem Absenden dieses Formulars stimmen Sie unserer Datenschutzbestimmungen und den Nutzungsbedingungen zu.",
-          "response": "Wir antworten innerhalb von 24 Stunden an Werktagen."
+          "and": "und",
+          "privacyPolicy": "Datenschutzbestimmungen",
+          "termsOfService": "Nutzungsbedingungen",
+          "text": "Durch das Absenden dieses Formulars stimmen Sie unseren Datenschutzbestimmungen und Nutzungsbedingungen zu.",
+          "response": "Wir werden uns an Werktagen innerhalb von 24 Stunden bei Ihnen melden."
         }
       }
     },
     "process": {
-      "description": "Wir verfolgen einen präzisen Prozess, um außergewöhnliche Ergebnisse für unsere Kunden zu liefern.",
+      "description": "Wir folgen einem präzisen Prozess, um aussergewöhnliche Ergebnisse für unsere Kunden zu erzielen.",
       "title": "Unser Prozess",
-      "subtitle": "Wir verfolgen einen präzisen Prozess, um außergewöhnliche Ergebnisse für unsere Kunden zu liefern.",
+      "subtitle": "Wir folgen einem präzisen Prozess, um aussergewöhnliche Ergebnisse für unsere Kunden zu erzielen.",
       "step1": {
         "title": "Entdeckung",
-        "description": "Wir beginnen damit, Ihr Unternehmen und Ihre Ziele zu verstehen."
+        "description": "Wir beginnen damit, Ihr Geschäft und Ihre Ziele zu verstehen."
       },
       "step2": {
         "title": "Strategie",
-        "description": "Wir entwickeln eine maßgeschneiderte Strategie, um Ihre Ziele zu erreichen."
+        "description": "Wir entwickeln eine massgeschneiderte Strategie, um Ihre Ziele zu erreichen."
       },
       "step3": {
         "title": "Design",
@@ -179,26 +207,221 @@
       },
       "step4": {
         "title": "Entwicklung",
-        "description": "Wir entwickeln eine maßgeschneiderte Strategie, um Ihre Ziele zu erreichen."
+        "description": "Wir entwickeln eine massgeschneiderte Strategie, um Ihre Ziele zu erreichen."
       }
     }
   },
   "HeroSection": {
-    "mainText": "VON DER IDEE ZUR REALITÄT DURCH",
+    "mainText": "VOM KONZEPT ZUR REALITÄT DURCH",
     "subtitle": "Marketingagentur",
-    "cta": "Starten Sie Ihr Projekt",
+    "cta": "Projekt starten",
     "services": {
       "graphicDesign": "Grafikdesign",
       "printing": "Druck",
       "webDevelopment": "Webentwicklung",
-      "socialMedia": "Social Media",
+      "socialMedia": "Soziale Medien",
       "3dInstallations": "3D-Installationen",
       "paidAds": "Bezahlte Anzeigen",
       "seo": "SEO"
     },
     "servicesScrollStack": {
       "title": "Digitale Dienstleistungen, die Ergebnisse liefern",
-      "subtitle": "Umfassende digitale Lösungen, maßgeschneidert für Schweizer Unternehmen. Von kreativem Design bis zur technischen Entwicklung erledigen wir alles mit Präzision und Exzellenz."
+      "subtitle": "Umfassende digitale Lösungen, massgeschneidert für Schweizer Unternehmen. Von kreativem Design bis zur technischen Entwicklung erledigen wir alles mit Präzision und Exzellenz."
+    }
+  },
+  "Projects": {
+    "title": "Unsere",
+    "titleHighlight": "Projekte",
+    "categories": {
+      "printing": "Druckservice",
+      "graphic": "Grafikdesign",
+      "web": "Webentwicklung",
+      "social": "Social Media Management",
+      "digital": "Digitales Marketing",
+      "software": "Interne Softwarelösungen"
+    },
+    "exploreNow": "Jetzt entdecken"
+  },
+  "ServicesData": {
+    "services": {
+      "graphicDesignPrinting": {
+        "title": "Grafikdesign & Druck",
+        "subtitle": "Komplette visuelle Identitätslösungen von Logos bis hin zu Grossformatdruck und Leuchtreklame.",
+        "services": [
+          "Logo- & Markenidentitätsdesign",
+          "Visitenkarten & Broschüren",
+          "Digital- & Offsetdruck"
+        ],
+        "buttonText": "Gestalte das Morgen heute"
+      },
+      "webDevelopment": {
+        "title": "Webentwicklung",
+        "subtitle": "Unser Webentwicklungsteam erstellt responsive, leistungsstarke Websites und Anwendungen, die ein aussergewöhnliches Benutzererlebnis auf allen Geräten und Plattformen bieten.",
+        "services": [
+          "Responsives Webdesign",
+          "Full-Stack Entwicklung",
+          "E-Commerce Lösungen",
+          "Progressive Web Apps",
+          "API Integration"
+        ],
+        "buttonText": "Verwirklichen Sie Ihre Vision"
+      },
+      "socialMediaMarketing": {
+        "title": "Social Media & Digitales Marketing",
+        "subtitle": "Komplette Social Media Strategie, Content-Erstellung und Community Management Services.",
+        "services": [
+          "Profil-Setup & Branding",
+          "Content-Planung & Terminierung",
+          "Benutzerdefinierte Post- & Story-Designs"
+        ],
+        "buttonText": "Vom Konzept zum Erfolg"
+      },
+      "digitalOffsetPrinting": {
+        "title": "Digital- & Offsetdruck",
+        "subtitle": "Hochwertiger Digital- und Offsetdruck für all Ihre Marketingmaterialien und Geschäftsanforderungen.",
+        "services": [
+          "Visitenkarten",
+          "Flyer & Werbematerialien",
+          "Innen- & Aussendrucke (Wandlogos, Banner)"
+        ],
+        "buttonText": "Lassen Sie uns gemeinsam strahlen"
+      },
+      "illuminatedSigns3d": {
+        "title": "Leuchtreklamen & 3D-Installationen",
+        "subtitle": "Professionelle Leuchtreklamen und 3D-Installationen für maximale Markensichtbarkeit.",
+        "services": [
+          "LED-Buchstaben (Leuchtbeschriftungen)",
+          "Leuchtkasten",
+          "Geschäftsfrontschilder"
+        ],
+        "buttonText": "Lassen Sie uns gemeinsam strahlen"
+      },
+      "paidAds": {
+        "title": "Bezahlte Anzeigen (Google & Meta Plattformen)",
+        "subtitle": "Gezielte Werbekampagnen, die echte Ergebnisse liefern",
+        "services": [
+          "Google Ads (Suche, Display, YouTube)",
+          "Facebook & Instagram Ads",
+          "Erweitertes Targeting"
+        ],
+        "buttonText": "Ihr Erfolg, unsere Mission"
+      },
+      "seo": {
+        "title": "Suchmaschinenoptimierung (SEO)",
+        "subtitle": "Umfassende SEO-Dienstleistungen und digitale Marketingstrategien zur Steigerung Ihrer Online-Präsenz.",
+        "services": [
+          "Langform- & Analytische Blogartikel",
+          "On-Page SEO-Optimierung",
+          "Technische SEO & Leistungsberichte"
+        ],
+        "buttonText": "Erlebnisse schaffen, die bleiben"
+      }
+    },
+    "processSteps": {
+      "consultation": {
+        "number": "01",
+        "title": "Beratung",
+        "description": "Identifizierung der Kundenziele, Analyse der Markenposition, Vorschlag massgeschneiderter Strategien und Aufzeigen, wie unsere Agentur helfen kann."
+      },
+      "strategyPlanning": {
+        "number": "02",
+        "title": "Strategie & Planung",
+        "description": "Entwicklung umfassender Projekt-Roadmaps, Definition von Leistungen, Zeitplänen und Ressourcenzuweisung für optimale Ergebnisse."
+      },
+      "designDevelopment": {
+        "number": "03",
+        "title": "Design & Entwicklung",
+        "description": "Erstellung visuell beeindruckender Designs und robuster Entwicklungslösungen, die sich an Ihrer Markenidentität und Ihren Geschäftszielen ausrichten."
+      },
+      "testingOptimization": {
+        "number": "04",
+        "title": "Testen & Optimierung",
+        "description": "Rigorose Qualitätssicherung, Leistungstests und Optimierung, um ein fehlerfreies Benutzererlebnis auf allen Plattformen zu gewährleisten."
+      },
+      "launchDelivery": {
+        "number": "05",
+        "title": "Launch & Lieferung",
+        "description": "Nahtlose Projektbereitstellung mit umfassender Schulung, Dokumentation und laufendem Support für eine erfolgreiche Implementierung."
+      },
+      "growthMaintenance": {
+        "number": "06",
+        "title": "Wachstum & Wartung",
+        "description": "Kontinuierliche Überwachung, Updates und strategische Verbesserungen, um langfristigen Erfolg und nachhaltiges Wachstum zu gewährleisten."
+      }
+    },
+    "detailedServices": {
+      "consultation": {
+        "title": "Beratung",
+        "description": "Wir beginnen mit der präzisen Ermittlung der Kundenziele, analysieren sorgfältig die aktuelle Marktposition der Marke und entdecken Wachstumschancen. Von dort aus schlagen wir massgeschneiderte Strategien vor, die darauf abzielen, spezifische Ziele zu erreichen, die Sichtbarkeit zu verbessern und die Markenidentität zu stärken. Schliesslich demonstrieren wir detailliert, wie die Expertise, Tools und der kreative Ansatz unserer Agentur messbare Ergebnisse und langfristigen Erfolg liefern können.",
+        "items": [
+          {
+            "title": "Next.js Exzellenz",
+            "description": "(App Router, SSR/SSG, API Routes, Server Components)"
+          },
+          {
+            "title": "React Beherrschung",
+            "description": "(TypeScript, Custom Hooks, State Management, Performance)"
+          },
+          {
+            "title": "Leistungsoptimierung",
+            "description": "(Core Web Vitals, Bildoptimierung, Bundle-Analyse)"
+          }
+        ]
+      },
+      "strategy": {
+        "title": "Strategie",
+        "description": "Wir konzentrieren uns auf die Entwicklung massgeschneiderter Pläne, indem wir die Kundenziele genau verstehen, Markttrends sorgfältig analysieren und effektive, datengesteuerte Ansätze entwickeln, die nicht nur unmittelbare Bedürfnisse erfüllen, sondern auch langfristiges, nachhaltiges Wachstum fördern.",
+        "items": [
+          {
+            "title": "Designsysteme",
+            "description": "(Komponentenbibliotheken, Figma zu Code, Markenkonsistenz)"
+          },
+          {
+            "title": "Benutzererfahrung",
+            "description": "(Wireframing, Prototyping, Usertesting, Conversion-Optimierung)"
+          },
+          {
+            "title": "Responsives Design",
+            "description": "(Mobile-First, Cross-Browser, Barrierefreiheit)"
+          }
+        ]
+      },
+      "execution": {
+        "title": "Umsetzung",
+        "description": "Wir sind bestrebt, Kundenzufriedenheit zu erreichen, indem wir innovative Lösungen liefern, die auf ihre individuellen Bedürfnisse zugeschnitten sind, messbare Ergebnisse mit realer Wirkung erzielen und langfristige Wachstumspartnerschaften aufbauen, die auf Vertrauen, Zusammenarbeit und gemeinsamem Erfolg basieren.",
+        "items": [
+          {
+            "title": "Server-Komponenten",
+            "description": "(React Server Components, Streaming, Datenabruf)"
+          },
+          {
+            "title": "Zustandsverwaltung",
+            "description": "(Zustand, Redux Toolkit, React Query, Context API)"
+          },
+          {
+            "title": "Build-Optimierung",
+            "description": "(Webpack, Vite, Code Splitting, Tree Shaking)"
+          }
+        ]
+      },
+      "success": {
+        "title": "Erfolg",
+        "description": "Wir setzen Strategien in die Tat um, indem wir effektive, ergebnisorientierte Lösungen implementieren, Prozesse effizient und präzise verwalten und konsequent messbare Ergebnisse liefern, die einen sinnvollen Fortschritt und langfristigen Erfolg vorantreiben.",
+        "items": [
+          {
+            "title": "Animationsbibliotheken",
+            "description": "(GSAP, Framer Motion, React Spring, CSS-Animationen)"
+          },
+          {
+            "title": "3D-Webgrafiken",
+            "description": "(Three.js, React Three Fiber, WebGL, 3D-Modelle)"
+          },
+          {
+            "title": "Mikro-Interaktionen",
+            "description": "(Hover-Effekte, Ladezustände, Übergangsdesign)"
+          }
+        ]
+      }
     }
   }
 }

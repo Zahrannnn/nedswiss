@@ -4,7 +4,8 @@ import AnimatedHeaderSection from "../AnimatedHeaderSection";
 import { useMediaQuery } from "react-responsive";   
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { servicesData } from "@/data";
+import { useDetailedServicesData, type DetailedService } from "@/data";
+import { useTranslations } from "next-intl";
 
 const Services = () => {
   const text = `I build secure, high-performance full-stack apps
@@ -12,9 +13,9 @@ const Services = () => {
     not headaches.`;
   const serviceRefs = useRef([]);
   const isDesktop = useMediaQuery({ minWidth: "48rem" }); //768px
-  
-  // Use data from constants directly
-  const servicesDataa  = servicesData;
+  const t = useTranslations('HomePage.processHeader');
+  // Use data from translation hook
+  const servicesDataa = useDetailedServicesData();
 
   useGSAP(() => {
     serviceRefs.current.forEach((el) => {
@@ -32,7 +33,7 @@ const Services = () => {
      
      
     });
-  }, [servicesData]); // Keep services as dependency for consistency
+  }, [servicesDataa]); // Keep services as dependency for consistency
 
   useGSAP(() => {
     gsap.set("#services", {
@@ -60,13 +61,14 @@ const Services = () => {
         
      <AnimatedHeaderSection
         subTitle={"Behind the scene, Beyond the screen"}
-        title={"Our Precision Process"}
+        title={t('processHeader.title')}
+        titleHighlight={t('processHeader.titleHighlight')}
         text={text}
         textColor={"text-black"}
         withScrollTrigger={true}
       />
      </div>
-      {servicesDataa.map((service, index) => (
+      {servicesDataa.map((service: DetailedService, index: number) => (
         <div
           ref={(el) => (serviceRefs.current[index] = el as never)}
           key={index}

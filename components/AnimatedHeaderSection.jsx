@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { AnimatedTextLines } from "./AnimatedTextLines";
+import { useTranslations } from "next-intl";
 
 const AnimatedHeaderSection = ({
   subTitle,
@@ -19,7 +20,7 @@ const AnimatedHeaderSection = ({
     target: contextRef,
     offset: ["start start", "end end"]
   });
-
+  const t = useTranslations('HomePage.processHeader');
   const rotation = useTransform(scrollYProgress, [0.00001, 1], [0, 360]);
   
   const shouldSplitTitle = title.includes(" ");
@@ -86,7 +87,7 @@ const AnimatedHeaderSection = ({
               </h1>
             </div> */}
             <div className="flex flex-col justify-center items-center gap-12 pt-16 sm:gap-16">
-              <h1 className="text-4xl lg:text-5xl font-bold">Our Precision <span className="text-red-500">Process</span></h1>
+              <h1 className="text-4xl lg:text-5xl font-bold">{t('title')} <span className="text-red-500">{t('titleHighlight')}</span></h1>
               
             </div>
           </div>
