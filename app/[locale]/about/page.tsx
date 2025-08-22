@@ -16,10 +16,10 @@ const AboutPage = () => {
     <main className='bg-gray-50'>
       <DiscoverVision />
       <Cards />
-      <div className="w-full h-full flex flex-col items-center justify-center pt-10">
+      
       
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 ">{t('title')} <span className="text-red-500">{t('titleHighlight')}</span></h1>
-      <div className='bg-[#FE233805]'>
+      <div className='bg-[#FE233805] overflow-hidden'>
       <InfiniteMovingCards
         direction="right"
         speed="normal"
@@ -38,57 +38,57 @@ const AboutPage = () => {
           {
             src: "/clients/partner3.png",
             alt: "Partner 1",
-            name: "Partner 1",
+            name: "Partner 3",
           },
           {
             src: "/clients/partner4.png",
             alt: "Partner 2",
-            name: "Partner 2",
+            name: "Partner 4",
           },
           {
             src: "/clients/partner5.png",
             alt: "Partner 1",
-            name: "Partner 1",
+            name: "Partner 5",
           },
           {
             src: "/clients/partner1.png",
             alt: "Partner 2",
-            name: "Partner 2",
+            name: "Partner 6",
           },
           {
             src: "/clients/partner2.png",
             alt: "Partner 1",
-            name: "Partner 1",
+            name: "Partner 7",
           },
           {
             src: "/clients/partner3.png",
             alt: "Partner 2",
-            name: "Partner 2",
+            name: "Partner 8",
           },
           {
             src: "/clients/partner4.png",
             alt: "Partner 1",
-            name: "Partner 1",
+            name: "Partner 9",
           },
           {
             src: "/clients/partner5.png",
             alt: "Partner 2",
-            name: "Partner 2",
+            name: "Partner 10",
           },
           {
             src: "/clients/partner1.png",
             alt: "Partner 1",
-            name: "Partner 1",
+            name: "Partner 11",
           },
           {
             src: "/clients/partner2.png",
             alt: "Partner 2",
-            name: "Partner 2",
+            name: "Partner 12",
           },
         ]}
       />
         
-      </div>
+ 
       <div className='h-10'/>
     </div>
     <div className='h-10'/>
