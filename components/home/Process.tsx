@@ -4,7 +4,7 @@ import AnimatedHeaderSection from "../AnimatedHeaderSection";
 import { useMediaQuery } from "react-responsive";   
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useDetailedServicesData, type DetailedService } from "@/data";
+import { useProcessSteps, type DetailedService } from "@/data";
 import { useTranslations } from "next-intl";
 
 const Services = () => {
@@ -15,7 +15,7 @@ const Services = () => {
   const isDesktop = useMediaQuery({ minWidth: "48rem" }); //768px
   const t = useTranslations('HomePage.processHeader');
   // Use data from translation hook
-  const servicesDataa = useDetailedServicesData();
+  const servicesDataa = useProcessSteps();
 
   useGSAP(() => {
     serviceRefs.current.forEach((el) => {

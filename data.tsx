@@ -236,18 +236,7 @@ export const useProcessSteps = (): ProcessStep[] => {
       title: t('testingOptimization.title'),
       description: t('testingOptimization.description')
     },
-    {
-      id: 5,
-      number: t('launchDelivery.number'),
-      title: t('launchDelivery.title'),
-      description: t('launchDelivery.description')
-    },
-    {
-      id: 6,
-      number: t('growthMaintenance.number'),
-      title: t('growthMaintenance.title'),
-      description: t('growthMaintenance.description')
-    }
+  
   ];
 };
 

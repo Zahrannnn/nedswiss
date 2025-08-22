@@ -342,33 +342,24 @@
       "consultation": {
         "number": "01",
         "title": "Consultation",
-        "description": "Identifying client goals, analyzing brand position, proposing tailored strategies, and showing how our agency can help."
+        "description": "Identifying client goals, analyzing brand position, proposing tailored strategies, and showing how our agency can help. We conduct thorough market research to understand your unique challenges and opportunities in the competitive landscape."
       },
       "strategyPlanning": {
         "number": "02",
-        "title": "Strategy & Planning",
-        "description": "Developing comprehensive project roadmaps, defining deliverables, timelines, and resource allocation for optimal results."
+        "title": "Strategy",
+        "description": "Developing customized plans by understanding client objectives, analyzing market trends, and creating effective approaches to achieve sustainable growth."
       },
       "designDevelopment": {
         "number": "03",
-        "title": "Design & Development",
-        "description": "Creating visually stunning designs and robust development solutions that align with your brand identity and business objectives."
+        "title": "Execution",
+        "description": "Implementing creative solutions with precision, delivering exceptional quality work, and ensuring client objectives are met through detailed execution."
       },
       "testingOptimization": {
         "number": "04",
-        "title": "Testing & Optimization",
-        "description": "Rigorous quality assurance, performance testing, and optimization to ensure flawless user experience across all platforms."
-      },
-      "launchDelivery": {
-        "number": "05",
-        "title": "Launch & Delivery",
-        "description": "Seamless project deployment with comprehensive training, documentation, and ongoing support for successful implementation."
-      },
-      "growthMaintenance": {
-        "number": "06",
-        "title": "Growth & Maintenance",
-        "description": "Continuous monitoring, updates, and strategic improvements to ensure long-term success and sustained growth."
+        "title": "Success",
+        "description": "Measuring performance against key metrics, celebrating achievements, optimizing strategies based on results, and establishing foundations for continued growth."
       }
+      
     },
     "detailedServices": {
       "consultation": {
