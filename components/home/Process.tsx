@@ -56,7 +56,7 @@ const Services = () => {
 
   
   return (
-    <section id="services" className="min-h-screen  rounded-t-4xl -mt-10 tracking-wide  ">
+    <section id="services" className="min-h-screen  rounded-t-4xl  tracking-wide  ">
      <div className="p-10">
         
      <AnimatedHeaderSection

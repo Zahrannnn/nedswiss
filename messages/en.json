@@ -209,6 +209,17 @@
           "termsOfService": "Terms of Service",
           "response": "We'll respond within 24 hours during business days."
         }
+      },
+      "blogInsights": {
+        "title": {
+          "prefix": "Dive into",
+          "highlight": "Our Blogs",
+          "suffix": "for Insights that Matter"
+        },
+        "subtitle": "Explore our latest insights, industry trends, and expert tips to stay ahead in the digital landscape",
+        "category": "Category",
+        "date": "Date",
+        "discoverButton": "Discover Blogs"
       }
     }
   },
@@ -380,6 +391,40 @@
         "Campaign Analytics & Optimization"
       ],
       "buttonText": "Drive Results"
+    }
+  },
+  "AboutPage": {
+    "discoverVision": {
+      "title": {
+        "part1": "Discover the Vision Behind"
+      },
+      "story": {
+        "title": "Our Story",
+        "paragraph1": "NEDSWISS helps businesses across Europe grow by combining creativity and technology to build a strong digital presence.",
+        "paragraph2": "Our experienced team delivers design, development, and marketing solutions that look great and achieve real results.",
+        "paragraph3": "We've supported 50+ clients, from startups to enterprises, in transforming their digital presence and driving success."
+      },
+      "whyChoose": {
+        "title": "Why Choose Us?",
+        "item1": "Award-winning creative team",
+        "item2": "Proven track record of success",
+        "item3": "Dedicated account management", 
+        "item4": "Fast turnaround times"
+      }
+    },
+    "cards": {
+      "vision": {
+        "title": "Vision",
+        "description": "To be the leading digital agency that transforms businesses through innovative design and strategic thinking."
+      },
+      "mission": {
+        "title": "Mission",
+        "description": "To deliver exceptional digital experiences that drive growth and create lasting value for our clients."
+      },
+      "values": {
+        "title": "Values",
+        "description": "Creativity, integrity, excellence, and client success are at the heart of everything we do."
+      }
     }
   }
 } 
