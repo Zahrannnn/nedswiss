@@ -4,7 +4,7 @@ import AnimatedHeaderSection from "../AnimatedHeaderSection";
 import { useMediaQuery } from "react-responsive";   
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useProcessSteps, type DetailedService } from "@/data";
+import { ProcessStep, useProcessSteps, type DetailedService } from "@/data";
 import { useTranslations } from "next-intl";
 
 const Services = () => {
@@ -67,7 +67,7 @@ const Services = () => {
         withScrollTrigger={true}
       />
      </div>
-      {servicesDataa.map((service: DetailedService, index: number) => (
+      {servicesDataa.map((service: ProcessStep, index: number) => (
         <div
           ref={(el) => (serviceRefs.current[index] = el as never)}
           key={index}
