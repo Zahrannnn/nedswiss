@@ -44,6 +44,8 @@ export default function ServicesScrollStack() {
               services={service.services}
               buttonText={service.buttonText}
               backgroundColor={service.backgroundColor}
+              gradientColors={service.gradientColors}
+              gradientDirection={service.gradientDirection}
               laptopImage={service.laptopImage}
               backgroundMask={service.backgroundMask}
               progress={scrollYProgress} 

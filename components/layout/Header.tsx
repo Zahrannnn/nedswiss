@@ -35,6 +35,9 @@ export const Header = () => {
 
   const currentLocale = getCurrentLocaleFromPath();
 
+  // Check if current page is homepage
+  const isHomePage = pathname === `/${currentLocale}` || pathname === '/' || pathname === `/${currentLocale}/`;
+
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
@@ -80,9 +83,15 @@ export const Header = () => {
     <header
       className={cn(
         'fixed w-full z-50 transition-all duration-300',
-        scrolled
-          ? 'bg-[#2a2a2a]/95 backdrop-blur-sm py-3'
-          : 'bg-[#2a2a2a] py-4'
+        isHomePage ? (
+          scrolled
+            ? 'bg-[#2a2a2a]/95 backdrop-blur-sm py-3'
+            : 'bg-[#2a2a2a] py-4'
+        ) : (
+          scrolled
+            ? 'bg-white/95 backdrop-blur-sm py-3 shadow-md'
+            : 'bg-transparent py-4'
+        )
       )}
     >
       <div className="container mx-auto px-4 lg:px-8">
@@ -99,7 +108,10 @@ export const Header = () => {
               height={40} 
               className="w-8 h-8 lg:w-10 lg:h-10"
             />
-            <span className="text-lg lg:text-xl font-light tracking-wide text-white">
+            <span className={cn(
+              "text-lg lg:text-xl font-light tracking-wide transition-colors duration-300",
+              isHomePage ? "text-white" : scrolled ? "text-gray-900" : "text-white"
+            )}>
               <span className='font-bold text-red-500'>NED</span><span className='text-red-500 font-light'>SWISS</span>
             </span>
           </Link>
@@ -114,10 +126,14 @@ export const Header = () => {
                     "relative text-sm font-medium transition-colors duration-200 py-2",
                     "after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:bg-red-500",
                     "after:transition-all after:duration-300 after:transform after:-translate-x-1/2",
-                    "hover:after:w-full hover:text-red-400",
+                    "hover:after:w-full hover:text-red-600",
                     pathname === `/${currentLocale}` || pathname === '/' 
-                      ? "text-red-400 after:w-full" 
-                      : "text-white"
+                      ? "text-red-600 after:w-full" 
+                      : isHomePage 
+                        ? "text-white" 
+                        : scrolled 
+                          ? "text-gray-900" 
+                          : "text-text-gray-900"
                   )}
                 >
                   {t('home')}
@@ -130,10 +146,14 @@ export const Header = () => {
                     "relative text-sm font-medium transition-colors duration-200 py-2",
                     "after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:bg-red-500",
                     "after:transition-all after:duration-300 after:transform after:-translate-x-1/2",
-                    "hover:after:w-full hover:text-red-400",
+                    "hover:after:w-full hover:text-red-600",
                     pathname.includes('/about') 
-                      ? "text-red-400 after:w-full" 
-                      : "text-white"
+                      ? "text-red-600 after:w-full" 
+                      : isHomePage 
+                        ? "text-white" 
+                        : scrolled 
+                          ? "text-gray-900" 
+                          : "text-text-gray-900"
                   )}
                 >
                   {t('about')}
@@ -146,10 +166,14 @@ export const Header = () => {
                     "relative text-sm font-medium transition-colors duration-200 py-2",
                     "after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:bg-red-500",
                     "after:transition-all after:duration-300 after:transform after:-translate-x-1/2",
-                    "hover:after:w-full hover:text-red-400",
+                    "hover:after:w-full hover:text-red-600",
                     pathname.includes('/services') 
-                      ? "text-red-400 after:w-full" 
-                      : "text-white"
+                      ? "text-red-600 after:w-full" 
+                      : isHomePage 
+                        ? "text-white" 
+                        : scrolled 
+                          ? "text-gray-900" 
+                          : "text-text-gray-900"
                   )}
                 >
                   {t('services')}
@@ -162,10 +186,14 @@ export const Header = () => {
                     "relative text-sm font-medium transition-colors duration-200 py-2",
                     "after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:bg-red-500",
                     "after:transition-all after:duration-300 after:transform after:-translate-x-1/2",
-                    "hover:after:w-full hover:text-red-400",
+                    "hover:after:w-full hover:text-red-600",
                     pathname.includes('/contact') 
-                      ? "text-red-400 after:w-full" 
-                      : "text-white"
+                      ? "text-red-600 after:w-full" 
+                      : isHomePage 
+                        ? "text-white" 
+                        : scrolled 
+                          ? "text-gray-900" 
+                          : "text-text-gray-900"
                   )}
                 >
                   {t('contact')}
@@ -183,8 +211,12 @@ export const Header = () => {
                 className={cn(
                   "text-sm font-medium transition-colors duration-200",
                   loc === currentLocale 
-                    ? "text-red-400" 
-                    : "text-white/60 hover:text-white"
+                    ? "text-red-600" 
+                    : isHomePage 
+                      ? "text-white/60 hover:text-white" 
+                      : scrolled 
+                        ? "text-gray-600 hover:text-gray-900" 
+                        : "text-text-gray-900"
                 )}
               >
                 {loc.toUpperCase()}
@@ -194,7 +226,14 @@ export const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white hover:text-red-400 focus:outline-none p-1"
+            className={cn(
+              "lg:hidden hover:text-red-600 focus:outline-none p-1 transition-colors duration-300",
+              isHomePage 
+                ? "text-white" 
+                : scrolled 
+                  ? "text-gray-900" 
+                  : "text-text-gray-900"
+            )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >

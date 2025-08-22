@@ -1,4 +1,10 @@
 {
+  "contact": {
+    "success": {
+      "title": "We guarantee a response within 24 hours.",
+      "message": "Our team is always available to answer your inquiries and help you achieve your goals. Don’t hesitate to reach out to us anytime."
+    }
+  },
   
   "Navigation": {
     "home": "Home",
@@ -190,6 +196,16 @@
           "termsOfService": "Terms of Service",
           "text": "By submitting this form, you agree to our Privacy Policy and Terms of Service.",
           "response": "We'll respond within 24 hours during business days."
+        },
+        "services": {
+          "graphicDesign": "Graphic Design",
+          "printing": "Printing",
+          "webDevelopment": "Web Development",
+          "socialMedia": "Social Media",
+          "3dInstallations": "3D Installations",
+          "seo": "SEO",
+          "software": "Software Solutions",
+          "advertising": "Advertising Solutions"
         }
       }
     },

@@ -9,6 +9,8 @@ export interface ServiceItem {
   services: string[];
   buttonText: string;
   backgroundColor: string;
+  gradientColors?: string[];
+  gradientDirection?: string;
   laptopImage: string;
   backgroundMask: string;
   link: string;
@@ -47,7 +49,9 @@ export const useServicesData = (): ServiceItem[] => {
         t('graphicDesignPrinting.services.2')
       ],
       buttonText: t('graphicDesignPrinting.buttonText'),
-      backgroundColor: "#5C00D3",
+      backgroundColor: "#51218F",
+      gradientColors: ["#51218F", "#8A38F5"],
+      gradientDirection: "to bottom",
       laptopImage: "/laptop-graphic-design.png",
       backgroundMask: "/mask-group.png",
       link: "/services/graphic-design",
@@ -69,7 +73,9 @@ export const useServicesData = (): ServiceItem[] => {
         t('webDevelopment.services.4')
       ],
       buttonText: t('webDevelopment.buttonText'),
-      backgroundColor: "#5D5FEF",
+      backgroundColor: "#5C00D3",
+      gradientColors: ["#353689", "#5D5FEF"],
+      gradientDirection: "to bottom",
       laptopImage: "/laptop-web-development.png",
       backgroundMask: "/mask-group.png",
       link: "/services/web-development",
@@ -94,6 +100,8 @@ export const useServicesData = (): ServiceItem[] => {
       ],
       buttonText: t('socialMediaMarketing.buttonText'),
       backgroundColor: "#E71B30",
+      gradientColors: ["#810F1B", "#E71B30"],
+      gradientDirection: "to bottom",
       laptopImage: "/rocket.png",
       backgroundMask: "/mask-group.png",
       link: "/services/social-media-management",
@@ -115,6 +123,8 @@ export const useServicesData = (): ServiceItem[] => {
       ],
       buttonText: t('digitalOffsetPrinting.buttonText'),
       backgroundColor: "#26A297",
+      gradientColors: ["#1A6660", "#26A297"],
+      gradientDirection: "to bottom",
       laptopImage: "/laptop-seo-services.png",
       backgroundMask: "/mask-group.png",
       link: "/services/seo-services",
@@ -136,6 +146,8 @@ export const useServicesData = (): ServiceItem[] => {
       ],
       buttonText: t('illuminatedSigns3d.buttonText'),
       backgroundColor: "#84259C",
+      gradientColors: ["#84259C", "#8B00D3"],
+      gradientDirection: "to right",
       laptopImage: "/laptop-advertising.png",
       backgroundMask: "/mask-group.png",
       link: "/services/advertising-solutions",
@@ -156,6 +168,8 @@ export const useServicesData = (): ServiceItem[] => {
       ],
       buttonText: t('paidAds.buttonText'),
       backgroundColor: "#45B6E1",
+      gradientColors: ["#26647B", "#45B6E1"],
+      gradientDirection: "to bottom",
       laptopImage: "/idea.png",
       backgroundMask: "/mask-group.png",
       link: "/services/advertising-solutions",
@@ -176,6 +190,8 @@ export const useServicesData = (): ServiceItem[] => {
       ],
       buttonText: t('seo.buttonText'),
       backgroundColor: "#88A28D",
+      gradientColors: ["#A58C10", "#E0BC07"],
+      gradientDirection: "to bottom",
       laptopImage: "/laptop-software-solution.png",
       backgroundMask: "/mask-group.png",
       link: "/services/software-solutions",

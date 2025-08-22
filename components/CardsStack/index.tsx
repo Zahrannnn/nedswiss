@@ -11,6 +11,8 @@ interface CardProps {
   services?: string[];
   buttonText?: string;
   backgroundColor?: string;
+  gradientColors?: string[];
+  gradientDirection?: string;
   progress: import('framer-motion').MotionValue<number>;
   range: number[];
   targetScale: number;
@@ -27,6 +29,8 @@ const Card = ({
   services = [], 
   buttonText, 
   backgroundColor = "#dc2626", 
+  gradientColors,
+  gradientDirection = "135deg",
   progress, 
   range, 
   targetScale,
@@ -57,16 +61,43 @@ const Card = ({
     ? t.raw('services') as string[]
     : services;
 
+  // Create gradient background style
+  const getBackgroundStyle = () => {
+    if (gradientColors && gradientColors.length >= 2) {
+      return {
+        background: `linear-gradient(${gradientDirection}, ${gradientColors.join(', ')})`,
+        scale,
+        top: `calc(-5vh + ${i * 25}px)`,
+      };
+    }
+    return {
+      backgroundColor: backgroundColor,
+      scale,
+      top: `calc(-5vh + ${i * 25}px)`,
+    };
+  };
+
   return (
     <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
       <motion.div 
-        style={{
-          backgroundColor: backgroundColor, 
-          scale, 
-          top:`calc(-5vh + ${i * 25}px)`,
-        }} 
-        className="flex relative h-[400px] w-[400px] sm:h-[500px] sm:w-[500px] md:w-[1300px] md:h-[600px] rounded-[25px] overflow-hidden origin-top"
+        style={getBackgroundStyle()}
+        className="flex relative h-[500px] w-[370px] sm:h-[500px] sm:w-[500px] md:w-[1300px] md:h-[600px] rounded-[25px] overflow-hidden origin-top"
       >
+        {/* Mobile Background Image - Only visible on mobile/tablet */}
+        {(laptopImage || illustration) && (
+          <div className="absolute inset-0 md:hidden">
+            <Image 
+              src={laptopImage || illustration || ''} 
+              alt="Service background"
+              fill
+              className="object-cover object-center opacity-20"
+              sizes="(max-width: 768px) 100vw, 0px"
+            />
+            {/* Overlay to ensure text readability */}
+            <div className="absolute inset-0 bg-black/30"></div>
+          </div>
+        )}
+
         {/* Content Section - Full width on mobile, left side on desktop */}
         <div className="w-full md:flex-1 p-6 sm:p-8 md:p-12 flex flex-col justify-center relative z-10">
           {/* Title */}
@@ -119,7 +150,7 @@ const Card = ({
           </motion.button>
         </div>
 
-        {/* Illustration Section - Hidden on mobile, right side on desktop */}
+        {/* Desktop Illustration Section - Only visible on desktop */}
         <div className="hidden md:flex flex-1 relative items-center justify-center p-8">
           {/* Custom Illustration */}
           {illustration && (
