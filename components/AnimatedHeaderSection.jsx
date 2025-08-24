@@ -87,12 +87,12 @@ const AnimatedHeaderSection = ({
               </h1>
             </div> */}
             <div className="flex flex-col justify-center items-center gap-12 pt-16 sm:gap-16">
-              <h1 className="text-4xl lg:text-5xl font-bold">{t('title')} <span className="text-red-500">{t('titleHighlight')}</span></h1>
+              <h1 className="text-4xl lg:text-5xl font-bold text-white">{t('title')} <span className="text-red-500">{t('titleHighlight')}</span></h1>
               
             </div>
           </div>
         </div>
-        <div className={`relative px-10 ${textColor}`}>
+        <div className={`relative px-10 text-white`}>
           <div className="absolute inset-x-0 " />
           {/* <div className="py-12 sm:py-16 text-end">
             <AnimatedTextLines

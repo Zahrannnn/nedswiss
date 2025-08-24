@@ -119,7 +119,7 @@ const Projects = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <h3 className="text-base lg:text-4xl font-semibold">{category.name}</h3>
+                  <h3 className="text-base lg:text-4xl font-semibold w-fit">{category.name}</h3>
                 </motion.button>
               ))}
             </div>

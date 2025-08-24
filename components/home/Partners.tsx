@@ -76,6 +76,7 @@ const Partners = () => {
           },
         ]}
       />
+      <div className="w-full h-10 " />
       <InfiniteMovingCards
         direction="left"
         speed="normal"

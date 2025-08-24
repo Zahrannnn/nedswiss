@@ -83,23 +83,23 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap gap-2 py-2 sm:gap-3 sm:py-3 md:gap-4 md:py-4 lg:gap-6",
+          "flex w-max min-w-full  flex-nowrap gap-2 py-2 sm:gap-3 sm:py-3 md:gap-4 md:py-4 lg:gap-6",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[240px] h-[140px] sm:w-[160px] sm:h-[100px] md:w-[200px] md:h-[220px] lg:w-[240px] lg:h-[140px] xl:w-[280px] xl:h-[160px] max-w-full shrink-0 rounded-xl sm:rounded-2xl bg-white/50 backdrop-blur-sm p-2 sm:p-3 md:p-4 dark:border-zinc-700 dark:bg-zinc-900/50 flex items-center justify-center group hover:scale-105 transition-transform duration-300"
+            className="relative w-[280px] h-auto  sm:w-[160px] sm:h-[100px] md:w-[200px] md:h-[220px] lg:w-[240px] lg:h-[140px] xl:w-[280px] xl:h-[160px] max-w-full shrink-0 rounded-xl sm:rounded-2xl bg-white/50 backdrop-blur-sm p-2 sm:p-3 md:p-4 dark:border-zinc-700 dark:bg-zinc-900/50 flex items-center justify-center group hover:scale-105 transition-transform duration-300"
             key={`${item.src}-${idx}`}
           >
-            <div className="relative w-full h-full flex items-center justify-center">
+            <div className="relative w-full h-auto flex items-center justify-center">
               <Image
                 src={item.src}
                 alt={item.alt}
-                width={ 200}
-                height={  120}
-                className="object-contain max-w-full max-h-full transition-all duration-300"
+                width={ 380}
+                height={  260}
+                className="object-contain transition-all duration-300"
                 priority={idx < 4} // Prioritize first 4 images for better performance
               />
             </div>

@@ -35,35 +35,34 @@ const Services = () => {
     });
   }, [servicesDataa]); 
 
-  // useGSAP(() => {
-  //   gsap.set("#services", {
-  //     scale: 1,
+  useGSAP(() => {
+    gsap.set("#services", {
+      scale: 0.7,
       
-  //   });
-  //   gsap.to("#services", {
-  //     scale: 1,
-  //     scrollTrigger: {
-  //       trigger: "#services",
-  //       start: "top 90%",
-  //       end: "top 40%",
-  //       scrub: true,
-  //       markers: false,
-  //     },
-  //     ease: "power1.inOut",
-  //   });
-  // }, []);
-
+    });
+    gsap.to("#services", {
+      scale: 1,
+      scrollTrigger: {
+        trigger: "#services",
+        start: "top 90%",
+        end: "top 40%",
+        scrub: true,
+        markers: false,
+      },
+      ease: "power1.inOut",
+    });
+  }, []);
 
   
   return (
-    <section id="services" className="min-h-screen  rounded-t-4xl  tracking-wide  ">
-     <div className="p-10">
+    <section id="services" className="min-h-screen rounded-t-4xl tracking-wide bg-[#252525]">
+     <div className="p-10 bg-[#252525] rounded-t-4xl">
         
      <AnimatedHeaderSection
         subTitle={"Behind the scene, Beyond the screen"}
         title={t('title')}
         text={t('subtitle')}
-        textColor={"text-black"}
+        textColor={"text-white"}
         withScrollTrigger={true}
       />
      </div>
@@ -71,27 +70,34 @@ const Services = () => {
         <div
           ref={(el) => (serviceRefs.current[index] = el as never)}
           key={index}
-          className="sticky px-10 pt-6 pb-12 text-red-500  bg-white border-t-2 border-gray-200  "
+          className="sticky px-10 pt-6 pb-12 text-red-500 border-t-2 border-gray-500 bg-[#252525]"
           style={
             isDesktop
               ? {
-                  top: `calc(10vh + ${index * 5}em)`,
-                  marginBottom: `${(servicesDataa.length - index - 1) * 5}rem`,
+                  top: `calc(10vh + ${index * 4}rem)`,
+                  marginBottom: `${(servicesDataa.length - index - 1) * 4}rem`,
+                  minHeight: '280px', // Consistent minimum height
                 }
-              : { top: 0 }
+              : { 
+                  top: 0,
+                  minHeight: '250px' // Consistent height on mobile too
+                }
           }
         >
-          <div className="flex items-center justify-center gap-4 font-light">
+          <div className="flex items-start justify-start gap-4 font-light h-full">
             <div className="flex justify-center gap-4 font-light h-full">
            
-                <h1 className="text-4xl lg:text-5xl font-bold border-r-2 border-gray-200 pr-4 h-full">0{index + 1}</h1>
+                <h1 className="text-4xl lg:text-5xl font-bold border-r-2 border-gray-200 pr-4 flex-shrink-0">
+                  0{index + 1}
+                </h1>
       
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 flex-1 max-w-4xl">
               <h2 className="text-3xl lg:text-4xl font-bold">{service.title}</h2>
-              <p className="text-lg leading-relaxed tracking-widest lg:text-xl text-black text-pretty">
-                {service.description}
-              </p>
-             
+              <div className="text-lg leading-relaxed tracking-wide lg:text-xl text-white">
+                <p className="line-clamp-4 lg:line-clamp-none">
+                  {service.description}
+                </p>
+              </div>
             </div>
             </div>
           </div>

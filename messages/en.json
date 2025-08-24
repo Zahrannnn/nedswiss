@@ -69,6 +69,176 @@
       "description": "We combine Swiss precision with digital innovation to deliver exceptional results for our clients.",
       "cta": "Learn More About Us"
     },
+    "Services": {
+      "title": "Everything You Need in",
+      "highlight": "One Place",
+      "subtitle": "We deliver innovative digital solutions that drive growth and exceed expectations",
+      "ourWorkIncludes": "Our Work Includes",
+      "tabs": {
+        "design": "Design",
+        "webDevelopment": "Web Development",
+        "socialMedia": "Social Media",
+        "digitalMarketing": "Digital Marketing"
+      },
+      "badges": {
+        "webDesign": "WEB DESIGN",
+        "professional": "PROFESSIONAL WEBSITE",
+        "creative": "CREATIVE",
+        "results": "RESULTS"
+      },
+      "design": {
+        "title": "Website Design",
+        "subtitle": "We craft modern, responsive, and user-friendly websites that reflect your brand and deliver seamless digital experiences across all devices.",
+        "description": "Our design approach combines aesthetics with functionality, ensuring your website not only looks stunning but also performs exceptionally well.",
+        "features": {
+          "ecommerce": "E-commerce Website",
+          "restaurant": "Restaurant Website",
+          "landing": "Landing Page",
+          "corporate": "Corporate Website"
+        },
+        "cta": "Your Brand, Our Passion",
+        "services": {
+          "branding": {
+            "title": "Brand Identity & Logo Design",
+            "description": "Create a memorable brand identity that resonates with your audience",
+            "features": {
+              "logoDesign": "Custom Logo Design",
+              "brandGuidelines": "Brand Guidelines",
+              "colorPalette": "Color Palette",
+              "typography": "Typography Selection"
+            }
+          },
+          "print": {
+            "title": "Print Design & Marketing Materials",
+            "description": "Professional print materials that make a lasting impression",
+            "features": {
+              "businessCards": "Business Cards",
+              "brochures": "Brochures & Flyers",
+              "posters": "Posters & Banners",
+              "packaging": "Packaging Design"
+            }
+          },
+          "digital": {
+            "title": "Digital Graphics & Social Media Assets",
+            "description": "Eye-catching digital designs for all your online needs",
+            "features": {
+              "socialMedia": "Social Media Graphics",
+              "webGraphics": "Web Graphics",
+              "banners": "Digital Banners",
+              "infographics": "Infographics"
+            }
+          }
+        },
+        "process": {
+          "title": "Our Design Process",
+          "steps": {
+            "discovery": "Discovery & Research",
+            "concept": "Concept Development",
+            "design": "Design & Refinement",
+            "delivery": "Delivery & Support"
+          },
+          "descriptions": {
+            "discovery": "Understanding your brand, audience, and objectives",
+            "concept": "Creating initial concepts and design directions",
+            "design": "Developing and refining the final design solution",
+            "delivery": "Final files delivery and ongoing design support"
+          }
+        }
+      },
+      "webDevelopment": {
+        "title": "System Development",
+        "subtitle": "We build tailored systems and software that perfectly fit your business needs, such as CRM platforms, HR systems, or any custom solutions that streamline operations and improve performance.",
+        "description": "Our development team creates scalable, secure, and efficient solutions using the latest technologies and best practices.",
+        "features": {
+          "crm": "CRM Systems",
+          "hr": "HR Management Systems",
+          "inventory": "Inventory & ERP Solutions",
+          "booking": "Booking & Reservation Systems"
+        },
+        "cta": "Your Brand, Our Passion",
+        "services": {
+          "websites": {
+            "title": "Custom Websites & Web Applications",
+            "description": "Modern, responsive websites built with cutting-edge technologies",
+            "features": {
+              "responsive": "Responsive Design",
+              "seo": "SEO Optimized",
+              "cms": "Content Management",
+              "ecommerce": "E-commerce Integration"
+            }
+          },
+          "systems": {
+            "title": "Business Management Systems",
+            "description": "Streamline your operations with custom business solutions",
+            "features": {
+              "crm": "Customer Relationship Management",
+              "inventory": "Inventory Management",
+              "hr": "Human Resources Systems",
+              "booking": "Booking & Scheduling"
+            }
+          },
+          "mobile": {
+            "title": "Mobile Applications",
+            "description": "Native and cross-platform mobile apps for iOS and Android",
+            "features": {
+              "crossPlatform": "Cross-Platform Development",
+              "native": "Native iOS & Android",
+              "pwa": "Progressive Web Apps",
+              "api": "API Integration"
+            }
+          }
+        },
+        "process": {
+          "title": "Development Process",
+          "steps": {
+            "planning": "Planning & Analysis",
+            "design": "UI/UX Design",
+            "development": "Development",
+            "testing": "Testing & QA",
+            "deployment": "Deployment & Launch"
+          },
+          "descriptions": {
+            "planning": "Requirements gathering and project planning",
+            "design": "User interface and experience design",
+            "development": "Coding and implementation",
+            "testing": "Quality assurance and testing",
+            "deployment": "Launch and ongoing support"
+          }
+        },
+        "features": "Key Features",
+        "technologies": "Technologies",
+        "stats": {
+          "projects": "Completed Projects",
+          "uptime": "System Uptime",
+          "support": "Support Available",
+          "satisfaction": "Client Satisfaction"
+        }
+      },
+      "socialMedia": {
+        "title": "Social Media Management",
+        "subtitle": "Strategic social media management that builds your brand presence and engages your audience across all platforms.",
+        "description": "We create compelling content and manage your social media presence to drive engagement and growth.",
+        "features": {
+          "contentCreation": "Content Creation",
+          "communityManagement": "Community Management",
+          "analytics": "Performance Analytics",
+          "strategy": "Social Media Strategy"
+        },
+        "cta": "Your Brand, Our Passion"
+      },
+      "digitalMarketing": {
+        "title": "Digital Marketing",
+        "subtitle": "Comprehensive digital marketing strategies that increase your online visibility and drive qualified traffic to your business.",
+        "description": "From SEO to paid advertising, we help you reach your target audience and achieve your business goals.",
+        "features": {
+          "seo": "Search Engine Optimization",
+          "ppc": "Pay-Per-Click Advertising",
+          "emailMarketing": "Email Marketing",
+          "contentMarketing": "Content Marketing"
+        },
+        "cta": "Your Brand, Our Passion"
+      }
+    },
     "process": {
       "title": "Our Precision Process",
       "description": "We follow a clear, proven methodology to deliver results that exceed expectations",

@@ -342,22 +342,22 @@
       "consultation": {
         "number": "01",
         "title": "Consultation",
-        "description": "Identifying client goals, analyzing brand position, proposing tailored strategies, and showing how our agency can help. We conduct thorough market research to understand your unique challenges and opportunities in the competitive landscape."
+        "description": "Identifying client goals, analyzing brand position, proposing tailored strategies, and showing how our agency can help. We conduct thorough market research to understand your unique challenges and opportunities."
       },
       "strategyPlanning": {
         "number": "02",
         "title": "Strategy",
-        "description": "Developing customized plans by understanding client objectives, analyzing market trends, and creating effective approaches to achieve sustainable growth."
+        "description": "Developing customized plans by understanding client objectives, analyzing market trends, and creating effective approaches to achieve sustainable growth and competitive advantage."
       },
       "designDevelopment": {
         "number": "03",
         "title": "Execution",
-        "description": "Implementing creative solutions with precision, delivering exceptional quality work, and ensuring client objectives are met through detailed execution."
+        "description": "Implementing creative solutions with precision, delivering exceptional quality work, and ensuring client objectives are met through detailed execution and continuous refinement."
       },
       "testingOptimization": {
         "number": "04",
         "title": "Success",
-        "description": "Measuring performance against key metrics, celebrating achievements, optimizing strategies based on results, and establishing foundations for continued growth."
+        "description": "Measuring performance against key metrics, celebrating achievements, optimizing strategies based on results, and establishing foundations for continued growth and success."
       }
       
     },
@@ -484,5 +484,174 @@
       "discoverButton": "Discover Blogs"
     }
     
+  },
+  "Services": {
+    "title": "Digital Services that Drive",
+    "highlight": "Results",
+    "subtitle": "Comprehensive digital solutions tailored for Swiss businesses. From creative design to technical development, we handle everything with precision and excellence.",
+    "tabs": {
+      "design": "Graphic Design",
+      "webDevelopment": "Web Development", 
+      "socialMedia": "Social Media",
+      "digitalMarketing": "Digital Marketing"
+    },
+    "design": {
+      "title": "Graphic Design & Branding",
+      "subtitle": "Visual identity that makes an impact",
+      "description": "We create compelling visual narratives that resonate with your audience and strengthen your brand identity across all touchpoints.",
+      "features": {
+        "ecommerce": "Brand Identity & Logo Design",
+        "restaurant": "Print Design & Marketing Materials",
+        "landing": "Digital Graphics & Social Media Assets",
+        "corporate": "Packaging & Product Design"
+      },
+      "cta": "Start Your Design Project"
+    },
+    "socialMedia": {
+      "title": "Social Media Management",
+      "subtitle": "Engaging social presence and strategy",
+      "description": "We build and manage your social media presence with strategic content creation, community engagement, and data-driven growth tactics.",
+      "features": {
+        "contentCreation": "Content Creation & Planning",
+        "communityManagement": "Community Management",
+        "analytics": "Analytics & Reporting",
+        "strategy": "Social Media Strategy"
+      },
+      "cta": "Boost Your Social Presence"
+    },
+    "digitalMarketing": {
+      "title": "Digital Marketing Solutions",
+      "subtitle": "Strategic campaigns that convert",
+      "description": "We develop comprehensive digital marketing strategies that drive traffic, generate leads, and increase conversions for your business.",
+      "features": {
+        "seo": "Search Engine Optimization (SEO)",
+        "ppc": "Pay-Per-Click Advertising (PPC)",
+        "emailMarketing": "Email Marketing Campaigns",
+        "contentMarketing": "Content Marketing Strategy"
+      },
+      "cta": "Grow Your Business Online"
+    },
+    "webDevelopment": {
+      "header": {
+        "title": "We deliver innovative digital solutions that drive growth and exceed expectations"
+      },
+      "websiteDesign": {
+        "title": "Website Design",
+        "description": "We craft modern, responsive, and user-friendly websites that reflect your brand and deliver seamless digital experiences across all devices.",
+        "workIncludes": {
+          "title": "Our Work Includes",
+          "items": {
+            "ecommerce": "E-Commerce Website",
+            "restaurant": "Restaurant Website",
+            "landing": "Landing Page",
+            "corporate": "Corporate Website"
+          }
+        },
+        "cta": {
+          "text": "Your Brand, Our Passion"
+        }
+      },
+      "systemDevelopment": {
+        "title": "System Development",
+        "description": "We build tailored systems and software that perfectly fit your business needs, such as CRM platforms, HR systems, or any custom solutions that streamline operations and improve performance.",
+        "workIncludes": {
+          "title": "Our Work Includes",
+          "items": {
+            "crm": "CRM Systems",
+            "hr": "HR Management Systems",
+            "inventory": "Inventory & ERP Solutions",
+            "booking": "Booking & Reservation Systems"
+          }
+        },
+        "cta": {
+          "text": "Your Brand, Our Passion"
+        }
+      },
+      "expertises": {
+        "title": "Expertises",
+        "tabs": {
+          "nedx": "NEDX",
+          "nedswiss": "NED SWISS"
+        },
+        "nedx": {
+          "title": "SaaS CRM for Moving & Relocation – Enterprise Solution",
+          "description": "NEDX CRM is a tailored SaaS platform that transforms how moving and relocation companies manage their business - from customer contact and offers to scheduling, secure payments, and financial analysis - all in one intelligent system. Revolutionizing Business Management: A tailored CRM Platform for the Moving Industry.",
+          "subtitle": "Revolutionizing Business Management: A Tailored CRM Platform for Growing Enterprises",
+          "awards": {
+            "title": "Awards",
+            "items": [
+              "2025 Global Tech Innovation - Gold in Business Solutions",
+              "2024 Digital Excellence Award - Silver in User Experience"
+            ]
+          },
+          "expertises": {
+            "title": "Expertises",
+            "items": [
+              "Customer & Lead Management",
+              "Offer & Invoice Automation (PDF, Email Approvals)",
+              "Task & Employee Management with Roles & Permissions",
+              "Secure Online Payments (Stripe)",
+              "Scheduling & Dispatching (Google Calendar Integration)",
+              "Financial Tools & Reporting",
+              "Multi-language Support & Real-time Notifications"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies",
+            "items": [
+              "ASP.NET Core (.NET)",
+              "C# Backend",
+              "Entity Framework Core",
+              "RESTful Web API",
+              "Stripe (Payments)",
+              "Google Calendar API",
+              "QuestPDF (Document Generation)",
+              "SignalR (Real-Time Notifications)",
+              "React.js"
+            ]
+          },
+          "conclusion": "Built with a secure, multi-tenant architecture, NEDX CRM empowers both platform owners and moving companies to operate efficiently. Super Admins can manage subscriptions, track revenue, and monitor company performance."
+        },
+        "nedswiss": {
+          "title": "NED SWISS – The All-in-One Management Platform for Modern Agencies",
+          "description": "NED SWISS is an advanced management platform designed specifically for agencies to streamline client management, track revenues and expenses, assign employee tasks, interact with an AI assistant, and analyze profits and performance through precise dashboards and visual reports. A breakthrough in business management – everything you need in one smart system.",
+          "subtitle": "Revolutionizing Business Management A Tailored CRM Platform for Growing Enterprises",
+          "awards": {
+            "title": "Awards",
+            "items": [
+              "2025 Global Tech Innovation - Gold in Business Solutions",
+              "2024 Digital Excellence Award - Silver in User Experience"
+            ]
+          },
+          "expertises": {
+            "title": "Expertises",
+            "items": [
+              "Client & Lead Management – A complete view of all customer interactions",
+              "Offer & Invoice Automation – Generate and send PDF documents with email approval workflows.",
+              "Task & Employee Management – Assign roles and permissions to ensure efficient workflows.",
+              "Secure Online Payments (Stripe)",
+              "AI Assistant – Smart decision support for faster and better outcomes.",
+              "Financial Tools & Reporting",
+              "Multi-language Support & Real-time Notifications"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies",
+            "items": [
+              "ASP.NET Core (.NET)",
+              "C# Backend",
+              "Entity Framework Core",
+              "RESTful Web API",
+              "Stripe (Payments)",
+              "Google Calendar API",
+              "QuestPDF (Document Generation)",
+              "SignalR (Real-Time Notifications)",
+              "React.js"
+            ]
+          },
+          "conclusion": "With its robust and secure multi-tenant architecture, NED SWISS empowers both platform owners and agencies to operate with unmatched efficiency. Super Admins can manage subscriptions, track revenues, and monitor company performance, while agencies gain powerful tools to manage clients, offers, payments, and employees—all in one place."
+        }
+      }
+    }
   }
 }
