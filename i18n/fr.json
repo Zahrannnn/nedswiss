@@ -1,4 +1,8 @@
 {
+  "SplashScreen": {
+    "tagline": "Excellence Numérique, Précision Suisse",
+    "loading": "Chargement"
+  },
   "Navigation": {
     "home": "Accueil",
     "about": "À propos",
@@ -423,5 +427,16 @@
         ]
       }
     }
+  },
+  "SplashScreen": {
+    "mainText": "Excellence digitale, Précision suisse",
+    "subtitle": "Transformer les idées en réalité digitale",
+    "loading": "Chargement de l'expérience",
+    "tagline": "Excellence digitale, Précision suisse",
+    "digitalTransformation": "TRANSFORMATION DIGITALE",
+    "digitalExcellence": "Excellence digitale",
+    "precision": "Précision",
+    "innovation": "Innovation",
+    "excellence": "Excellence"
   }
 }

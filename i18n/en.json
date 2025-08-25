@@ -1,4 +1,8 @@
 {
+  "SplashScreen": {
+    "tagline": "Digital Excellence, Swiss Precision",
+    "loading": "Loading"
+  },
   "contact": {
     "success": {
       "title": "We guarantee a response within 24 hours.",
@@ -655,8 +659,10 @@
     }
   },
   "SplashScreen": {
+    "mainText": "Digital Excellence, Swiss Precision",
+    "subtitle": "Transforming Ideas into Digital Reality",
+    "loading": "Loading Experience",
     "tagline": "Digital Excellence, Swiss Precision",
-    "loading": "Loading...",
     "digitalTransformation": "DIGITAL TRANSFORMATION",
     "digitalExcellence": "Digital Excellence",
     "precision": "Precision",

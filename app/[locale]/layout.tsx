@@ -4,9 +4,10 @@ import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { getDirection, locales, type Locale } from '@/app/i18n';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
 import { LenisProvider } from '@/lib/providers';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import LayoutWrapper from '@/components/layout/LayoutWrapper';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -42,11 +43,13 @@ export default async function RootLayout({
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           <LenisProvider>
-            <Header />
-            <main className="pt-16">
-              {children}
-            </main>
-            <Footer />
+            <LayoutWrapper>
+              <Header />
+              <main className="pt-16">
+                {children}
+              </main>
+              <Footer />
+            </LayoutWrapper>
           </LenisProvider>
         </NextIntlClientProvider>
       </body>

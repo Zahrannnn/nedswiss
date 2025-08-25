@@ -1,4 +1,8 @@
 {
+  "SplashScreen": {
+    "tagline": "Digitale Exzellenz, Schweizer Präzision",
+    "loading": "Laden"
+  },
   "contact": {
     "success": {
       "title": "Vielen Dank für Ihre Nachricht!",
@@ -487,5 +491,16 @@
       "date": "Datum",
       "discoverButton": "Blogs entdecken"
     }
+  },
+  "SplashScreen": {
+    "mainText": "Digitale Exzellenz, Schweizer Präzision",
+    "subtitle": "Ideen in digitale Realität verwandeln",
+    "loading": "Erlebnis wird geladen",
+    "tagline": "Digitale Exzellenz, Schweizer Präzision",
+    "digitalTransformation": "DIGITALE TRANSFORMATION",
+    "digitalExcellence": "Digitale Exzellenz",
+    "precision": "Präzision",
+    "innovation": "Innovation",
+    "excellence": "Exzellenz"
   }
 }
