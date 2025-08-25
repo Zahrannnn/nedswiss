@@ -9,7 +9,6 @@
       "message": "Our team is always available to answer your inquiries and help you achieve your goals. Don’t hesitate to reach out to us anytime."
     }
   },
-  
   "Navigation": {
     "home": "Home",
     "about": "About",
@@ -29,7 +28,7 @@
     "projectGallery": "Project Gallery",
     "blog": "Blog",
     "contact": "Contact",
-      "letsTalk": "LET'S TALK",
+    "letsTalk": "LET'S TALK",
     "careers": "Careers",
     "clientPortal": "Client Portal",
     "privacyPolicy": "Privacy Policy",
@@ -42,13 +41,13 @@
       "subtitle": "We follow a precise process to deliver exceptional results for our clients."
     },
     "partnersHeaders": {
-    "title": "Our Trusted",
-    "titleHighlight": "Partners"
-  },
-  "servicesHeader": {
-    "title": "Digital Services that Drive ",
-    "titleHighlight": "Results"
-  },
+      "title": "Our Trusted",
+      "titleHighlight": "Partners"
+    },
+    "servicesHeader": {
+      "title": "Digital Services that Drive ",
+      "titleHighlight": "Results"
+    },
     "whyUs": {
       "title": "Why us ?",
       "quickDelivery": "We deliver projects quickly—without compromising on quality.",
@@ -59,10 +58,8 @@
       "platform": {
         "name": "NED Swiss Software",
         "intro": "NED Swiss Software is a platform that allows you to manage your projects and tasks efficiently."
-        
-    }
-  },
-    
+      }
+    },
     "meta": {
       "title": "NED Swiss | Digital Excellence, Swiss Precision",
       "description": "NED Swiss is a digital agency delivering exceptional web development, design, and digital marketing services with Swiss precision and excellence."
@@ -137,7 +134,7 @@
         ]
       }
     },
-   "cta": {
+    "cta": {
       "title": {
         "prefix": "Ready to Start Your",
         "highlight": "Project",
@@ -166,7 +163,6 @@
         }
       },
       "form": {
-        
         "title": "Send a Message",
         "fields": {
           "firstName": "First Name *",
@@ -252,14 +248,13 @@
       "title": "Digital Services that Drive Results",
       "subtitle": "Comprehensive digital solutions tailored for Swiss businesses. From creative design to technical development, we handle everything with precision and excellence."
     }
-   
   },
   "Projects": {
     "title": "Our",
     "titleHighlight": "Projects",
     "categories": {
       "printing": "Printing Service",
-      "graphic": "Graphic Design", 
+      "graphic": "Graphic Design",
       "web": "Web Development",
       "social": "Social Media Management",
       "digital": "Digital Marketing",
@@ -274,7 +269,7 @@
         "subtitle": "Complete visual identity solutions from logos to large-format printing and illuminated signage.",
         "services": [
           "Logo & Brand Identity Design",
-          "Business Cards & Brochures", 
+          "Business Cards & Brochures",
           "Digital & Offset Printing"
         ],
         "buttonText": "Designing Tomorrow Today"
@@ -363,7 +358,6 @@
         "title": "Success",
         "description": "Measuring performance against key metrics, celebrating achievements, optimizing strategies based on results, and establishing foundations for continued growth and success."
       }
-      
     },
     "detailedServices": {
       "consultation": {
@@ -458,7 +452,7 @@
         "title": "Why Choose Us?",
         "item1": "Award-winning creative team",
         "item2": "Proven track record of success",
-        "item3": "Dedicated account management", 
+        "item3": "Dedicated account management",
         "item4": "Fast turnaround times"
       }
     },
@@ -487,16 +481,15 @@
       "date": "Date",
       "discoverButton": "Discover Blogs"
     }
-    
   },
   "Services": {
     "title": "Digital Services that Drive",
     "highlight": "Results",
     "subtitle": "Comprehensive digital solutions tailored for Swiss businesses. From creative design to technical development, we handle everything with precision and excellence.",
     "tabs": {
-      "design": "Graphic Design",
-      "webDevelopment": "Web Development", 
-      "socialMedia": "Social Media",
+      "design": "Design & Printing",
+      "webDevelopment": "Web Development",
+      "socialMedia": "3D installation & Illuminated Signs",
       "digitalMarketing": "Digital Marketing"
     },
     "design": {
@@ -522,18 +515,6 @@
         "strategy": "Social Media Strategy"
       },
       "cta": "Boost Your Social Presence"
-    },
-    "digitalMarketing": {
-      "title": "Digital Marketing Solutions",
-      "subtitle": "Strategic campaigns that convert",
-      "description": "We develop comprehensive digital marketing strategies that drive traffic, generate leads, and increase conversions for your business.",
-      "features": {
-        "seo": "Search Engine Optimization (SEO)",
-        "ppc": "Pay-Per-Click Advertising (PPC)",
-        "emailMarketing": "Email Marketing Campaigns",
-        "contentMarketing": "Content Marketing Strategy"
-      },
-      "cta": "Grow Your Business Online"
     },
     "webDevelopment": {
       "header": {
@@ -655,6 +636,296 @@
           },
           "conclusion": "With its robust and secure multi-tenant architecture, NED SWISS empowers both platform owners and agencies to operate with unmatched efficiency. Super Admins can manage subscriptions, track revenues, and monitor company performance, while agencies gain powerful tools to manage clients, offers, payments, and employees—all in one place."
         }
+      }
+    },
+    "GraphicDesign": {
+      "header": {
+        "title": "We design and deliver cutting-edge digital experiences that empower businesses to grow, succeed, and go beyond limits. "
+      },
+      "websiteDesign": {
+        "title": "Graphic Design & Printing",
+        "description": "We create unique and impactful graphic designs that bring your brand to life, leaving a lasting impression across print, digital, and social platforms.",
+        "workIncludes": {
+          "title": "Our Work Includes",
+          "items": {
+            "ecommerce": "Logo & Brand Identity",
+            "restaurant": "Business Cards",
+            "landing": "Flyers & Brochures",
+            "corporate": "Social Media Designs"
+          }
+        },
+        "cta": {
+          "text": "Your Brand, Our Passion"
+        }
+      },
+      "systemDevelopment": {
+        "title": "Offset Printing",
+        "description": "We deliver high-quality offset printing solutions that ensure precision, consistency, and vibrant results—perfect for large volumes of magazines, catalogs, packaging, and marketing materials that elevate your brand’s presence.",
+        "workIncludes": {
+          "title": "Our Work Includes",
+          "items": {
+            "crm": "Posters",
+            "hr": "Business Cards",
+            "inventory": "Catalogs",
+            "booking": "Brochures"
+          }
+        },
+        "cta": {
+          "text": "Your Brand, Our Passion"
+        }
+      },
+      "expertises": {
+        "title": "Expertises",
+        "tabs": {
+          "businessCards": "Business Cards",
+          "flyers": "Flyers",
+          "logo": "logo"
+        },
+        "businessCards": {
+          "title": "Promotional Business Card Design for Bella Mila Restaurant",
+          "description": "An innovative business card was designed for Bella Mila, a pizza-specialized restaurant, to serve as an effective marketing tool that goes beyond simply displaying contact information. The primary goal of the design is to encourage customers to order and boost sales by integrating an attractive promotional offer directly into the card.",
+          "subtitle": "The card includes all the information a customer needs to make a purchase decision and take advantage of the offer:",
+          "mainOffer":{
+            "title": "Main Offer",
+            "items": [
+              "Instant discount of CHF 10.",
+              "Voucher worth CHF 10."
+            ]
+          },
+          "offerConditions":{
+            "title": "Offer Conditions",
+            "description": "Minimum order: CHF 30\nImportant note: Vouchers cannot be combined with other offers.\nExpiration date: Offer valid until December 31, 2025"
+          },
+          "contactDetails":{
+            "title": "Contact & Ordering Information",
+            "description": "To redeem the offer: valid when ordering by phone.\nPhone number: 056 222 01 02\nAddress: Bruggerstrasse 173, 5400 Baden"
+          },
+          "footer":{
+            "title": "Footer",
+            "description": "The design features a dark textured background to highlight the vibrant restaurant logo and a tempting pizza image. Red and white accents are strategically applied to emphasize the offer details and contact information, ensuring readability and making the card a memorable marketing tool in the hands of every customer."
+          },
+          
+          "expertises": {
+            "title": "Expertises",
+            "items": [
+              "Customer & Lead Management",
+              "Offer & Invoice Automation (PDF, Email Approvals)",
+              "Task & Employee Management with Roles & Permissions",
+              "Secure Online Payments (Stripe)",
+              "Scheduling & Dispatching (Google Calendar Integration)",
+              "Financial Tools & Reporting",
+              "Multi-language Support & Real-time Notifications"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies",
+            "items": [
+              "ASP.NET Core (.NET)",
+              "C# Backend",
+              "Entity Framework Core",
+              "RESTful Web API",
+              "Stripe (Payments)",
+              "Google Calendar API",
+              "QuestPDF (Document Generation)",
+              "SignalR (Real-Time Notifications)",
+              "React.js"
+            ]
+          },
+          "conclusion": "Built with a secure, multi-tenant architecture, NEDX CRM empowers both platform owners and moving companies to operate efficiently. Super Admins can manage subscriptions, track revenue, and monitor company performance."
+        },
+        "flyers": {
+          "title": "Visual Identity & Promotional Flyer Design for Coiffeur Adam",
+          "description": "An innovative business card was designed for Bella Mila, a pizza-specialized restaurant, to serve as an effective marketing tool that goes beyond simply displaying contact information. The primary goal of the design is to encourage customers to order and boost sales by integrating an attractive promotional offer directly into the card.",
+          "subtitle": "The card includes all the information a customer needs to make a purchase decision and take advantage of the offer:",
+          "mainOffer":{
+            "title": "Main Offer",
+            "items": [
+              "Instant discount of CHF 10.",
+              "Voucher worth CHF 10."
+            ]
+          },
+          "offerConditions":{
+            "title": "Offer Conditions",
+            "description": "Minimum order: CHF 30\nImportant note: Vouchers cannot be combined with other offers.\nExpiration date: Offer valid until December 31, 2025"
+          },
+          "contactDetails":{
+            "title": "Contact & Ordering Information",
+            "description": "To redeem the offer: valid when ordering by phone.\nPhone number: 056 222 01 02\nAddress: Bruggerstrasse 173, 5400 Baden"
+          },
+          "footer":{
+            "title": "Footer",
+            "description": "At Coiffeur Adam it’s not just about the service itself, but about the fine details that bring out your natural beauty in the best way. Our eyebrow trimming is done with care and professionalism, giving you a balanced and elegant look while enjoying a relaxing experience in a refined atmosphere. This integrated visual design reflects our philosophy of combining quality with sophistication, allowing clients to feel luxury and attention to detail from the very first moment—even before stepping into the salon."
+          },
+          
+          "expertises": {
+            "title": "Expertises",
+            "items": [
+              "Customer & Lead Management",
+              "Offer & Invoice Automation (PDF, Email Approvals)",
+              "Task & Employee Management with Roles & Permissions",
+              "Secure Online Payments (Stripe)",
+              "Scheduling & Dispatching (Google Calendar Integration)",
+              "Financial Tools & Reporting",
+              "Multi-language Support & Real-time Notifications"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies",
+            "items": [
+              "ASP.NET Core (.NET)",
+              "C# Backend",
+              "Entity Framework Core",
+              "RESTful Web API",
+              "Stripe (Payments)",
+              "Google Calendar API",
+              "QuestPDF (Document Generation)",
+              "SignalR (Real-Time Notifications)",
+              "React.js"
+            ]
+          },
+          "conclusion": "Built with a secure, multi-tenant architecture, NEDX CRM empowers both platform owners and moving companies to operate efficiently. Super Admins can manage subscriptions, track revenue, and monitor company performance."
+        },
+        "logo": {
+          "title": "Professional Presentation of the La Delizia Restaurant Logo Identity",
+          "description": "Main Concept: The Joy of Italian Authenticity with a Modern Touch",
+          "subtitle": "The name \"La Delizia\" means \"delight\" or \"joy\" in Italian, which perfectly captures the essence of the brand identity. The logo is designed to reflect an unforgettable dining experience, conveying a clear message: a restaurant that blends the authenticity of traditional Italian cuisine with a modern, elegant atmosphere.",
+          "subtitle2": "The logo is built upon three core elements that work together to form a strong and distinctive identity:",
+          "keyElements": {
+            "title": "Key Elements of the Logo",
+            "items": [
+              {
+                "title": "1. Artistic Italian Flag",
+                "description": "Brushstroke style instead of a rigid flag. Symbolizes passion, creativity, and authenticity—each dish as a crafted piece of art."
+              },
+              {
+                "title": "2. Smart Typography Duo",
+                "description": "La Delizia: Modern, lowercase sans-serif → elegance, simplicity, and approachability.\nPizzeria – Ristorante: Classic serif → tradition, heritage, and credibility."
+              }
+            ]
+          },
+          "footer":{
+            "title": "Integrated Message",
+            "description": "The logo blends tradition and modernity: authentic Italian flavors, presented with elegance and quality, creating a joyful and memorable dining experience."
+          },
+          "conclusion": "With its robust and secure multi-tenant architecture, NED SWISS empowers both platform owners and agencies to operate with unmatched efficiency. Super Admins can manage subscriptions, track revenues, and monitor company performance, while agencies gain powerful tools to manage clients, offers, payments, and employees—all in one place."
+        }
+      }
+    },
+    "digitalMarketing": {
+      "header": {
+        "title": "We create digital experiences that inspire people, strengthen brands, and help businesses grow with confidence"
+      },
+      "websiteDesign": {
+        "title": "Website Design",
+        "description": "We craft modern, responsive, and user-friendly websites that reflect your brand and deliver seamless digital experiences across all devices.",
+        "workIncludes": {
+          "title": "Our Work Includes",
+          "items": {
+            "ecommerce": "Account Creation & Branding ",
+            "restaurant": "Content Creation & Scheduling ",
+            "landing": "Community Management",
+            "corporate": "Creative Designs ",
+            "paidAds": "Paid Ads"
+          }
+        },
+        "cta": {
+          "text": "Your Brand, Our Passion"
+        }
+      },
+      "expertises": {
+        "title": "Expertises",
+        "tabs": {
+          "seo": "SEO",
+          "socialMedia": "Social Media",
+          "paidAds": "Paid Ads"
+        },
+        "seo": {
+          "title": "From Distinction to Power This is Your Brand’s Journey",
+          "description": "In today’s crowded market, how can you make sure you’re not just another option?",
+          "subtitle": "At NED SWISS, we don’t just help you stand out. We build with you a strong and influential brand that gives you the power to grow and dominate.",
+          "stageOne": {
+            "title": "Stage One: Distinction:",
+            "description": "We start here with you: helping you stand out from competitors—just like the bright red balloon in a sky full of shadows. Through strong visual identity and strategy, we make your brand visible and unique. But distinction isn’t the final goal… it’s just the beginning."
+            
+          },
+          "stageTwo": {
+            "title": "Stage Two: Power",
+            "description": "We take your brand from being just a colorful balloon to becoming the “king” that dominates the chessboard.    At NED SWISS, we don’t just help you stand out. We build    with you a strong and influential brand that gives you the    power to grow and dominate. The design balances a modern background with striking visuals of the featured product. Carefully placed color accents enhance readability of the offer and call-to-action, creating a promotional piece that is both stylish and impactful."
+          },
+          "technologies": {
+            "title": "Technologies",
+            "items": [
+              "ASP.NET Core (.NET)",
+              "C# Backend",
+              "Entity Framework Core",
+              "RESTful Web API",
+              "Stripe (Payments)",
+              "Google Calendar API",
+              "QuestPDF (Document Generation)",
+              "SignalR (Real-Time Notifications)",
+              "React.js"
+            ]
+          },
+          "conclusion": "Built with a secure, multi-tenant architecture, NEDX CRM empowers both platform owners and moving companies to operate efficiently. Super Admins can manage subscriptions, track revenue, and monitor company performance."
+        },
+        "socialMedia": {
+            "title": "The Three Dimensional Traffic Light Strategy:",
+            "description": "The Three Dimensional Traffic Light Strategy is a powerful approach to digital marketing that helps businesses grow and dominate their market. It combines three key elements: content creation, community management, and paid ads, to create a comprehensive and effective marketing strategy.",
+          "subtitle": "At NED SWISS, we don’t just manage accounts—we drive their success. The German word “Steuern” means management, leadership, guidance, and control all at once. Just like an intelligent traffic light system that organizes the busiest intersections, we implement a strategic system that transforms chaos into a streamlined flow of results.",
+          "stageOne": {
+            "title": "Yellow Light: Prepare & Optimize",
+            "description": "Create content, design visuals, target precisely, and test for best results."
+            
+          },
+          "stageTwo": {
+            "title": "Green Light: Execute & Drive",
+            "description": "Launch campaigns, manage ads, engage audiences, and drive traffic to your website or store."
+          },
+          "expertises": {
+            "title": "Expertises",
+            "items": [
+              "Client & Lead Management – A complete view of all customer interactions",
+              "Offer & Invoice Automation – Generate and send PDF documents with email approval workflows.",
+              "Task & Employee Management – Assign roles and permissions to ensure efficient workflows.",
+              "Secure Online Payments (Stripe)",
+              "AI Assistant – Smart decision support for faster and better outcomes.",
+              "Financial Tools & Reporting",
+              "Multi-language Support & Real-time Notifications"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies",
+            "items": [
+              "ASP.NET Core (.NET)",
+              "C# Backend",
+              "Entity Framework Core",
+              "RESTful Web API",
+              "Stripe (Payments)",
+              "Google Calendar API",
+              "QuestPDF (Document Generation)",
+              "SignalR (Real-Time Notifications)",
+              "React.js"
+            ]
+          },
+          "conclusion": "With its robust and secure multi-tenant architecture, NED SWISS empowers both platform owners and agencies to operate with unmatched efficiency. Super Admins can manage subscriptions, track revenues, and monitor company performance, while agencies gain powerful tools to manage clients, offers, payments, and employees—all in one place."
+        },
+        "paidAds": {
+          "title": "In a crowded world, don’t wait for opportunities... Build your own path to them",
+          "description": "Many brands have strong products and services, yet get lost in the noise of the digital space. Reaching the right customer doesn’t have to be a long or uncertain process. With Paid Ads, you can connect directly and efficiently.At NED SWISS, we build this path in three structured step",
+          "subtitle": "At NED SWISS, we build this path in three structured steps: ",
+          "subtitle2": "Strategic Planning Market research and precise audience targeting. Creative Execution Campaigns across Google, Meta, LinkedIn, and TikTok with impactful visuals and messaging. Continuous Optimization Real time monitoring, A/B testing, and data driven adjustments for maximum results",
+          "keyBenefits": {
+            "title": "Key Benefits",
+            "items": [
+              "Fast and direct customer reach.",
+              "Accurate targeting with efficient budget use.",
+              "Full control over message and spending.",
+              "Measurable growth with clear ROI.",
+              "Bright accent colors are used sparingly against a neutral backdrop to guide the viewer’s eye toward the offer details and contact points."
+            ]
+          }
+        }
+
       }
     }
   },

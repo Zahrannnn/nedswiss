@@ -1,247 +1,589 @@
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const DigitalMarketingTab = () => {
-  const t = useTranslations('Services.digitalMarketing');
+  const t = useTranslations("Services.digitalMarketing");
+  const [activeTab, setActiveTab] = useState("nedx");
+  
+  // Refs for GSAP animations
+  const containerRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const websiteDesignRef = useRef<HTMLDivElement>(null);
+  const systemDevRef = useRef<HTMLDivElement>(null);
+  const expertisesRef = useRef<HTMLDivElement>(null);
 
-  const marketingServices = [
-    {
-      icon: '🔍',
-      title: 'Search Engine Optimization',
-      description: 'Improve your organic search rankings and visibility',
-      features: ['Keyword Research', 'On-Page SEO', 'Technical SEO', 'Link Building'],
-      metrics: ['Organic Traffic +150%', 'Keyword Rankings +85%', 'Click-Through Rate +40%']
-    },
-    {
-      icon: '💰',
-      title: 'Pay-Per-Click Advertising',
-      description: 'Targeted advertising campaigns for immediate results',
-      features: ['Google Ads', 'Facebook Ads', 'LinkedIn Ads', 'Campaign Optimization'],
-      metrics: ['ROAS 400%+', 'Cost Per Click -30%', 'Conversion Rate +60%']
-    },
-    {
-      icon: '📧',
-      title: 'Email Marketing',
-      description: 'Nurture leads and retain customers with targeted campaigns',
-      features: ['Email Automation', 'List Segmentation', 'A/B Testing', 'Performance Analytics'],
-      metrics: ['Open Rate +25%', 'Click Rate +35%', 'Revenue +120%']
-    },
-    {
-      icon: '📝',
-      title: 'Content Marketing',
-      description: 'Engage your audience with valuable, relevant content',
-      features: ['Blog Content', 'Video Marketing', 'Infographics', 'eBooks & Guides'],
-      metrics: ['Engagement +200%', 'Lead Generation +180%', 'Brand Awareness +90%']
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    // Header text animation - Split text effect
+    const headerTitle = headerRef.current?.querySelector('h1');
+    if (headerTitle) {
+      const text = headerTitle.textContent || '';
+      headerTitle.innerHTML = text.split(' ').map(word => 
+        `<span class="word">${word.split('').map(char => 
+          `<span class="char" style="display: inline-block;">${char}</span>`
+        ).join('')}</span>`
+      ).join(' ');
+
+      gsap.fromTo(
+        headerTitle.querySelectorAll('.char'),
+        { opacity: 0, y: 50, rotationX: -90 },
+        {
+          opacity: 1,
+          y: 0,
+          rotationX: 0,
+          duration: 0.8,
+          stagger: 0.02,
+          ease: "back.out(1.7)",
+        }
+      );
     }
-  ];
 
-  const analyticsTools = [
-    { name: 'Google Analytics', icon: '📊', purpose: 'Website Traffic Analysis' },
-    { name: 'Google Search Console', icon: '🔎', purpose: 'Search Performance' },
-    { name: 'Facebook Analytics', icon: '📘', purpose: 'Social Media Insights' },
-    { name: 'HubSpot', icon: '🎯', purpose: 'Marketing Automation' },
-    { name: 'SEMrush', icon: '🔍', purpose: 'Competitive Analysis' },
-    { name: 'Mailchimp', icon: '📧', purpose: 'Email Marketing' }
-  ];
+    // Website Design section animation
+    if (websiteDesignRef.current) {
+      // Animate section titles with typewriter effect
+      const sectionTitles = websiteDesignRef.current.querySelectorAll('h2, h3');
+      sectionTitles.forEach((title) => {
+        const text = title.textContent || '';
+        title.innerHTML = text.split('').map(char => 
+          `<span style="display: inline-block; opacity: 0;">${char === ' ' ? '&nbsp;' : char}</span>`
+        ).join('');
+
+        gsap.to(title.querySelectorAll('span'), {
+          opacity: 1,
+          duration: 0.05,
+          stagger: 0.05,
+          ease: "none",
+          scrollTrigger: {
+            trigger: title,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        });
+      });
+
+      // Animate list items with slide-in effect
+      const listItems = websiteDesignRef.current.querySelectorAll('li');
+      gsap.fromTo(
+        listItems,
+        { opacity: 0, x: -30, scale: 0.8 },
+        {
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: websiteDesignRef.current,
+            start: "top 75%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Animate paragraphs with fade-in effect
+      const paragraphs = websiteDesignRef.current.querySelectorAll('p');
+      gsap.fromTo(
+        paragraphs,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: websiteDesignRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }
+
+    // System Development section animation
+    if (systemDevRef.current) {
+      // Animate section titles with glitch effect
+      const sectionTitles = systemDevRef.current.querySelectorAll('h2, h3');
+      sectionTitles.forEach((title) => {
+        gsap.fromTo(
+          title,
+          { opacity: 0, scaleY: 0, skewX: 15 },
+          {
+            opacity: 1,
+            scaleY: 1,
+            skewX: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: title,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      });
+
+      // Animate list items with bounce effect
+      const listItems = systemDevRef.current.querySelectorAll('li');
+      gsap.fromTo(
+        listItems,
+        { opacity: 0, x: 50, rotation: 5 },
+        {
+          opacity: 1,
+          x: 0,
+          rotation: 0,
+          duration: 0.7,
+          stagger: 0.15,
+          ease: "elastic.out(1, 0.75)",
+          scrollTrigger: {
+            trigger: systemDevRef.current,
+            start: "top 75%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Animate paragraphs with slide-up effect
+      const paragraphs = systemDevRef.current.querySelectorAll('p');
+      gsap.fromTo(
+        paragraphs,
+        { opacity: 0, y: 30, filter: "blur(5px)" },
+        {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 1,
+          stagger: 0.3,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: systemDevRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }
+
+    // Expertises section animation
+    if (expertisesRef.current) {
+      // Animate main title with simple slide-up and fade-in
+      const mainTitle = expertisesRef.current.querySelector('h2');
+      if (mainTitle) {
+        gsap.fromTo(
+          mainTitle,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: mainTitle,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      }
+
+      // Animate tab buttons with simple slide-up and fade-in
+      const tabButtons = expertisesRef.current.querySelectorAll('button');
+      gsap.fromTo(
+        tabButtons,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: expertisesRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }
+
+    // Floating animation for images
+    gsap.to(".floating-image", {
+      y: "-20px",
+      duration: 3,
+      ease: "sine.inOut",
+      yoyo: true,
+      repeat: -1,
+    });
+
+    // Tab switch animation
+    const tabContent = container.querySelectorAll(".tab-content");
+    tabContent.forEach((content) => {
+      gsap.set(content, { opacity: 0, y: 30 });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
+  useEffect(() => {
+    // Animate tab content when switching with text animations
+    const activeContent = containerRef.current?.querySelector('.tab-content.active');
+    if (activeContent) {
+      // Animate container
+      gsap.fromTo(
+        activeContent,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+      );
+
+      // Animate titles with split text
+      const titles = activeContent.querySelectorAll('h3, h4, h5');
+      titles.forEach((title, index) => {
+        const text = title.textContent || '';
+        title.innerHTML = text.split('').map(char => 
+          `<span style="display: inline-block; opacity: 0; transform: translateY(20px);">${char === ' ' ? '&nbsp;' : char}</span>`
+        ).join('');
+
+        gsap.to(title.querySelectorAll('span'), {
+          opacity: 1,
+          y: 0,
+          duration: 0.03,
+          stagger: 0.02,
+          delay: 0.3 + (index * 0.1),
+          ease: "power2.out",
+        });
+      });
+
+      // Animate list items with cascade effect
+      const listItems = activeContent.querySelectorAll('li');
+      gsap.fromTo(
+        listItems,
+        { opacity: 0, x: -20, scale: 0.9 },
+        {
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          duration: 0.5,
+          stagger: 0.05,
+          delay: 0.5,
+          ease: "back.out(1.7)",
+        }
+      );
+
+      // Animate paragraphs with fade and blur
+      const paragraphs = activeContent.querySelectorAll('p');
+      gsap.fromTo(
+        paragraphs,
+        { opacity: 0, filter: "blur(3px)" },
+        {
+          opacity: 1,
+          filter: "blur(0px)",
+          duration: 0.8,
+          stagger: 0.2,
+          delay: 0.4,
+          ease: "power2.out",
+        }
+      );
+
+      // Animate technology items with random entrance
+      const techItems = activeContent.querySelectorAll('.grid > div');
+      gsap.fromTo(
+        techItems,
+        { 
+          opacity: 0, 
+          scale: 0.8,
+          rotation: () => gsap.utils.random(-15, 15)
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          rotation: 0,
+          duration: 0.6,
+          stagger: 0.08,
+          delay: 0.7,
+          ease: "elastic.out(1, 0.8)",
+        }
+      );
+    }
+  }, [activeTab]);
 
   return (
-    <div className="space-y-12">
-      {/* Header */}
-      <div className="text-center">
-        <h3 className="text-3xl font-bold text-gray-900 mb-4">
-          {t('title')}
-        </h3>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          {t('description')}
-        </p>
+    <div ref={containerRef} className="bg-[#424242] text-white min-h-screen">
+      {/* Header Section */}
+      <div ref={headerRef} className="text-center py-16 px-6">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 w-[78%] leading-20 text-center mx-auto">
+          {t('header.title')}
+        </h1>
       </div>
 
-      {/* Marketing Services */}
-      <div className="grid lg:grid-cols-2 gap-8">
-        {marketingServices.map((service, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2 }}
-            className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <div className="flex items-center mb-6">
-              <div className="text-4xl mr-4">{service.icon}</div>
-              <div>
-                <h4 className="text-xl font-bold text-gray-900">{service.title}</h4>
-                <p className="text-gray-600">{service.description}</p>
-              </div>
-            </div>
+      {/* Website Design Section */}
+      <div className="px-6 py-12">
+        <div ref={websiteDesignRef} className="max-w-7xl mx-auto">
+          {/* Header Row */}
+         
 
-            {/* Features */}
-            <div className="mb-6">
-              <h5 className="font-semibold text-gray-900 mb-3">Key Features</h5>
-              <div className="grid grid-cols-2 gap-2">
-                {service.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center text-sm text-gray-700">
-                    <div className="w-1.5 h-1.5 bg-red-500 rounded-full mr-2"></div>
-                    {feature}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Metrics */}
+          {/* Two Column Row */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h5 className="font-semibold text-gray-900 mb-3">Expected Results</h5>
-              <div className="space-y-2">
-                {service.metrics.map((metric, metricIndex) => (
-                  <div key={metricIndex} className="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium inline-block mr-2">
-                    {metric}
-                  </div>
-                ))}
+              <div className="mb-8">
+                <h3 className="text-2xl font-semibold mb-4">
+                  {t('websiteDesign.workIncludes.title')}
+                </h3>
+                <ul className="space-y-3 text-gray-300 text-2xl">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    {t('websiteDesign.workIncludes.items.ecommerce')}
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    {t('websiteDesign.workIncludes.items.restaurant')}
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    {t('websiteDesign.workIncludes.items.landing')}
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    {t('websiteDesign.workIncludes.items.corporate')}
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    {t('websiteDesign.workIncludes.items.paidAds')}
+                  </li>
+                </ul>
               </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
 
-      {/* Digital Marketing Funnel */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
-        <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-          Digital Marketing Funnel
-        </h4>
-        <div className="grid md:grid-cols-5 gap-4">
-          {[
-            { stage: 'Awareness', icon: '👁️', description: 'Attract prospects', color: 'bg-blue-500' },
-            { stage: 'Interest', icon: '🎯', description: 'Generate interest', color: 'bg-green-500' },
-            { stage: 'Consideration', icon: '🤔', description: 'Nurture leads', color: 'bg-yellow-500' },
-            { stage: 'Purchase', icon: '🛒', description: 'Convert customers', color: 'bg-orange-500' },
-            { stage: 'Retention', icon: '💝', description: 'Build loyalty', color: 'bg-purple-500' }
-          ].map((stage, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className={`w-16 h-16 ${stage.color} rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-3`}>
-                {stage.icon}
-              </div>
-              <h5 className="font-bold text-gray-900 mb-1">{stage.stage}</h5>
-              <p className="text-sm text-gray-600">{stage.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Analytics Tools */}
-      <div>
-        <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-          Analytics & Tools We Use
-        </h4>
-        <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {analyticsTools.map((tool, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl p-4 shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="text-3xl mb-2">{tool.icon}</div>
-              <h5 className="font-semibold text-gray-900 text-sm mb-1">{tool.name}</h5>
-              <p className="text-xs text-gray-600">{tool.purpose}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Performance Metrics */}
-      <div className="bg-gray-900 text-white rounded-2xl p-8">
-        <h4 className="text-2xl font-bold mb-8 text-center">
-          Our Track Record
-        </h4>
-        <div className="grid md:grid-cols-4 gap-8">
-          {[
-            { metric: '250%', label: 'Average ROI Increase', icon: '📈' },
-            { metric: '85%', label: 'Client Retention Rate', icon: '🤝' },
-            { metric: '3.2x', label: 'Lead Generation Growth', icon: '🎯' },
-            { metric: '150+', label: 'Successful Campaigns', icon: '🏆' }
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="text-3xl mb-2">{stat.icon}</div>
-              <div className="text-3xl font-bold text-red-400 mb-1">{stat.metric}</div>
-              <div className="text-gray-300 text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Strategy Process */}
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
-          <h4 className="text-xl font-bold text-gray-900 mb-6">
-            🎯 Strategy Development
-          </h4>
-          <div className="space-y-4">
-            {[
-              { step: '1', title: 'Market Research', desc: 'Analyze your market and competitors' },
-              { step: '2', title: 'Goal Setting', desc: 'Define clear, measurable objectives' },
-              { step: '3', title: 'Channel Selection', desc: 'Choose optimal marketing channels' },
-              { step: '4', title: 'Campaign Planning', desc: 'Develop comprehensive campaign strategy' }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-start"
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white group md:mt-20 hover:bg-red-600 backdrop-blur-sm text-red-600 hover:text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 border border-white/30 flex items-center space-x-2 w-fit"
               >
-                <div className="bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">
-                  {item.step}
-                </div>
-                <div>
-                  <h5 className="font-semibold text-gray-900 mb-1">{item.title}</h5>
-                  <p className="text-sm text-gray-600">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+                <span className="text-red-500 group-hover:text-white text-lg sm:text-xl">
+                  ✦
+                </span>
+                <span>{t('websiteDesign.cta.text')}</span>
+              </motion.button>
+            </div>
+
+            <div className="">
+              <Image
+                src="/digital-marketing.jpg"
+                alt="Website Design"
+                width={400}
+                height={500}
+                className="floating-image"
+              />
+            </div>
           </div>
         </div>
+      </div>
 
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
-          <h4 className="text-xl font-bold text-gray-900 mb-6">
-            📊 Performance Optimization
-          </h4>
-          <div className="space-y-4">
-            {[
-              { step: '1', title: 'Data Collection', desc: 'Gather comprehensive performance data' },
-              { step: '2', title: 'Analysis & Insights', desc: 'Identify trends and opportunities' },
-              { step: '3', title: 'A/B Testing', desc: 'Test and optimize campaign elements' },
-              { step: '4', title: 'Continuous Improvement', desc: 'Refine strategies based on results' }
-            ].map((item, index) => (
+    
+
+      {/* Expertises Section */}
+      <div className="px-6 py-16">
+        <div ref={expertisesRef} className="max-w-7xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-12 text-left">
+            {t('expertises.title')}
+          </h2>
+
+          {/* Tab Navigation */}
+          <div className="flex justify-center items-center space-x-8 mb-16">
+            <button
+              onClick={() => setActiveTab("SEO")}
+              className={`text-2xl font-bold px-6 py-2 rounded-full transition-all duration-300 ${
+                activeTab === "SEO"
+                  ? "text-red-500 bg-white/10"
+                  : "text-gray-400 hover:text-red-400"
+              }`}
+            >
+              {t('expertises.tabs.seo')}
+            </button>
+            <button
+              onClick={() => setActiveTab("socialMedia")}
+              className={`text-2xl font-bold px-6 py-2 rounded-full transition-all duration-300 ${
+                activeTab === "socialMedia"
+                  ? "bg-white text-black"
+                  : "bg-gray-600 text-white hover:bg-gray-500"
+              }`}
+            >
+              {t('expertises.tabs.socialMedia')}
+            </button>
+            <button
+              onClick={() => setActiveTab("paidAds")}
+              className={`text-2xl font-bold px-6 py-2 rounded-full transition-all duration-300 ${
+                activeTab === "paidAds"
+                  ? "bg-white text-black"
+                  : "bg-gray-600 text-white hover:bg-gray-500"
+              }`}
+            >
+              {t('expertises.tabs.paidAds')}
+            </button>
+          </div>
+
+          {/* Tab Content */}
+          <div className="min-h-[600px]">
+            {activeTab === "SEO" && (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-start"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="rounded-2xl p-8 tab-content active"
               >
-                <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">
-                  {item.step}
+                <h3 className="text-2xl font-bold mb-6 text-left">
+                  {t('expertises.seo.title')}
+                </h3>
+                <p className="text-gray-300 text-lg mb-8">
+                  {t('expertises.seo.description')}
+                </p>
+
+                <div className="rounded-xl mb-8   w-fit flex justify-center items-center mx-auto">
+                  <Image
+                    src="/seoService.jpg"
+                    alt="NEDX CRM Platform"
+                    width={800}
+                    height={200}
+                    className="   rounded-lg"
+                  />
                 </div>
-                <div>
-                  <h5 className="font-semibold text-gray-900 mb-1">{item.title}</h5>
-                  <p className="text-sm text-gray-600">{item.desc}</p>
+                <h3 className="text-2xl font-bold mb-6 text-left max-w-4xl">
+                  {t('expertises.seo.subtitle')}
+                </h3>
+
+                <div className="text-left">
+                  <h4 className="text-xl font-bold mb-4">
+                    {t('expertises.seo.stageOne.title')}
+                  </h4>
+
+                  <p className="text-gray-300 text-xl mb-8 max-w-4xl">
+                    {t('expertises.seo.stageOne.description')}
+                  </p>
+                  
+                  <h4 className="text-xl font-bold mb-4">
+                    {t('expertises.seo.stageTwo.title')}
+                  </h4>
+
+                  <p className="text-gray-300 text-xl mb-8 max-w-4xl">
+                    {t('expertises.seo.stageTwo.description')}
+                  </p>
+                  
                 </div>
               </motion.div>
-            ))}
+            )}
+
+            {activeTab === "socialMedia" && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="rounded-2xl p-8 tab-content active"
+              >
+                <h3 className="text-2xl font-bold mb-6 text-left">
+                  {t('expertises.socialMedia.title')}
+                </h3>
+                <p className="text-gray-300 text-lg mb-8">
+                  {t('expertises.socialMedia.description')}
+                </p>
+
+                <div className=" rounded-xl  mb-8   w-fit flex justify-center items-center mx-auto">
+                  <Image
+                    src="/socailService.jpg"
+                    alt="NEDX CRM Platform"
+                    width={600}
+                    height={200}
+                    className="   rounded-lg"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold  text-left max-w-4xl">
+                  {t('expertises.socialMedia.stageOne.title')}
+                </h3>
+
+                <p className="text-gray-300 text-lg mb-8 max-w-4xl">
+                  {t('expertises.socialMedia.stageOne.description')}
+                </p>
+
+                <h3 className="text-2xl font-bold m text-left max-w-4xl">
+                  {t('expertises.socialMedia.stageTwo.title')}
+                </h3>
+                <p className="text-gray-300 text-lg mb-8 max-w-4xl">
+                  {t('expertises.socialMedia.stageTwo.description')}
+                </p>
+
+                <div className="text-left">
+                  <h4 className="text-2xl  mb-4 max-w-4xl leading-8">
+                    {t('expertises.socialMedia.subtitle')}
+                  </h4>
+
+                 
+                </div>
+              </motion.div>
+            )}
+            {activeTab === "paidAds" && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="rounded-2xl p-8 tab-content active"
+              >
+                <h3 className="text-2xl font-bold mb-6 text-left">
+                  {t('expertises.paidAds.title')}
+                </h3>
+                <p className="text-gray-300 text-lg mb-8">
+                  {t('expertises.paidAds.description')}
+                </p>
+
+                <div className=" rounded-xl  mb-8   w-fit flex justify-center items-center mx-auto">
+                  <Image
+                    src="/paidAds .jpg"
+                    alt="NEDX CRM Platform"
+                    width={600}
+                    height={200}
+                    className="   rounded-lg"
+                  />
+                </div>
+              
+
+                <div className="text-left">
+                  <h4 className="text-2xl  mb-4 max-w-4xl leading-8">
+                    {t('expertises.paidAds.subtitle')}
+                  </h4>
+                  <p className="text-gray-300 text-xl mb-8 max-w-4xl">
+                    {t('expertises.paidAds.subtitle2')}
+                  </p>
+
+                 
+                  <ul className="space-y-3 text-gray-300 text-2xl">
+                    <li className="flex items-center">
+                      {t('expertises.paidAds.keyBenefits.items.0')}
+                    </li>
+                    <li className="flex items-center">
+                      {t('expertises.paidAds.keyBenefits.items.1')}
+                    </li>
+                    <li className="flex items-center">
+                      {t('expertises.paidAds.keyBenefits.items.2')}
+                    </li>
+                    <li className="flex items-center">
+                      {t('expertises.paidAds.keyBenefits.items.3')}
+                    </li>
+                    <li className="flex items-center max-w-2xl">
+                      {t('expertises.paidAds.keyBenefits.items.4')}
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+            )}
           </div>
         </div>
       </div>
@@ -249,4 +591,4 @@ const DigitalMarketingTab = () => {
   );
 };
 
-export default DigitalMarketingTab; 
+export default DigitalMarketingTab;

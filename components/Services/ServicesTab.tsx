@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import WebDevelopmentTab from './Web/WebDevelopmentTab';
+import { GraphicDesignTab, WebDevelopmentTab, SocialMediaTab, DigitalMarketingTab } from '.';
 
 interface ServiceTab {
   id: string;
@@ -128,7 +128,19 @@ const ServicesTab = () => {
         {/* Content Area */}
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
           <AnimatePresence mode="wait">
-          <WebDevelopmentTab />
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className=""
+            >
+              {activeTab === 'design' && <GraphicDesignTab />}
+              {activeTab === 'webDevelopment' && <WebDevelopmentTab />}
+              {activeTab === 'socialMedia' && <SocialMediaTab />}
+              {activeTab === 'digitalMarketing' && <DigitalMarketingTab />}
+            </motion.div>
           </AnimatePresence>
         </div>
       </div>
