@@ -653,5 +653,14 @@
         }
       }
     }
+  },
+  "SplashScreen": {
+    "tagline": "Digital Excellence, Swiss Precision",
+    "loading": "Loading...",
+    "digitalTransformation": "DIGITAL TRANSFORMATION",
+    "digitalExcellence": "Digital Excellence",
+    "precision": "Precision",
+    "innovation": "Innovation",
+    "excellence": "Excellence"
   }
 }

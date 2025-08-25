@@ -255,6 +255,7 @@ const AboutPage = () => {
     }
   }, []);
   return (
+    
     <main className='bg-gray-50'>
       <DiscoverVision />
       <Cards />

@@ -177,18 +177,17 @@ const WebDevelopmentTab = () => {
 
     // Expertises section animation
     if (expertisesRef.current) {
-      // Animate main title with dramatic entrance
+      // Animate main title with simple slide-up and fade-in
       const mainTitle = expertisesRef.current.querySelector('h2');
       if (mainTitle) {
         gsap.fromTo(
           mainTitle,
-          { opacity: 0, scale: 0.5, rotationY: 180 },
+          { opacity: 0, y: 30 },
           {
             opacity: 1,
-            scale: 1,
-            rotationY: 0,
-            duration: 1.2,
-            ease: "back.out(1.7)",
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
             scrollTrigger: {
               trigger: mainTitle,
               start: "top 85%",
@@ -198,18 +197,17 @@ const WebDevelopmentTab = () => {
         );
       }
 
-      // Animate tab buttons with hover-like effect
+      // Animate tab buttons with simple slide-up and fade-in
       const tabButtons = expertisesRef.current.querySelectorAll('button');
       gsap.fromTo(
         tabButtons,
-        { opacity: 0, y: -30, scale: 0.8 },
+        { opacity: 0, y: 20 },
         {
           opacity: 1,
           y: 0,
-          scale: 1,
-          duration: 0.8,
-          stagger: 0.2,
-          ease: "bounce.out",
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: expertisesRef.current,
             start: "top 80%",
@@ -325,7 +323,7 @@ const WebDevelopmentTab = () => {
     <div ref={containerRef} className="bg-[#424242] text-white min-h-screen">
       {/* Header Section */}
       <div ref={headerRef} className="text-center py-16 px-6">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 w-[78%] leading-20 text-center mx-auto">
           {t('header.title')}
         </h1>
       </div>
@@ -335,7 +333,7 @@ const WebDevelopmentTab = () => {
         <div ref={websiteDesignRef} className="max-w-7xl mx-auto">
           {/* Header Row */}
           <div className="text-left mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 ">
               {t('websiteDesign.title')}
             </h2>
             <p className="text-gray-300 text-3xl max-w-4xl ">
