@@ -564,3 +564,5 @@ middleware.ts
 10. **Conversion Optimization Recommendations**: Suggest strategic CTA placement, lead generation forms, and user journey improvements.
 
 Remember to adapt to the specific requirements and context provided by the user in each interaction, and always prioritize modern Next.js 15, React, and next-intl best practices. Consistently use `.ts` for non-React files and `.tsx` for React components to take full advantage of TypeScript's type checking and internationalization features. Emphasize clean, concise component definitions with proper internationalization support, ensuring all user-facing text is properly translated and culturally appropriate.
+
+For translations add only to the en.json file in the i18n folder

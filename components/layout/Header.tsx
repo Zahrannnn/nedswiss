@@ -181,6 +181,26 @@ export const Header = () => {
               </li>
               <li>
                 <Link 
+                  href={`/${currentLocale}/blogs`}
+                  className={cn(
+                    "relative text-sm font-medium transition-colors duration-200 py-2",
+                    "after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:bg-red-500",
+                    "after:transition-all after:duration-300 after:transform after:-translate-x-1/2",
+                    "hover:after:w-full hover:text-red-600",
+                    pathname.includes('/blogs') 
+                      ? "text-red-600 after:w-full" 
+                      : isHomePage 
+                        ? "text-white" 
+                        : scrolled 
+                          ? "text-gray-900" 
+                          : "text-text-gray-900"
+                  )}
+                >
+                  {t('blogs')}
+                </Link>
+              </li>
+              <li>
+                <Link 
                   href={`/${currentLocale}/contact`}
                   className={cn(
                     "relative text-sm font-medium transition-colors duration-200 py-2",

@@ -92,6 +92,9 @@ export const MobileMenu = ({ onClose }: MobileMenuProps) => {
         <Link href={`/${currentLocale}/services`} className="block px-2 py-3 rounded-md text-zinc-200 hover:text-white hover:bg-white/5" onClick={onClose}>
           {t('services')}
         </Link>
+        <Link href={`/${currentLocale}/blogs`} className="block px-2 py-3 rounded-md text-zinc-200 hover:text-white hover:bg-white/5" onClick={onClose}>
+          {t('blogs')}
+        </Link>
         <Link href={`/${currentLocale}/contact`} className="block px-2 py-3 rounded-md text-zinc-200 hover:text-white hover:bg-white/5" onClick={onClose}>
           {t('contact')}
         </Link>

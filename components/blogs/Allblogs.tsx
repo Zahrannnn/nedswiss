@@ -1,9 +1,28 @@
-import React from 'react'
+'use client';
+
+import { useBlogs } from '@/lib/hooks/useBlog';
+import { BlogHero } from './BlogHero';
+import { BlogGrid } from './BlogGrid';
+import { useTranslations } from 'next-intl';
 
 const Allblogs = () => {
-  return (
-    <div>Allblogs</div>
-  )
-}
+  const t = useTranslations('AllBlogs');
+  const { data: blogs = [], isLoading, error } = useBlogs();
 
-export default Allblogs
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+    
+      
+      {/* Blog Grid Section */}
+      <BlogGrid 
+        blogs={blogs}
+        isLoading={isLoading}
+        error={error}
+      />
+      
+    </div>
+  );
+};
+
+export default Allblogs;

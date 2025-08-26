@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { getDirection, locales, type Locale } from '@/app/i18n';
-import { LenisProvider } from '@/lib/providers';
+import { Providers } from '@/lib/providers';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import LayoutWrapper from '@/components/layout/LayoutWrapper';
@@ -41,17 +41,15 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={direction}>
       <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
-          <LenisProvider>
-            <LayoutWrapper>
-              <Header />
-              <main className="pt-16">
-                {children}
-              </main>
-              <Footer />
-            </LayoutWrapper>
-          </LenisProvider>
-        </NextIntlClientProvider>
+        <Providers locale={locale} messages={messages}>
+          <LayoutWrapper>
+            <Header />
+            <main className="pt-16">
+              {children}
+            </main>
+            <Footer />
+          </LayoutWrapper>
+        </Providers>
       </body>
     </html>
   );

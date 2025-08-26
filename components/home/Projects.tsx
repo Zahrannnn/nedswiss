@@ -89,12 +89,12 @@ const Projects = () => {
         <div className="flex flex-col lg:flex-row items-center lg:justify-between justify-center">
           {/* Left Side - Category Navigation */}
           <div className="space-y-6 w-full">
-            <div className="md:hidden grid grid-cols-2 overflow-x-auto pb-4 gap-3 scrollbar-hide">
+            <div className="md:hidden flex flex-wrap justify-center gap-2 pb-4">
               {projectCategories.map((category: ProjectCategory) => (
                 <motion.button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`snap-center whitespace-nowrap px-4 py-2 rounded-full transition-all duration-300 flex-shrink-0 ${
+                  className={`px-3 py-2 rounded-full transition-all duration-300 min-w-fit text-center ${
                     activeCategory === category.id
                       ? 'bg-red-500 text-white shadow-lg'
                       : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-900'
@@ -102,7 +102,9 @@ const Projects = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span className="text-sm font-medium">{category.name}</span>
+                  <span className="text-xs sm:text-sm font-medium leading-tight">
+                    {category.name}
+                  </span>
                 </motion.button>
               ))}
             </div>

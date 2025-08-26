@@ -1,7 +1,9 @@
 'use client';
 
 import { NextIntlClientProvider } from 'next-intl';
-import { ReactNode, useEffect } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import Lenis from 'lenis';
 
 // Extend Window interface for ScrollTrigger
@@ -57,15 +59,29 @@ export function LenisProvider({ children }: { children: ReactNode }) {
 }
 
 export function Providers({ children, locale, messages }: ProvidersProps) {
+  const [queryClient] = useState(() => new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 5 * 60 * 1000, // 5 minutes
+        gcTime: 10 * 60 * 1000, // 10 minutes
+        retry: 3,
+        refetchOnWindowFocus: false,
+      },
+    },
+  }));
+
   return (
-    <NextIntlClientProvider 
-      locale={locale} 
-      messages={messages}
-      timeZone="Europe/Zurich" // Using Swiss timezone since it's NED Swiss
-    >
-      <LenisProvider>
-        {children}
-      </LenisProvider>
-    </NextIntlClientProvider>
+    <QueryClientProvider client={queryClient}>
+      <NextIntlClientProvider 
+        locale={locale} 
+        messages={messages}
+        timeZone="Europe/Zurich" // Using Swiss timezone since it's NED Swiss
+      >
+        <LenisProvider>
+          {children}
+        </LenisProvider>
+      </NextIntlClientProvider>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 }

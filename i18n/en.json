@@ -11,6 +11,7 @@
   },
   "Navigation": {
     "home": "Home",
+    "blogs": "Blogs",
     "about": "About",
     "ourStory": "Our Story",
     "team": "Team",
@@ -480,6 +481,67 @@
       "category": "Category",
       "date": "Date",
       "discoverButton": "Discover Blogs"
+    }
+  },
+  "BlogHero": {
+    "title": {
+      "prefix": "Your journey starts",
+      "highlight": "here"
+    },
+    "subtitle": "Discover insights, trends, and stories that inspire innovation and drive digital transformation.",
+    "cta": {
+      "explore": "Explore Articles",
+      "categories": "Browse Categories"
+    },
+    "scrollIndicator": "Scroll to explore"
+  },
+  "BlogGrid": {
+    "title": "Latest Insights",
+    "subtitle": "Stay updated with the latest trends, insights, and stories from our digital experts.",
+    "categories": {
+      "all": "All"
+    },
+    "error": {
+      "title": "Unable to load blogs",
+      "message": "There was an error loading the blog posts. Please try again later.",
+      "retry": "Try Again"
+    },
+    "empty": {
+      "title": "No articles found",
+      "message": "No blog posts are currently available.",
+      "viewAll": "View All Articles"
+    },
+    "loadMore": "Load More Articles"
+  },
+  "BlogCard": {
+    "readMore": "Read More"
+  },
+  "AllBlogs": {
+    "meta": {
+      "title": "Blog & Insights | NED Swiss",
+      "description": "Discover the latest insights, trends, and expert tips from NED Swiss. Stay ahead in the digital landscape with our comprehensive blog articles."
+    }
+  },
+  "BlogError": {
+    "title": "Something went wrong",
+    "message": "We encountered an error while loading the blog posts. Please try again.",
+    "retry": "Try Again",
+    "goHome": "Go to Homepage"
+  },
+  "BlogDetail": {
+    "backToBlog": "Back to Blog",
+    "minRead": "min read",
+    "tags": "tags",
+    "relatedTopics": "Related Topics",
+    "allArticles": "All Articles",
+    "share": "Share",
+    "bookmark": "Bookmark",
+    "noRelatedBlogs": "No Related Articles Found",
+    "noRelatedBlogsMessage": "Check out our blog page for more interesting articles.",
+    "viewAllBlogs": "View All Blogs",
+    "meta": {
+      "title": "{title} | NED Swiss Blog",
+      "description": "{excerpt}"
     }
   },
   "Services": {
