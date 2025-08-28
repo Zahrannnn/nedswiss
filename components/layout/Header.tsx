@@ -11,6 +11,7 @@ import { type Locale } from '@/i18n';
 import { MobileMenu } from '../navigation/MobileMenu';
 import { cn } from "@/lib/utils";
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export const Header = () => {
   const t = useTranslations('Navigation');
@@ -82,14 +83,14 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        'fixed w-full z-50 transition-all duration-300',
+        'fixed-safe  z-header transition-all duration-300 mx-auto  w-full py-5 ',
         isHomePage ? (
           scrolled
-            ? 'bg-[#2a2a2a]/95 backdrop-blur-sm py-3'
+            ? 'bg-[#2a2a2a]/80 backdrop-blur-sm py-5   '
             : 'bg-[#2a2a2a] py-4'
         ) : (
           scrolled
-            ? 'bg-white/95 backdrop-blur-sm py-3 shadow-md'
+            ? 'bg-white/95 backdrop-blur-sm py-3 shadow-md '
             : 'bg-transparent py-4'
         )
       )}
@@ -192,7 +193,7 @@ export const Header = () => {
                       : isHomePage 
                         ? "text-white" 
                         : scrolled 
-                          ? "text-gray-900" 
+                          ? "text-gray-900 " 
                           : "text-text-gray-900"
                   )}
                 >
@@ -245,7 +246,7 @@ export const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <motion.button
             className={cn(
               "lg:hidden hover:text-red-600 focus:outline-none p-1 transition-colors duration-300",
               isHomePage 
@@ -256,33 +257,42 @@ export const Header = () => {
             )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
+            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className={cn(
-                "transition-transform duration-200",
-                isMobileMenuOpen ? "h-5 w-5 rotate-90" : "h-6 w-6"
-              )}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+            <motion.div
+              animate={{ rotate: isMobileMenuOpen ? 90 : 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <motion.path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  animate={{
+                    d: isMobileMenuOpen 
+                      ? "M6 18L18 6M6 6l12 12" 
+                      : "M4 6h16M4 12h16M4 18h16"
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                />
+              </svg>
+            </motion.div>
+          </motion.button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <MobileMenu 
-          onClose={() => setIsMobileMenuOpen(false)}
-        />
-      )}
+      <MobileMenu 
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+      />
     </header>
   );
 };

@@ -78,7 +78,7 @@ const Card = ({
   };
 
   return (
-    <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
+    <div ref={container} className="h-screen flex items-center justify-center sticky-safe top-0 z-sticky">
       <motion.div 
         style={getBackgroundStyle()}
         className="flex relative h-[500px] w-[370px] sm:h-[500px] sm:w-[500px] md:w-[1300px] md:h-[600px] rounded-[25px] overflow-hidden origin-top"

@@ -25,7 +25,7 @@ const WhatsAppButton = () => {
         width: 100%;
         height: 100%;
         pointer-events: none;
-        z-index: 9999;
+        z-index: var(--z-whatsapp-portal);
         transform: translate3d(0, 0, 0);
         will-change: transform;
         isolation: isolate;

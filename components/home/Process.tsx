@@ -70,7 +70,7 @@ const Services = () => {
         <div
           ref={(el) => (serviceRefs.current[index] = el as never)}
           key={index}
-          className="sticky px-6 pt-4 pb-8 lg:px-10 lg:pt-6 lg:pb-12 text-red-500 border-t-2 border-gray-500 bg-[#252525]"
+          className="sticky-safe px-6 pt-4 pb-8 lg:px-10 lg:pt-6 lg:pb-12 text-red-500 border-t-2 border-gray-500 bg-[#252525] z-sticky"
           style={
             isDesktop
               ? {

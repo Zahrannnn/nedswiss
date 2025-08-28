@@ -99,13 +99,13 @@ export default async function RootLayout({
         <Providers locale={locale} messages={messages}>
           <LayoutWrapper>
             <Header />
+            <WhatsAppButton />
             <main className="pt-16">
               {children}
             </main>
             <Footer />
             <SimpleVisitorTracker />
           </LayoutWrapper>
-          {/* <WhatsAppButton /> */}
         </Providers>
       </body>
     </html>

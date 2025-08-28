@@ -239,7 +239,7 @@ export const CallToAction = () => {
           </div>
 
           {/* Contact Information - Mobile */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4">
             {/* Address */}
             <div className="bg-white rounded-lg p-4 flex items-center space-x-3">
               <div className="bg-red-500 p-2 rounded-full flex-shrink-0">

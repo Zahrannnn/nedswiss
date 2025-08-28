@@ -147,36 +147,28 @@
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    /* GPU acceleration for better performance */
-    transform: translateZ(0);
-    will-change: scroll-position;
     /* Prevent scroll bounce on iOS */
-    -webkit-overflow-scrolling: touch;
     overflow-x: hidden !important;
-    
   }
+  
   .scrollbar-hide::-webkit-scrollbar {
-    
+    display: none;
   }
   
   /* Hide scrollbars but keep functionality */
   body::-webkit-scrollbar {
+    display: none;
   }
   
-  /* Optimize transforms for smooth animations */
-  * {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    perspective: 1000;
-  }
-  
-  /* Smooth transitions for all elements */
-  *,
-  *::before,
-  *::after {
-    -webkit-transform: translateZ(0);
+  /* Only apply transforms to elements that specifically need them for animations */
+  .gpu-accelerated {
     transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  .smooth-animation {
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
 }
 
@@ -241,6 +233,43 @@
     -webkit-box-orient: unset;
     -webkit-line-clamp: unset;
   }
+}
+
+/* Z-Index Management System */
+:root {
+  --z-splash-screen: 99999;
+  --z-whatsapp-portal: 9999;
+  --z-mobile-menu: 1000;
+  --z-header: 950;
+  --z-navbar: 900;
+  --z-sticky-elements: 100;
+  --z-modal-backdrop: 50;
+  --z-tooltip: 40;
+  --z-dropdown: 30;
+  --z-content: 1;
+  --z-background: 0;
+}
+
+/* Apply z-index variables to components */
+.z-splash-screen { z-index: var(--z-splash-screen); }
+.z-whatsapp-portal { z-index: var(--z-whatsapp-portal); }
+.z-mobile-menu { z-index: var(--z-mobile-menu); }
+.z-header { z-index: var(--z-header); }
+.z-navbar { z-index: var(--z-navbar); }
+.z-sticky { z-index: var(--z-sticky-elements); }
+.z-modal { z-index: var(--z-modal-backdrop); }
+.z-tooltip { z-index: var(--z-tooltip); }
+.z-dropdown { z-index: var(--z-dropdown); }
+
+/* Ensure sticky elements work properly */
+.sticky-safe {
+  position: sticky;
+  isolation: isolate;
+}
+
+.fixed-safe {
+  position: fixed;
+  isolation: isolate;
 }
 
 
