@@ -19,7 +19,7 @@ interface SEOProps {
 
 const defaultImageUrl = 'https://nedswiss.com/nedswiss.jpg';
 const defaultImageAlt = 'NED Swiss - Digital Excellence, Swiss Precision';
-const siteUrl = 'https://nedswiss.com';
+const siteUrl = 'https://stage-nedswiss.vercel.app';
 
 export function generateMetadata({
   title,
