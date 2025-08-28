@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { generateBlogPostMetadata } from '@/lib/seo/metadata';
 import { BlogDetailClient } from '@/components/blogs/BlogDetailClient';
 
 interface BlogDetailPageProps {

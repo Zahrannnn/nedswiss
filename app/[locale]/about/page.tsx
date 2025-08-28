@@ -10,6 +10,7 @@ import SocialProof from '@/components/home/SocialProof';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import WhatsAppButton from '@/components/contact/WhatsAppButton';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -391,6 +392,9 @@ const AboutPage = () => {
         </Link>
       </div>
     </div>
+    
+    {/* WhatsApp Button */}
+    <WhatsAppButton />
     </main>
   )
 }

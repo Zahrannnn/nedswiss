@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getDictionary } from "../dictionaries";
 import { locales, type Locale } from "@/app/i18n";
+import { generateHomeMetadata } from "@/lib/seo/metadata";
 import HeroSection from "@/components/home/HeroSection";
 
 import CallToAction from "@/components/home/CallToAction";
@@ -22,19 +23,10 @@ export async function generateMetadata({
   const { locale } = await params;
 
   if (!locales.includes(locale as Locale)) {
-    return {
-      title: "NED Swiss | Digital Excellence, Swiss Precision",
-      description:
-        "NED Swiss is a digital agency delivering exceptional web development, design, and digital marketing services with Swiss precision and excellence.",
-    };
+    return generateHomeMetadata('en');
   }
 
-  const messages = await getDictionary(locale as Locale);
-
-  return {
-    title: messages.HomePage.meta.title,
-    description: messages.HomePage.meta.description,
-  };
+  return generateHomeMetadata(locale);
 }
 
 export default async function HomePage({ params }: HomePageProps) {

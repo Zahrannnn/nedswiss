@@ -20,34 +20,54 @@ export const CallToAction = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (error) setError(null);
   };
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    // Reset form and show success message
-    setFormData({ 
-      firstName: '', 
-      lastName: '', 
-      email: '', 
-      phone: '', 
-      company: '', 
-      service: '', 
-      message: '' 
-    });
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
+         try {
+       const response = await fetch('/api/contact', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify(formData),
+       });
+
+       if (!response.ok) {
+         const errorData = await response.json().catch(() => ({}));
+         throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+       }
+
+      // Reset form and show success message
+      setFormData({ 
+        firstName: '', 
+        lastName: '', 
+        email: '', 
+        phone: '', 
+        company: '', 
+        service: '', 
+        message: '' 
+      });
+      setIsSubmitted(true);
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000);
+         } catch (error) {
+       console.error('Error submitting form:', error);
+       setError(error instanceof Error ? error.message : 'Failed to submit form. Please try again.');
+     } finally {
+       setIsSubmitting(false);
+     }
   };
   
   return (
@@ -73,6 +93,13 @@ export const CallToAction = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Error Message */}
+                {error && (
+                  <div className="bg-red-600 text-white px-4 py-3 rounded-lg text-center">
+                    <p className="text-sm">{error}</p>
+                  </div>
+                )}
+
                 {/* First Row - First Name & Last Name */}
                 <div className="grid grid-cols-2 gap-3">
                   <div>
@@ -193,7 +220,7 @@ export const CallToAction = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center"
+                  className="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -344,6 +371,12 @@ export const CallToAction = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                  {/* Error Message */}
+                  {error && (
+                    <div className="bg-red-600 text-white px-4 py-3 rounded-lg text-center">
+                      <p className="text-sm">{error}</p>
+                    </div>
+                  )}
                   {/* First Name and Last Name */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -464,7 +497,7 @@ export const CallToAction = () => {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center text-sm md:text-base"
+                    className="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />

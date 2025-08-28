@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 interface WhatsAppModalProps {
   isOpen: boolean;
@@ -21,17 +22,23 @@ const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
 
     if (isOpen) {
       document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
       
-      // Only scroll to top on mobile devices where the modal might be hidden
-      if (window.innerHeight < 600) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      // Disable Lenis and all scroll behavior
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.body.style.height = '100%';
+      
+      // Stop any smooth scroll animations
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }
 
     return () => {
       document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.height = '';
     };
   }, [isOpen, onClose]);
 
@@ -52,8 +59,13 @@ const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
 
   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 overflow-y-auto" style={{ minHeight: '100vh' }}>
+  const modalContent = (
+    <div 
+      className="absolute inset-0 flex items-center justify-center p-4" 
+      style={{ 
+        minHeight: '100vh'
+      }}
+    >
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -135,6 +147,9 @@ const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
       </div>
     </div>
   );
+
+  const portalContainer = document.getElementById('whatsapp-portal');
+  return portalContainer ? createPortal(modalContent, portalContainer) : null;
 };
 
 export default WhatsAppModal; 
