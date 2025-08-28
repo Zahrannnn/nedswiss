@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const DigitalMarketingTab = () => {
   const t = useTranslations("Services.digitalMarketing");
-  const [activeTab, setActiveTab] = useState("nedx");
+  const [activeTab, setActiveTab] = useState("SEO");
   
   // Refs for GSAP animations
   const containerRef = useRef<HTMLDivElement>(null);
@@ -322,44 +322,41 @@ const DigitalMarketingTab = () => {
   return (
     <div ref={containerRef} className="bg-[#424242] text-white min-h-screen">
       {/* Header Section */}
-      <div ref={headerRef} className="text-center py-16 px-6">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 w-[78%] leading-20 text-center mx-auto">
+      <div ref={headerRef} className="text-center py-8 md:py-16 px-4 md:px-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 w-full md:w-[78%] leading-tight md:leading-20 text-center mx-auto">
           {t('header.title')}
         </h1>
       </div>
 
-      {/* Website Design Section */}
-      <div className="px-6 py-12">
+      {/* Digital Marketing Services Section */}
+      <div className="px-4 md:px-6 py-8 md:py-12">
         <div ref={websiteDesignRef} className="max-w-7xl mx-auto">
-          {/* Header Row */}
-         
-
           {/* Two Column Row */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="mb-8">
-                <h3 className="text-2xl font-semibold mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="mb-6 md:mb-8">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
                   {t('websiteDesign.workIncludes.title')}
                 </h3>
-                <ul className="space-y-3 text-gray-300 text-2xl">
+                <ul className="space-y-2 md:space-y-3 text-gray-300 text-lg sm:text-xl md:text-2xl">
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.ecommerce')}
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.restaurant')}
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.landing')}
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.corporate')}
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.paidAds')}
                   </li>
                 </ul>
@@ -368,7 +365,7 @@ const DigitalMarketingTab = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white group md:mt-20 hover:bg-red-600 backdrop-blur-sm text-red-600 hover:text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 border border-white/30 flex items-center space-x-2 w-fit"
+                className="bg-white group mt-6 md:mt-20 hover:bg-red-600 backdrop-blur-sm text-red-600 hover:text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 border border-white/30 flex items-center space-x-2 w-fit"
               >
                 <span className="text-red-500 group-hover:text-white text-lg sm:text-xl">
                   ✦
@@ -377,33 +374,31 @@ const DigitalMarketingTab = () => {
               </motion.button>
             </div>
 
-            <div className="">
+            <div className="order-1 lg:order-2 flex justify-center">
               <Image
                 src="/digital-marketing.jpg"
-                alt="Website Design"
+                alt="Digital Marketing"
                 width={400}
                 height={500}
-                className="floating-image"
+                className="floating-image w-full max-w-sm md:max-w-md lg:max-w-lg h-auto"
               />
             </div>
           </div>
         </div>
       </div>
 
-    
-
       {/* Expertises Section */}
-      <div className="px-6 py-16">
+      <div className="px-4 md:px-6 py-8 md:py-16">
         <div ref={expertisesRef} className="max-w-7xl mx-auto">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-12 text-left">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 text-left">
             {t('expertises.title')}
           </h2>
 
           {/* Tab Navigation */}
-          <div className="flex justify-center items-center space-x-8 mb-16">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-8 mb-8 md:mb-16">
             <button
               onClick={() => setActiveTab("SEO")}
-              className={`text-2xl font-bold px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
                 activeTab === "SEO"
                   ? "text-red-500 bg-white/10"
                   : "text-gray-400 hover:text-red-400"
@@ -413,7 +408,7 @@ const DigitalMarketingTab = () => {
             </button>
             <button
               onClick={() => setActiveTab("socialMedia")}
-              className={`text-2xl font-bold px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
                 activeTab === "socialMedia"
                   ? "bg-white text-black"
                   : "bg-gray-600 text-white hover:bg-gray-500"
@@ -423,7 +418,7 @@ const DigitalMarketingTab = () => {
             </button>
             <button
               onClick={() => setActiveTab("paidAds")}
-              className={`text-2xl font-bold px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
                 activeTab === "paidAds"
                   ? "bg-white text-black"
                   : "bg-gray-600 text-white hover:bg-gray-500"
@@ -434,51 +429,51 @@ const DigitalMarketingTab = () => {
           </div>
 
           {/* Tab Content */}
-          <div className="min-h-[600px]">
+          <div className="min-h-[400px] md:min-h-[600px]">
             {activeTab === "SEO" && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="rounded-2xl p-8 tab-content active"
+                className="rounded-2xl p-4 md:p-8 tab-content active"
               >
-                <h3 className="text-2xl font-bold mb-6 text-left">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
                   {t('expertises.seo.title')}
                 </h3>
-                <p className="text-gray-300 text-lg mb-8">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
                   {t('expertises.seo.description')}
                 </p>
 
-                <div className="rounded-xl mb-8   w-fit flex justify-center items-center mx-auto">
+                <div className="rounded-xl mb-6 md:mb-8 w-full flex justify-center items-center">
                   <Image
                     src="/seoService.jpg"
-                    alt="NEDX CRM Platform"
+                    alt="SEO Services"
                     width={800}
                     height={200}
-                    className="   rounded-lg"
+                    className="rounded-lg w-full max-w-3xl h-auto"
                   />
                 </div>
-                <h3 className="text-2xl font-bold mb-6 text-left max-w-4xl">
+                
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left max-w-4xl">
                   {t('expertises.seo.subtitle')}
                 </h3>
 
                 <div className="text-left">
-                  <h4 className="text-xl font-bold mb-4">
+                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
                     {t('expertises.seo.stageOne.title')}
                   </h4>
 
-                  <p className="text-gray-300 text-xl mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-base md:text-xl mb-6 md:mb-8 max-w-4xl">
                     {t('expertises.seo.stageOne.description')}
                   </p>
                   
-                  <h4 className="text-xl font-bold mb-4">
+                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
                     {t('expertises.seo.stageTwo.title')}
                   </h4>
 
-                  <p className="text-gray-300 text-xl mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-base md:text-xl mb-6 md:mb-8 max-w-4xl">
                     {t('expertises.seo.stageTwo.description')}
                   </p>
-                  
                 </div>
               </motion.div>
             )}
@@ -488,96 +483,94 @@ const DigitalMarketingTab = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="rounded-2xl p-8 tab-content active"
+                className="rounded-2xl p-4 md:p-8 tab-content active"
               >
-                <h3 className="text-2xl font-bold mb-6 text-left">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
                   {t('expertises.socialMedia.title')}
                 </h3>
-                <p className="text-gray-300 text-lg mb-8">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
                   {t('expertises.socialMedia.description')}
                 </p>
 
-                <div className=" rounded-xl  mb-8   w-fit flex justify-center items-center mx-auto">
+                <div className="rounded-xl mb-6 md:mb-8 w-full flex justify-center items-center">
                   <Image
                     src="/socailService.jpg"
-                    alt="NEDX CRM Platform"
+                    alt="Social Media Services"
                     width={600}
                     height={200}
-                    className="   rounded-lg"
+                    className="rounded-lg w-full max-w-2xl h-auto"
                   />
                 </div>
-                <h3 className="text-2xl font-bold  text-left max-w-4xl">
+                
+                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-left max-w-4xl">
                   {t('expertises.socialMedia.stageOne.title')}
                 </h3>
 
-                <p className="text-gray-300 text-lg mb-8 max-w-4xl">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
                   {t('expertises.socialMedia.stageOne.description')}
                 </p>
 
-                <h3 className="text-2xl font-bold m text-left max-w-4xl">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-left max-w-4xl">
                   {t('expertises.socialMedia.stageTwo.title')}
                 </h3>
-                <p className="text-gray-300 text-lg mb-8 max-w-4xl">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
                   {t('expertises.socialMedia.stageTwo.description')}
                 </p>
 
                 <div className="text-left">
-                  <h4 className="text-2xl  mb-4 max-w-4xl leading-8">
+                  <h4 className="text-lg md:text-2xl mb-3 md:mb-4 max-w-4xl leading-6 md:leading-8">
                     {t('expertises.socialMedia.subtitle')}
                   </h4>
-
-                 
                 </div>
               </motion.div>
             )}
+            
             {activeTab === "paidAds" && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="rounded-2xl p-8 tab-content active"
+                className="rounded-2xl p-4 md:p-8 tab-content active"
               >
-                <h3 className="text-2xl font-bold mb-6 text-left">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
                   {t('expertises.paidAds.title')}
                 </h3>
-                <p className="text-gray-300 text-lg mb-8">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
                   {t('expertises.paidAds.description')}
                 </p>
 
-                <div className=" rounded-xl  mb-8   w-fit flex justify-center items-center mx-auto">
+                <div className="rounded-xl mb-6 md:mb-8 w-full flex justify-center items-center">
                   <Image
                     src="/paidAds .jpg"
-                    alt="NEDX CRM Platform"
+                    alt="Paid Advertising Services"
                     width={600}
                     height={200}
-                    className="   rounded-lg"
+                    className="rounded-lg w-full max-w-2xl h-auto"
                   />
                 </div>
-              
 
                 <div className="text-left">
-                  <h4 className="text-2xl  mb-4 max-w-4xl leading-8">
+                  <h4 className="text-lg md:text-2xl mb-3 md:mb-4 max-w-4xl leading-6 md:leading-8">
                     {t('expertises.paidAds.subtitle')}
                   </h4>
-                  <p className="text-gray-300 text-xl mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-base md:text-xl mb-6 md:mb-8 max-w-4xl">
                     {t('expertises.paidAds.subtitle2')}
                   </p>
 
-                 
-                  <ul className="space-y-3 text-gray-300 text-2xl">
-                    <li className="flex items-center">
+                  <ul className="space-y-3 text-gray-300 text-lg md:text-2xl">
+                    <li className="flex items-start">
                       {t('expertises.paidAds.keyBenefits.items.0')}
                     </li>
-                    <li className="flex items-center">
+                    <li className="flex items-start">
                       {t('expertises.paidAds.keyBenefits.items.1')}
                     </li>
-                    <li className="flex items-center">
+                    <li className="flex items-start">
                       {t('expertises.paidAds.keyBenefits.items.2')}
                     </li>
-                    <li className="flex items-center">
+                    <li className="flex items-start">
                       {t('expertises.paidAds.keyBenefits.items.3')}
                     </li>
-                    <li className="flex items-center max-w-2xl">
+                    <li className="flex items-start max-w-2xl">
                       {t('expertises.paidAds.keyBenefits.items.4')}
                     </li>
                   </ul>

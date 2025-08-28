@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <footer className="bg-[#1A1A1A] text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold mb-6 text-white relative after:content-[''] after:block after:w-12 after:h-1 after:bg-[#DC2626] after:mt-2">NED Swiss</h3>

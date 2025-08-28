@@ -5,6 +5,7 @@ import { ChevronRight, ChevronLeft } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { gsap } from 'gsap';
+import Link from 'next/link';
 
 const BlogInsights = () => {
   const t = useTranslations('AboutPage.blogInsights');
@@ -144,27 +145,33 @@ const BlogInsights = () => {
     animateToIndex(index);
   }, [animateToIndex]);
 
-  // Auto-play functionality
+  // Auto-play functionality - DISABLED
+  // useEffect(() => {
+  //   if (!carouselRef.current || isHovered) return;
+
+  //   // Clear existing interval
+  //   if (intervalRef.current) {
+  //     clearInterval(intervalRef.current);
+  //   }
+
+  //   // Set initial position
+  //   gsap.set(carouselRef.current, { x: 0 });
+
+  //   // Start auto-play
+  //   intervalRef.current = setInterval(goToNext, 3000);
+
+  //   return () => {
+  //     if (intervalRef.current) {
+  //       clearInterval(intervalRef.current);
+  //     }
+  //   };
+  // }, [goToNext, isHovered, isMobile, isTablet]);
+
+  // Set initial position only
   useEffect(() => {
-    if (!carouselRef.current || isHovered) return;
-
-    // Clear existing interval
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
-
-    // Set initial position
+    if (!carouselRef.current) return;
     gsap.set(carouselRef.current, { x: 0 });
-
-    // Start auto-play
-    intervalRef.current = setInterval(goToNext, 3000);
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, [goToNext, isHovered, isMobile, isTablet]);
+  }, [isMobile, isTablet]);
 
   // Get number of dots for pagination
   const getMaxSteps = () => {
@@ -278,12 +285,14 @@ const BlogInsights = () => {
       </div>
 
       {/* Discover Blogs Button */}
+      <Link href="/blogs">
       <div className="text-center mt-8 md:mt-12 px-4">
         <button className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base">
           {t('discoverButton')}
           <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
         </button>
       </div>
+      </Link>
     </section>
   );
 };

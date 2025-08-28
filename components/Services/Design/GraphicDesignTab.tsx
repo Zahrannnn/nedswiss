@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const WebDevelopmentTab = () => {
   const t = useTranslations("Services.GraphicDesign");
-  const [activeTab, setActiveTab] = useState("nedx");
+  const [activeTab, setActiveTab] = useState("flyers");
   
   // Refs for GSAP animations
   const containerRef = useRef<HTMLDivElement>(null);
@@ -322,47 +322,47 @@ const WebDevelopmentTab = () => {
   return (
     <div ref={containerRef} className="bg-[#424242] text-white min-h-screen">
       {/* Header Section */}
-      <div ref={headerRef} className="text-center py-16 px-6">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 w-[78%] leading-20 text-center mx-auto">
+      <div ref={headerRef} className="text-center py-8 md:py-16 px-4 md:px-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 w-full md:w-[78%] leading-tight md:leading-20 text-center mx-auto break-words hyphens-auto">
           {t('header.title')}
         </h1>
       </div>
 
       {/* Website Design Section */}
-      <div className="px-6 py-12">
+      <div className="px-4 md:px-6 py-8 md:py-12">
         <div ref={websiteDesignRef} className="max-w-7xl mx-auto">
           {/* Header Row */}
-          <div className="text-left mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 ">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 break-words hyphens-auto">
               {t('websiteDesign.title')}
             </h2>
-            <p className="text-gray-300 text-3xl max-w-4xl ">
+            <p className="text-gray-300 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl break-words hyphens-auto">
               {t('websiteDesign.description')}
             </p>
           </div>
 
           {/* Two Column Row */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="mb-8">
-                <h3 className="text-2xl font-semibold mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="mb-6 md:mb-8">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
                   {t('websiteDesign.workIncludes.title')}
                 </h3>
-                <ul className="space-y-3 text-gray-300 text-2xl">
+                <ul className="space-y-2 md:space-y-3 text-gray-300 text-lg sm:text-xl md:text-2xl">
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.ecommerce')}
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.restaurant')}
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.landing')}
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.corporate')}
                   </li>
                 </ul>
@@ -371,7 +371,7 @@ const WebDevelopmentTab = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white group md:mt-20 hover:bg-red-600 backdrop-blur-sm text-red-600 hover:text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 border border-white/30 flex items-center space-x-2 w-fit"
+                className="bg-white group mt-6 md:mt-20 hover:bg-red-600 backdrop-blur-sm text-red-600 hover:text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 border border-white/30 flex items-center space-x-2 w-fit"
               >
                 <span className="text-red-500 group-hover:text-white text-lg sm:text-xl">
                   ✦
@@ -380,13 +380,13 @@ const WebDevelopmentTab = () => {
               </motion.button>
             </div>
 
-            <div className="">
+            <div className="order-1 lg:order-2 flex justify-center">
               <Image
                 src="/gdp.jpg"
                 alt="Website Design"
                 width={400}
                 height={500}
-                className="floating-image"
+                className="floating-image w-full max-w-sm md:max-w-md lg:max-w-lg h-auto"
               />
             </div>
           </div>
@@ -394,40 +394,40 @@ const WebDevelopmentTab = () => {
       </div>
 
       {/* System Development Section */}
-      <div className="px-6 py-12">
+      <div className="px-4 md:px-6 py-8 md:py-12">
         <div ref={systemDevRef} className="max-w-7xl mx-auto">
           {/* Header Row */}
-          <div className="text-left mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
               {t('systemDevelopment.title')}
             </h2>
-            <p className="text-gray-300 text-3xl max-w-4xl ">
+            <p className="text-gray-300 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl">
               {t('systemDevelopment.description')}
             </p>
           </div>
 
           {/* Two Column Row */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="mb-8">
-                <h3 className="text-2xl font-semibold mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="mb-6 md:mb-8">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
                   {t('systemDevelopment.workIncludes.title')}
                 </h3>
-                <ul className="space-y-3 text-gray-300 text-2xl">
+                <ul className="space-y-2 md:space-y-3 text-gray-300 text-lg sm:text-xl md:text-2xl">
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('systemDevelopment.workIncludes.items.crm')}
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('systemDevelopment.workIncludes.items.hr')}
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('systemDevelopment.workIncludes.items.inventory')}
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('systemDevelopment.workIncludes.items.booking')}
                   </li>
                 </ul>
@@ -436,7 +436,7 @@ const WebDevelopmentTab = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white group md:mt-20 hover:bg-red-600 backdrop-blur-sm text-red-600 hover:text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 border border-white/30 flex items-center space-x-2 w-fit"
+                className="bg-white group mt-6 md:mt-20 hover:bg-red-600 backdrop-blur-sm text-red-600 hover:text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 border border-white/30 flex items-center space-x-2 w-fit"
               >
                 <span className="text-red-500 group-hover:text-white text-lg sm:text-xl">
                   ✦
@@ -445,13 +445,13 @@ const WebDevelopmentTab = () => {
               </motion.button>
             </div>
 
-            <div className="">
+            <div className="order-1 lg:order-2 flex justify-center">
               <Image
                 src="/offset.jpg"
-                alt="Website Design"
+                alt="System Development"
                 width={400}
                 height={500}
-                className="floating-image"
+                className="floating-image w-full max-w-sm md:max-w-md lg:max-w-lg h-auto"
               />
             </div>
           </div>
@@ -459,17 +459,17 @@ const WebDevelopmentTab = () => {
       </div>
 
       {/* Expertises Section */}
-      <div className="px-6 py-16">
+      <div className="px-4 md:px-6 py-8 md:py-16">
         <div ref={expertisesRef} className="max-w-7xl mx-auto">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-12 text-left">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 text-left">
             {t('expertises.title')}
           </h2>
 
           {/* Tab Navigation */}
-          <div className="flex justify-center items-center space-x-8 mb-16">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-8 mb-8 md:mb-16">
             <button
               onClick={() => setActiveTab("businessCards")}
-              className={`text-2xl font-bold px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
                 activeTab === "businessCards"
                   ? "text-red-500 bg-white/10"
                   : "text-gray-400 hover:text-red-400"
@@ -479,7 +479,7 @@ const WebDevelopmentTab = () => {
             </button>
             <button
               onClick={() => setActiveTab("flyers")}
-              className={`text-2xl font-bold px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
                 activeTab === "flyers"
                   ? "bg-white text-black"
                   : "bg-gray-600 text-white hover:bg-gray-500"
@@ -489,7 +489,7 @@ const WebDevelopmentTab = () => {
             </button>
             <button
               onClick={() => setActiveTab("logo")}
-              className={`text-2xl font-bold px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
                 activeTab === "logo"
                   ? "bg-white text-black"
                   : "bg-gray-600 text-white hover:bg-gray-500"
@@ -500,58 +500,57 @@ const WebDevelopmentTab = () => {
           </div>
 
           {/* Tab Content */}
-          <div className="min-h-[600px]">
+          <div className="min-h-[400px] md:min-h-[600px]">
             {activeTab === "businessCards" && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="rounded-2xl p-8 tab-content active"
+                className="rounded-2xl p-4 md:p-8 tab-content active"
               >
-                <h3 className="text-2xl font-bold mb-6 text-left">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
                   {t('expertises.businessCards.title')}
                 </h3>
-                <p className="text-gray-300 text-lg mb-8">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
                   {t('expertises.businessCards.description')}
                 </p>
 
-                <div className=" rounded-xl  mb-8   w-fit flex justify-center items-center mx-auto">
+                <div className="rounded-xl mb-6 md:mb-8 w-full flex justify-center items-center">
                   <Image
                     src="/buisnessCards.png"
-                    alt="NEDX CRM Platform"
+                    alt="Business Cards"
                     width={600}
                     height={200}
-                    className="   rounded-lg"
+                    className="rounded-lg w-full max-w-2xl h-auto"
                   />
                 </div>
 
                 <div className="text-left">
-                  <h4 className="text-xl font-bold mb-4">
+                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
                     {t('expertises.businessCards.subtitle')}
                   </h4>
-                  <h5 className="text-2xl font-bold mb-4 max-w-4xl">
+                  <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl">
                     {t('expertises.businessCards.mainOffer.title')}
                   </h5>
-                  <ul className="space-y-2 text-gray-300 mb-6">
+                  <ul className="space-y-2 text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
                     <li>{t('expertises.businessCards.mainOffer.items.0')}</li>
                     <li>{t('expertises.businessCards.mainOffer.items.1')}</li>
                   </ul>
                   
-                  <h5 className="text-2xl font-bold mb-4 max-w-4xl">
+                  <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl">
                     {t('expertises.businessCards.offerConditions.title')}
                   </h5>
-                  <p className="text-gray-300 text-lg mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
                     {t('expertises.businessCards.offerConditions.description')}
                   </p>
-                  <h5 className="text-2xl font-bold mb-4 max-w-4xl">
+                  <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl">
                     {t('expertises.businessCards.contactDetails.title')}
                   </h5>
-                  <p className="text-gray-300 text-lg mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
                     {t('expertises.businessCards.contactDetails.description')}
                   </p>
                   
-                  
-                  <p className="text-gray-300 text-lg mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
                     {t('expertises.businessCards.footer.description')}
                   </p>
                 </div>
@@ -563,59 +562,58 @@ const WebDevelopmentTab = () => {
              initial={{ opacity: 0, y: 20 }}
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.5 }}
-             className="rounded-2xl p-8 tab-content active"
+             className="rounded-2xl p-4 md:p-8 tab-content active"
            >
-             <h3 className="text-2xl font-bold mb-6 text-left">
+             <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
                {t('expertises.businessCards.title')}
              </h3>
-             <p className="text-gray-300 text-lg mb-8">
+             <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
                {t('expertises.businessCards.description')}
              </p>
 
-             <div className=" rounded-xl  mb-8   w-fit flex justify-center items-center mx-auto gap-8">
+             <div className="rounded-xl mb-6 md:mb-8 w-full flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-8">
                <Image
                  src="/flyer1.jpg"
-                 alt="NEDX CRM Platform"
+                 alt="Flyer Design 1"
                  width={400}
                  height={200}
-                 className="   rounded-lg"
+                 className="rounded-lg w-full max-w-sm h-auto"
                />
                <Image
                  src="/flyer2.jpg"
-                 alt="NEDX CRM Platform"
+                 alt="Flyer Design 2"
                  width={400}
                  height={200}
-                 className="   rounded-lg"
+                 className="rounded-lg w-full max-w-sm h-auto"
                />
              </div>
 
              <div className="text-left">
-               <h4 className="text-xl font-bold mb-4">
+               <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
                  {t('expertises.businessCards.subtitle')}
                </h4>
-               <h5 className="text-2xl font-bold mb-4 max-w-4xl">
+               <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl">
                  {t('expertises.businessCards.mainOffer.title')}
                </h5>
-               <ul className="space-y-2 text-gray-300 mb-6">
+               <ul className="space-y-2 text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
                  <li>{t('expertises.businessCards.mainOffer.items.0')}</li>
                  <li>{t('expertises.businessCards.mainOffer.items.1')}</li>
                </ul>
                
-               <h5 className="text-2xl font-bold mb-4 max-w-4xl">
+               <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl">
                  {t('expertises.businessCards.offerConditions.title')}
                </h5>
-               <p className="text-gray-300 text-lg mb-8 max-w-4xl">
+               <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
                  {t('expertises.businessCards.offerConditions.description')}
                </p>
-               <h5 className="text-2xl font-bold mb-4 max-w-4xl">
+               <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl">
                  {t('expertises.businessCards.contactDetails.title')}
                </h5>
-               <p className="text-gray-300 text-lg mb-8 max-w-4xl">
+               <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
                  {t('expertises.businessCards.contactDetails.description')}
                </p>
                
-               
-               <p className="text-gray-300 text-lg mb-8 max-w-4xl">
+               <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
                  {t('expertises.businessCards.footer.description')}
                </p>
              </div>
@@ -626,46 +624,44 @@ const WebDevelopmentTab = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="rounded-2xl p-8 tab-content active"
+                className="rounded-2xl p-4 md:p-8 tab-content active"
               >
-                <h3 className="text-2xl font-bold mb-6 text-left">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
                   {t('expertises.logo.title')}
                 </h3>
-                <p className="text-gray-300 text-2xl mb-8">
+                <p className="text-gray-300 text-lg md:text-2xl mb-6 md:mb-8">
                   {t('expertises.logo.description')}
                 </p>
-                <p className="text-gray-300 text-2xl  max-w-4xl">
+                <p className="text-gray-300 text-lg md:text-2xl max-w-4xl mb-6">
                   {t('expertises.logo.subtitle')}
                 </p>
 
-                <div className=" rounded-xl    md:-mt-24  w-fit  mx-auto">
+                <div className="rounded-xl mb-6 md:-mb-24 w-full mx-auto">
                   <Image
                     src="/logoService.png"
-                    alt="NEDX CRM Platform"
+                    alt="Logo Service"
                     width={800}
                     height={500}
-                    className="   rounded-lg"
+                    className="rounded-lg w-full max-w-4xl h-auto mx-auto"
                   />
                 </div>
 
                 <div className="text-left md:-mt-20">
-                  <h4 className="text-xl font-bold mb-4">
+                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
                     {t('expertises.logo.subtitle2')}
                   </h4>
-                  <ul className="space-y-2 text-gray-300 mb-6 text-2xl">
+                  <ul className="space-y-2 text-gray-300 mb-4 md:mb-6 text-lg md:text-2xl">
                     <li>{t('expertises.logo.keyElements.items.0.title')}</li>
                     <li>{t('expertises.logo.keyElements.items.0.description')}</li>
                     <li>{t('expertises.logo.keyElements.items.1.title')}</li>
                     <li>{t('expertises.logo.keyElements.items.1.description')}</li>
                   </ul>
-                  <h4 className="text-2xl font-bold mb-4">
+                  <h4 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
                     {t('expertises.logo.footer.title')}
                   </h4>
-                  <p className="text-gray-300 text-xl mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-lg md:text-xl mb-6 md:mb-8 max-w-4xl">
                     {t('expertises.logo.footer.description')}
                   </p>
-
-                  
                 </div>
               </motion.div>
             )}
