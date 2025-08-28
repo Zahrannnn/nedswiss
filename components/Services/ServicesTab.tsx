@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { GraphicDesignTab, WebDevelopmentTab, SocialMediaTab, DigitalMarketingTab } from '.';
+import IlluminatedSignsTab from './Design/IlluminatedSignsTab';
 
 interface ServiceTab {
   id: string;
@@ -138,7 +139,7 @@ const ServicesTab = () => {
             >
               {activeTab === 'design' && <GraphicDesignTab />}
               {activeTab === 'webDevelopment' && <WebDevelopmentTab />}
-              {activeTab === 'socialMedia' && <SocialMediaTab />}
+              {activeTab === 'socialMedia' && <IlluminatedSignsTab />}
               {activeTab === 'digitalMarketing' && <DigitalMarketingTab />}
             </motion.div>
           </AnimatePresence>

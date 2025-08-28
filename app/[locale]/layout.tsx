@@ -8,6 +8,8 @@ import { Providers } from '@/lib/providers';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import LayoutWrapper from '@/components/layout/LayoutWrapper';
+import SimpleVisitorTracker from '@/components/SimpleVisitorTracker';
+import WhatsAppButton from '@/components/contact/WhatsAppButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -48,6 +50,8 @@ export default async function RootLayout({
               {children}
             </main>
             <Footer />
+            <SimpleVisitorTracker />
+            <WhatsAppButton />
           </LayoutWrapper>
         </Providers>
       </body>

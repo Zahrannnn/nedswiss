@@ -342,22 +342,22 @@
       "consultation": {
         "number": "01",
         "title": "Consultation",
-        "description": "Identifying client goals, analyzing brand position, proposing tailored strategies, and showing how our agency can help. We conduct thorough market research to understand your unique challenges and opportunities."
+        "description": "Identifying client goals, analyzing brand position, and proposing tailored strategies based on thorough market research."
       },
       "strategyPlanning": {
         "number": "02",
         "title": "Strategy",
-        "description": "Developing customized plans by understanding client objectives, analyzing market trends, and creating effective approaches to achieve sustainable growth and competitive advantage."
+        "description": "Developing customized plans that align with client objectives and market trends to achieve sustainable growth."
       },
       "designDevelopment": {
         "number": "03",
         "title": "Execution",
-        "description": "Implementing creative solutions with precision, delivering exceptional quality work, and ensuring client objectives are met through detailed execution and continuous refinement."
+        "description": "Implementing creative solutions with precision and ensuring client objectives are met through detailed execution."
       },
       "testingOptimization": {
         "number": "04",
         "title": "Success",
-        "description": "Measuring performance against key metrics, celebrating achievements, optimizing strategies based on results, and establishing foundations for continued growth and success."
+        "description": "Measuring performance metrics and optimizing strategies for sustainable growth."
       }
     },
     "detailedServices": {
@@ -873,6 +873,119 @@
         }
       }
     },
+    "IlluminatedSigns": {
+      "header": {
+        "title": "We illuminate your brand with cutting-edge signage solutions and stunning 3D installations that capture attention and create lasting impressions."
+      },
+      "signageSolutions": {
+        "title": "Illuminated Signage Solutions",
+        "description": "We create vibrant, eye-catching illuminated signs that enhance your brand visibility 24/7, combining innovative lighting technology with superior craftsmanship.",
+        "workIncludes": {
+          "title": "Our Work Includes",
+          "items": {
+            "led": "LED Display Signs",
+            "neon": "Neon & Flex Signs",
+            "channel": "Channel Letter Signs",
+            "backlit": "Backlit Panels & Boards"
+          }
+        },
+        "cta": {
+          "text": "Illuminate Your Brand"
+        }
+      },
+      "installations": {
+        "title": "3D Installations",
+        "description": "We design and install stunning three-dimensional displays that transform spaces, creating immersive experiences that engage customers and elevate your brand presence.",
+        "workIncludes": {
+          "title": "Our Work Includes",
+          "items": {
+            "dimensional": "3D Letter Installations",
+            "architectural": "Architectural Lighting Features",
+            "digital": "Digital Display Installations",
+            "interactive": "Interactive 3D Elements"
+          }
+        },
+        "cta": {
+          "text": "Transform Your Space"
+        }
+      },
+      "expertises": {
+        "title": "Expertises",
+        "tabs": {
+          "led": "LED Systems",
+          "neon": "Neon Solutions",
+          "threed": "3D Installations"
+        },
+        "led": {
+          "title": "Advanced LED Signage Systems",
+          "description": "Our LED signage solutions combine energy efficiency with brilliant illumination, offering programmable displays that adapt to your marketing needs with stunning visual impact.",
+          "subtitle": "Why Choose Our LED Solutions:",
+          "features": {
+            "title": "Key Features & Benefits",
+            "items": [
+              "Energy-efficient LED technology with up to 80% power savings",
+              "Programmable color-changing displays for dynamic messaging",
+              "Weather-resistant design for outdoor durability",
+              "Remote control capabilities for easy content management"
+            ]
+          },
+          "applications": {
+            "title": "Perfect Applications",
+            "description": "Ideal for storefronts, shopping centers, restaurants, hotels, and corporate buildings seeking maximum visibility and modern appeal."
+          },
+          "footer": {
+            "description": "Our LED systems are designed for longevity and performance, backed by comprehensive warranties and professional installation services."
+          }
+        },
+        "neon": {
+          "title": "Custom Neon & Flex Sign Solutions",
+          "description": "We create stunning neon and LED flex signs that capture the classic appeal of traditional neon while offering modern efficiency and versatility for any design concept.",
+          "subtitle": "The Perfect Blend of Classic and Modern:",
+          "features": {
+            "title": "What Makes Our Neon Special",
+            "items": [
+              "Traditional glass neon and modern LED flex options",
+              "Custom shapes and designs for unique brand expression",
+              "Continuous lighting with smooth, even illumination"
+            ]
+          },
+          "applications": {
+            "title": "Ideal For",
+            "description": "Perfect for restaurants, bars, retail stores, entertainment venues, and any business wanting that distinctive neon glow and vintage aesthetic."
+          },
+          "footer": {
+            "description": "Our neon solutions combine artistic craftsmanship with technical precision to create signs that become landmark features of your business."
+          }
+        },
+        "threed": {
+          "title": "Professional 3D Installation Solutions",
+          "description": "Transform Your Space with Dimensional Impact",
+          "subtitle": "We create three-dimensional installations that add depth, texture, and visual interest to any environment, making your brand impossible to ignore.",
+          "subtitle2": "Our 3D installation process encompasses three critical phases:",
+          "features": {
+            "title": "Our 3D Capabilities",
+            "items": [
+              {
+                "title": "Dimensional Letters & Logos",
+                "description": "Precision-cut letters with LED backlighting or face illumination for maximum brand impact."
+              },
+              {
+                "title": "Architectural Integration",
+                "description": "Seamless integration with building facades and interior spaces for cohesive design."
+              },
+              {
+                "title": "Interactive Elements",
+                "description": "Motion-activated and touch-responsive installations that engage customers actively."
+              }
+            ]
+          },
+          "footer": {
+            "title": "End-to-End Service",
+            "description": "From initial concept and 3D modeling to fabrication and professional installation, we handle every aspect of your 3D signage project with precision and expertise."
+          }
+        }
+      }
+    },
     "digitalMarketing": {
       "header": {
         "title": "We create digital experiences that inspire people, strengthen brands, and help businesses grow with confidence"
@@ -1001,5 +1114,28 @@
     "precision": "Precision",
     "innovation": "Innovation",
     "excellence": "Excellence"
+  },
+  "PrivacyConsent": {
+    "title": "Privacy & Data Collection",
+    "description": "We collect basic visitor data (country, session duration) to improve our services. This helps us understand our audience and enhance your experience.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "WhatsApp": {
+    "button": {
+      "ariaLabel": "Contact us on WhatsApp"
+    },
+    "modal": {
+      "title": "Welcome to NED Swiss!",
+      "subtitle": "Ready to transform your digital presence?",
+      "description": "Connect with our team instantly and discover how we can help bring your vision to life with Swiss precision and excellence.",
+      "whatsappButton": "Chat on WhatsApp",
+      "maybeLater": "Maybe Later",
+      "close": "Close",
+      "footer": "We're here to help 24/7"
+    },
+    "message": {
+      "default": "Hello! I'm interested in learning more about NED Swiss services."
+    }
   }
 }

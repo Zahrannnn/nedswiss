@@ -168,7 +168,7 @@ const SocialMediaTab = () => {
       {/* Call to Action */}
       <div className="text-center bg-gray-900 text-white rounded-2xl p-8">
         <h4 className="text-2xl font-bold mb-4">Ready to Boost Your Social Presence?</h4>
-        <p className="text-gray-300 mb-6">Let's create a social media strategy that drives real results for your business.</p>
+        <p className="text-gray-300 mb-6">Let&apos;s create a social media strategy that drives real results for your business.</p>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

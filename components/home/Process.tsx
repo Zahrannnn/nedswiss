@@ -56,7 +56,7 @@ const Services = () => {
   
   return (
     <section id="services" className="min-h-screen rounded-t-4xl tracking-wide bg-[#252525]">
-     <div className="p-10 bg-[#252525] rounded-t-4xl">
+     <div className="px-6 pt-10 pb-4 lg:p-10 bg-[#252525] rounded-t-4xl">
         
      <AnimatedHeaderSection
         subTitle={"Behind the scene, Beyond the screen"}
@@ -70,7 +70,7 @@ const Services = () => {
         <div
           ref={(el) => (serviceRefs.current[index] = el as never)}
           key={index}
-          className="sticky px-10 pt-6 pb-12 text-red-500 border-t-2 border-gray-500 bg-[#252525]"
+          className="sticky px-6 pt-4 pb-8 lg:px-10 lg:pt-6 lg:pb-12 text-red-500 border-t-2 border-gray-500 bg-[#252525]"
           style={
             isDesktop
               ? {
