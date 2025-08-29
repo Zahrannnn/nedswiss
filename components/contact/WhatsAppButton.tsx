@@ -52,12 +52,12 @@ const WhatsAppButton = () => {
       >
         <div className="relative">
           {/* Green circle background */}
-          <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+          <div className="size-16 bg-red-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
             {/* WhatsApp icon */}
 
             <svg
-              width="54"
-              height="55"
+              width="40"
+              height="40"
               viewBox="0 0 54 55"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

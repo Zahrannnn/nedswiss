@@ -1,9 +1,11 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link';
 
 const CustomBtn = () => {
   const t = useTranslations('Navigation');
   return (
+    <Link href="/contact">
     <div className=' mb-6 group '>
 
     
@@ -18,6 +20,7 @@ const CustomBtn = () => {
     </button>
 
     </div>
+    </Link>
   )
 }
 

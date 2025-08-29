@@ -3,6 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const WhyUs = () => {
   const t = useTranslations('HomePage.whyUs');
@@ -43,9 +44,10 @@ const WhyUs = () => {
                     
                     {/* CTA Button */}
                     <div className="pt-4 sm:pt-6">
+                      <Link href="/contact">
                       <button className="bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
                         {t('cta')}
-                      </button>
+                      </button></Link>
                     </div>
                   </div>
                 </div>

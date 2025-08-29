@@ -541,7 +541,7 @@ const DigitalMarketingTab = () => {
 
                 <div className="rounded-xl mb-6 md:mb-8 w-full flex justify-center items-center">
                   <Image
-                    src="/paidAds .jpg"
+                    src="/paidAds.jpg"
                     alt="Paid Advertising Services"
                     width={600}
                     height={200}

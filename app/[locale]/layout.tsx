@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 // This metadata will be overridden by page-specific metadata
 export const metadata: Metadata = {
-  metadataBase: new URL('https://stage-nedswiss.vercel.app'),
+  metadataBase: new URL('https://nedswiss.com'),
   title: {
     default: 'NED Swiss | Digital Excellence, Swiss Precision',
     template: '%s | NED Swiss',

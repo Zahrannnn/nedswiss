@@ -10,22 +10,20 @@ export const Footer = () => {
   return (
     <footer className="bg-[#1A1A1A] text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold mb-6 text-white relative after:content-[''] after:block after:w-12 after:h-1 after:bg-[#DC2626] after:mt-2">NED Swiss</h3>
             <p className="mb-6 text-white/80">Digital Excellence, Swiss Precision</p>
             <div className="flex space-x-5">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-[#DC2626]/10 hover:bg-[#DC2626] text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+              <a href="https://www.facebook.com/profile.php?id=61550717965657" target="_blank" rel="noopener noreferrer" className="bg-[#DC2626]/10 hover:bg-[#DC2626] text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110">
                 <FaFacebook size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-[#DC2626]/10 hover:bg-[#DC2626] text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110">
-                <FaTwitter size={20} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-[#DC2626]/10 hover:bg-[#DC2626] text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+            
+              <a href="https://www.instagram.com/ned_swiss/" target="_blank" rel="noopener noreferrer" className="bg-[#DC2626]/10 hover:bg-[#DC2626] text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110">
                 <FaInstagram size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-[#DC2626]/10 hover:bg-[#DC2626] text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+              <a href="https://www.linkedin.com/company/ned-swiss" target="_blank" rel="noopener noreferrer" className="bg-[#DC2626]/10 hover:bg-[#DC2626] text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110">
                 <FaLinkedin size={20} />
               </a>
             </div>
@@ -42,7 +40,7 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/about/our-story" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
+                <Link href="/about" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
                   <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
                   {t('about')}
                 </Link>
@@ -53,14 +51,9 @@ export const Footer = () => {
                   {t('services')}
                 </Link>
               </li>
+             
               <li>
-                <Link href="/portfolio" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
-                  <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
-                  {t('portfolio')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
+                <Link href="/blogs" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
                   <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
                   {t('blog')}
                 </Link>
@@ -79,25 +72,25 @@ export const Footer = () => {
             <h3 className="text-xl font-bold mb-6 text-white relative after:content-[''] after:block after:w-12 after:h-1 after:bg-[#DC2626] after:mt-2">{t('services')}</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services/graphic-design" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
+                <Link href="/services" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
                   <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
                   {t('graphicDesign')}
                 </Link>
               </li>
               <li>
-                <Link href="/services/web-development" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
+                <Link href="/services" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
                   <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
                   {t('webDevelopment')}
                 </Link>
               </li>
               <li>
-                <Link href="/services/social-media-management" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
+                <Link href="/services" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
                   <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
                   {t('socialMediaManagement')}
                 </Link>
               </li>
               <li>
-                <Link href="/services/seo-services" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
+                <Link href="/services" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
                   <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
                   {t('seoServices')}
                 </Link>
@@ -144,10 +137,10 @@ export const Footer = () => {
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60">&copy; {new Date().getFullYear()} NED Swiss. All rights reserved.</p>
           <div className="mt-6 md:mt-0 flex space-x-6">
-            <Link href="/privacy-policy" className="text-white/60 hover:text-[#DC2626] transition-colors duration-300">
+            <Link href="/" className="text-white/60 hover:text-[#DC2626] transition-colors duration-300">
               {t('privacyPolicy')}
             </Link>
-            <Link href="/terms-of-service" className="text-white/60 hover:text-[#DC2626] transition-colors duration-300">
+            <Link href="/" className="text-white/60 hover:text-[#DC2626] transition-colors duration-300">
               {t('termsOfService')}
             </Link>
           </div>

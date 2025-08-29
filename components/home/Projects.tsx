@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Stack from '../../comps/Components/Stack/Stack';
+import Link from 'next/link';
 
 interface ProjectCategory {
   id: string;
@@ -159,9 +160,10 @@ const Projects = () => {
                 ease: "easeOut"
               }}
             >
+              <Link href="/services">
               <button className="bg-red-500 mt-5 hover:bg-red-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
                 {t('exploreNow')}
-              </button>
+              </button></Link>
             </motion.div>
           </div>
         </div>

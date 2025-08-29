@@ -19,7 +19,7 @@ interface SEOProps {
 
 const defaultImageUrl = 'https://nedswiss.com/nedswiss.jpg';
 const defaultImageAlt = 'NED Swiss - Digital Excellence, Swiss Precision';
-const siteUrl = 'https://stage-nedswiss.vercel.app';
+const siteUrl = 'https://nedswiss.com';
 
 export function generateMetadata({
   title,
@@ -39,7 +39,7 @@ export function generateMetadata({
 }: SEOProps): Metadata {
   const fullTitle = title.includes('NED Swiss') ? title : `${title} | NED Swiss`;
   const url = `${siteUrl}/${locale}${path}`;
-  const canonical = canonicalUrl || url;
+    const canonical = canonicalUrl || url;
 
   // Default keywords for NED Swiss
   const defaultKeywords = [
