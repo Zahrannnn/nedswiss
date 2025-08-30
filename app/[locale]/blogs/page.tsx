@@ -7,7 +7,7 @@ interface BlogsPageProps {
 }
 
 // Enable ISR with optimized revalidation - 2 minutes for blog listing
-export const revalidate = 5*60;
+export const revalidate = 300;
 
 // Enable static generation
 export const dynamicParams = false;
