@@ -343,22 +343,22 @@
       "consultation": {
         "number": "01",
         "title": "Beratung",
-        "description": "Identifizierung der Kundenziele, Analyse der Markenposition und Vorschläge für massgeschneiderte Strategien auf der Grundlage gründlicher Marktforschung."
+        "description": "Identifizierung der Kundenziele und Entwicklung massgeschneiderter Strategien durch Marktanalyse."
       },
       "strategyPlanning": {
         "number": "02",
         "title": "Strategie",
-        "description": "Entwicklung massgeschneiderter Pläne, die auf die Kundenziele und Markttrends abgestimmt sind, um nachhaltiges Wachstum zu erzielen."
+        "description": "Erstellung zielgerichteter Pläne für nachhaltiges Wachstum basierend auf Kundenzielen und Markttrends."
       },
       "designDevelopment": {
         "number": "03",
         "title": "Ausführung",
-        "description": "Präzise Umsetzung kreativer Lösungen und Sicherstellung der Kundenziele durch detaillierte Ausführung."
+        "description": "Präzise Umsetzung kreativer Lösungen zur Erreichung der Kundenziele."
       },
       "testingOptimization": {
         "number": "04",
         "title": "Erfolg",
-        "description": "Messung der Leistungsmetriken und Optimierung der Strategien für nachhaltiges Wachstum."
+        "description": "Leistungsmessung und Strategieoptimierung für langfristiges Wachstum."
       }
     },
     "detailedServices": {

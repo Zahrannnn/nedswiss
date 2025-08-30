@@ -343,22 +343,22 @@
       "consultation": {
         "number": "01",
         "title": "Consultation",
-        "description": "Identifying client goals, analyzing brand position, and proposing tailored strategies based on thorough market research."
+        "description": "Identifying goals, analyzing brand position, and proposing tailored strategies."
       },
       "strategyPlanning": {
         "number": "02",
         "title": "Strategy",
-        "description": "Developing customized plans that align with client objectives and market trends to achieve sustainable growth."
+        "description": "Developing custom plans aligned with client objectives and market trends."
       },
       "designDevelopment": {
         "number": "03",
         "title": "Execution",
-        "description": "Implementing creative solutions with precision and ensuring client objectives are met through detailed execution."
+        "description": "Implementing creative solutions with precision to meet client objectives."
       },
       "testingOptimization": {
         "number": "04",
         "title": "Success",
-        "description": "Measuring performance metrics and optimizing strategies for sustainable growth."
+        "description": "Measuring performance and optimizing strategies for growth."
       }
     },
     "detailedServices": {
