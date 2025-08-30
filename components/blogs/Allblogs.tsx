@@ -22,8 +22,7 @@ const Allblogs = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <BlogHero />
+    
       
       
       
