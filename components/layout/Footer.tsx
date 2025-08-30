@@ -134,17 +134,7 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/60">&copy; {new Date().getFullYear()} NED Swiss. All rights reserved.</p>
-          <div className="mt-6 md:mt-0 flex space-x-6">
-            <Link href="/" className="text-white/60 hover:text-[#DC2626] transition-colors duration-300">
-              {t('privacyPolicy')}
-            </Link>
-            <Link href="/" className="text-white/60 hover:text-[#DC2626] transition-colors duration-300">
-              {t('termsOfService')}
-            </Link>
-          </div>
-        </div>
+        
       </div>
     </footer>
   );
