@@ -14,29 +14,31 @@ export const blogQueryKeys = {
   slug: (slug: string) => [...blogQueryKeys.details(), 'slug', slug] as const,
 };
 
-// Hook to get all blogs with optimized caching
+// Hook to get all blogs with optimized caching for instant updates
 export const useBlogs = (): UseQueryResult<Blog[], Error> => {
   return useQuery({
     queryKey: blogQueryKeys.list({}),
     queryFn: () => blogAPI.getAllBlogs(),
-    staleTime: 5 * 60 * 1000, // 5 minutes - matches Next.js cache
-    gcTime: 30 * 60 * 1000, // 30 minutes - longer garbage collection
+    staleTime: 0, // Always consider data stale for instant updates
+    gcTime: 5 * 60 * 1000, // 5 minutes garbage collection
     retry: 2,
-    refetchOnWindowFocus: false, // Disable refetch on window focus for better performance
-    refetchOnMount: false, // Rely on cache for initial load
+    refetchOnWindowFocus: true, // Refetch when window gains focus
+    refetchOnMount: true, // Always refetch on mount to get latest data
+    refetchInterval: 30 * 1000, // Refetch every 30 seconds in background
   });
 };
 
-// Hook to get published blogs with optimized caching
+// Hook to get published blogs with optimized caching for instant updates
 export const usePublishedBlogs = (): UseQueryResult<Blog[], Error> => {
   return useQuery({
     queryKey: blogQueryKeys.list({ status: 1 }),
     queryFn: () => blogAPI.getPublishedBlogs(),
-    staleTime: 5 * 60 * 1000,
-    gcTime: 30 * 60 * 1000,
+    staleTime: 0, // Always consider data stale for instant updates
+    gcTime: 5 * 60 * 1000, // 5 minutes garbage collection
     retry: 2,
-    refetchOnWindowFocus: false,
-    refetchOnMount: false,
+    refetchOnWindowFocus: true,
+    refetchOnMount: true,
+    refetchInterval: 30 * 1000, // Refetch every 30 seconds
   });
 };
 
@@ -45,40 +47,41 @@ export const useBlogsWithFilters = (filters: BlogFilters): UseQueryResult<Blog[]
   return useQuery({
     queryKey: blogQueryKeys.list(filters),
     queryFn: () => blogAPI.getBlogsWithFilters(filters),
-    staleTime: 5 * 60 * 1000,
-    gcTime: 20 * 60 * 1000,
+    staleTime: 0, // Always consider data stale for instant updates
+    gcTime: 5 * 60 * 1000,
     retry: 2,
-    refetchOnWindowFocus: false,
-    refetchOnMount: false,
+    refetchOnWindowFocus: true,
+    refetchOnMount: true,
+    refetchInterval: 30 * 1000, // Refetch every 30 seconds
     enabled: Object.keys(filters).length > 0, // Only run if filters are provided
   });
 };
 
-// Hook to get a single blog by ID with optimized caching
+// Hook to get a single blog by ID with optimized caching for instant updates
 export const useBlog = (id: number): UseQueryResult<Blog, Error> => {
   return useQuery({
     queryKey: blogQueryKeys.detail(id),
     queryFn: () => blogAPI.getBlogById(id),
-    staleTime: 10 * 60 * 1000, // 10 minutes - longer for individual blogs
-    gcTime: 60 * 60 * 1000, // 1 hour - keep individual blogs longer
+    staleTime: 0, // Always consider data stale for instant updates
+    gcTime: 10 * 60 * 1000, // 10 minutes for individual blogs
     retry: 2,
     enabled: !!id, // Only run query if ID is provided
-    refetchOnWindowFocus: false,
-    refetchOnMount: false,
+    refetchOnWindowFocus: true,
+    refetchOnMount: true,
   });
 };
 
-// Hook to get a single blog by slug with optimized caching
+// Hook to get a single blog by slug with optimized caching for instant updates
 export const useBlogBySlug = (slug: string): UseQueryResult<Blog, Error> => {
   return useQuery({
     queryKey: blogQueryKeys.slug(slug),
     queryFn: () => blogAPI.getBlogBySlug(slug),
-    staleTime: 10 * 60 * 1000, // 10 minutes - longer for individual blogs
-    gcTime: 60 * 60 * 1000, // 1 hour - keep individual blogs longer
+    staleTime: 0, // Always consider data stale for instant updates
+    gcTime: 10 * 60 * 1000, // 10 minutes for individual blogs
     retry: 2,
     enabled: !!slug, // Only run query if slug is provided
-    refetchOnWindowFocus: false,
-    refetchOnMount: false,
+    refetchOnWindowFocus: true,
+    refetchOnMount: true,
   });
 };
 
@@ -92,7 +95,7 @@ export const usePrefetchBlogs = () => {
       queryClient.prefetchQuery({
         queryKey: blogQueryKeys.list({}),
         queryFn: () => blogAPI.getAllBlogs(),
-        staleTime: 5 * 60 * 1000,
+        staleTime: 0,
       });
     },
     
@@ -101,7 +104,7 @@ export const usePrefetchBlogs = () => {
       queryClient.prefetchQuery({
         queryKey: blogQueryKeys.list({ status: 1 }),
         queryFn: () => blogAPI.getPublishedBlogs(),
-        staleTime: 5 * 60 * 1000,
+        staleTime: 0,
       });
     },
     
@@ -110,13 +113,18 @@ export const usePrefetchBlogs = () => {
       queryClient.prefetchQuery({
         queryKey: blogQueryKeys.slug(slug),
         queryFn: () => blogAPI.getBlogBySlug(slug),
-        staleTime: 10 * 60 * 1000,
+        staleTime: 0,
       });
     },
     
     // Invalidate cache for specific tags (useful after updates)
     invalidateBlogCache: () => {
       queryClient.invalidateQueries({ queryKey: blogQueryKeys.all });
+    },
+    
+    // Force refetch all blog queries
+    refetchAllBlogs: () => {
+      queryClient.refetchQueries({ queryKey: blogQueryKeys.all });
     },
   };
 }; 

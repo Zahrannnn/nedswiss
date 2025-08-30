@@ -2,9 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const API_BASE_URL = 'https://nedsite.runasp.net/api';
 
-// Enable static generation for API route
-export const dynamic = 'force-static';
-export const revalidate = 600; // Revalidate every 10 minutes
+// Set to dynamic to ensure fresh data on each request
+export const dynamic = 'force-dynamic';
+// Remove static revalidation since we want fresh data every time
+// export const revalidate = 20; // Removed to get fresh data
 
 export async function GET(request: NextRequest) {
   try {
@@ -13,11 +14,12 @@ export async function GET(request: NextRequest) {
       headers: {
         'Accept': 'application/json',
       },
-      cache: 'force-cache',
-      next: { 
-        revalidate: 600, // Revalidate every 10 minutes
-        tags: ['blogs-api'] 
-      }
+      cache: 'no-store', // Disable caching to get fresh data every time
+      // Remove next.js cache configuration to ensure fresh data
+      // next: { 
+      //   revalidate: 20,
+      //   tags: ['blogs-api'] 
+      // }
     });
 
     if (!response.ok) {
@@ -32,7 +34,7 @@ export async function GET(request: NextRequest) {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-        'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=3600', // Browser and CDN caching
+        'Cache-Control': 'no-cache, no-store, must-revalidate', // Prevent any caching
       },
     });
   } catch (error) {

@@ -6,11 +6,14 @@ interface BlogsPageProps {
   params: Promise<{ locale: string }>;
 }
 
-// Enable ISR with optimized revalidation - 2 minutes for blog listing
-export const revalidate = 300;
+// Enable dynamic rendering for instant updates
+export const dynamic = 'force-dynamic';
 
-// Enable static generation
-export const dynamicParams = false;
+// Remove static revalidation to ensure fresh data on each request
+// export const revalidate = 600;
+
+// Enable dynamic params for better flexibility
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: BlogsPageProps): Promise<Metadata> {
   const { locale } = await params;

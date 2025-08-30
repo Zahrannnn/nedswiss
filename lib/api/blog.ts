@@ -16,11 +16,7 @@ class BlogAPI {
         headers: {
           'Accept': 'application/json',
         },
-        cache: 'force-cache',
-        next: { 
-          revalidate: 600, // Revalidate every 10 minutes
-          tags: ['blogs-list'] 
-        }
+        cache: 'no-store', // Align with API route settings for instant updates
       });
 
       if (!response.ok) {
@@ -42,11 +38,7 @@ class BlogAPI {
         headers: {
           'Accept': 'application/json',
         },
-        cache: 'force-cache',
-        next: { 
-          revalidate: 900, // Revalidate every 15 minutes
-          tags: ['blog-detail', `blog-${id}`] 
-        }
+        cache: 'no-store', // Disable caching for instant updates
       });
 
       if (!response.ok) {
@@ -68,11 +60,7 @@ class BlogAPI {
         headers: {
           'Accept': 'application/json',
         },
-        cache: 'force-cache',
-        next: { 
-          revalidate: 900, // Revalidate every 15 minutes
-          tags: ['blog-detail', `blog-slug-${slug}`] 
-        }
+        cache: 'no-store', // Disable caching for instant updates
       });
 
       if (!response.ok) {
