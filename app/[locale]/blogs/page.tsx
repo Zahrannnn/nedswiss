@@ -6,8 +6,8 @@ interface BlogsPageProps {
   params: Promise<{ locale: string }>;
 }
 
-// Enable ISR with optimized revalidation - 10 minutes for blog listing
-export const revalidate = 600;
+// Enable ISR with optimized revalidation - 2 minutes for blog listing
+export const revalidate = 5*60;
 
 // Enable static generation
 export const dynamicParams = false;
