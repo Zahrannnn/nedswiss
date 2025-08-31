@@ -21,20 +21,20 @@ export function OrganizationSchema({ locale = 'en' }: { locale?: string }) {
   const organizationData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': 'https://nedswiss.com#organization',
+    '@id': 'https://www.ned-swiss.ch#organization',
     name: 'NED Swiss',
     alternateName: 'NED Swiss Digital Agency',
     description: 'Swiss digital agency delivering exceptional web development, design, and digital marketing services with Swiss precision and excellence.',
-    url: 'https://nedswiss.com',
+    url: 'https://www.ned-swiss.ch',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://nedswiss.com/logo.png',
+      url: 'https://www.ned-swiss.ch/logo.png',
       width: 200,
       height: 60,
     },
     image: {
       '@type': 'ImageObject',
-      url: 'https://nedswiss.com/nedswiss.jpg',
+      url: 'https://www.ned-swiss.ch/nedswiss.jpg',
       width: 1200,
       height: 630,
     },
@@ -106,24 +106,24 @@ export function WebsiteSchema({ locale = 'en' }: { locale?: string }) {
   const websiteData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://nedswiss.com#website',
+    '@id': 'https://www.ned-swiss.ch#website',
     name: 'NED Swiss',
     description: 'Digital excellence with Swiss precision - Web development, design, and marketing services',
-    url: 'https://nedswiss.com',
+    url: 'https://www.ned-swiss.ch',
     inLanguage: locale,
     publisher: {
-      '@id': 'https://nedswiss.com#organization',
+      '@id': 'https://www.ned-swiss.ch#organization',
     },
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://nedswiss.com/search?q={search_term_string}',
+        urlTemplate: 'https://www.ned-swiss.ch/search?q={search_term_string}',
       },
       'query-input': 'required name=search_term_string',
     },
     mainEntity: {
-      '@id': 'https://nedswiss.com#organization',
+      '@id': 'https://www.ned-swiss.ch#organization',
     },
   };
 
@@ -153,7 +153,7 @@ export function ServiceSchema({
     description: serviceDescription,
     url: serviceUrl,
     provider: {
-      '@id': 'https://nedswiss.com#organization',
+      '@id': 'https://www.ned-swiss.ch#organization',
     },
     areaServed: {
       '@type': 'Country',
@@ -241,10 +241,10 @@ export function ArticleSchema({
     author: {
       '@type': 'Organization',
       name: authorName,
-      url: 'https://nedswiss.com',
+      url: 'https://www.ned-swiss.ch',
     },
     publisher: {
-      '@id': 'https://nedswiss.com#organization',
+      '@id': 'https://www.ned-swiss.ch#organization',
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -296,10 +296,10 @@ export function LocalBusinessSchema({ locale = 'en' }: { locale?: string }) {
   const localBusinessData = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://nedswiss.com#local-business',
+    '@id': 'https://www.ned-swiss.ch#local-business',
     name: 'NED Swiss',
     description: 'Swiss digital agency delivering exceptional web development, design, and digital marketing services',
-    url: 'https://nedswiss.com',
+    url: 'https://www.ned-swiss.ch',
     telephone: '+41-44-123-45-67',
     email: 'info@nedswiss.com',
     address: {

@@ -1,12 +1,12 @@
 # Robots.txt for NED Swiss
-# https://nedswiss.com
+# https://www.ned-swiss.ch/
 
 # Allow all crawlers to access all content
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://nedswiss.com/sitemap.xml
+Sitemap: https://www.ned-swiss.ch/sitemap.xml
 
 # Specific crawl delays for different bots (optional)
 User-agent: Googlebot

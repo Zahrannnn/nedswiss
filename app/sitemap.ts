@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { locales } from '@/app/i18n';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://nedswiss.com';
+  const baseUrl = 'https://www.ned-swiss.ch';
   
   // Define all static routes
   const routes = [
@@ -15,12 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Define service sub-routes
   const serviceRoutes = [
-    '/services/graphic-design',
-    '/services/web-development',
-    '/services/social-media',
-    '/services/digital-marketing',
-    '/services/illuminated-signs',
-    '/services/seo-services',
+    '/services',
+    '/services',
+    '/services',
+    '/services',
+    '/services',
+    '/services',
   ];
 
   // Generate sitemap entries for all locales and routes
