@@ -10,6 +10,7 @@ import Footer from '@/components/layout/Footer';
 import LayoutWrapper from '@/components/layout/LayoutWrapper';
 import SimpleVisitorTracker from '@/components/SimpleVisitorTracker';
 import WhatsAppButton from '@/components/contact/WhatsAppButton';
+import { VisitorTrackerTestButton } from '@/components/test/VisitorTrackerTest';
 import { OrganizationSchema, WebsiteSchema, LocalBusinessSchema } from '@/components/seo/StructuredData';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -105,6 +106,7 @@ export default async function RootLayout({
             </main>
             <Footer />
             <SimpleVisitorTracker />
+            <VisitorTrackerTestButton />
           </LayoutWrapper>
         </Providers>
       </body>

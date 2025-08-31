@@ -343,22 +343,22 @@
       "consultation": {
         "number": "01",
         "title": "Beratung",
-        "description": "Identifizierung der Kundenziele und Entwicklung massgeschneiderter Strategien durch Marktanalyse."
+        "description": "Ziele definieren und Strategien entwickeln."
       },
       "strategyPlanning": {
         "number": "02",
         "title": "Strategie",
-        "description": "Erstellung zielgerichteter Pläne für nachhaltiges Wachstum basierend auf Kundenzielen und Markttrends."
+        "description": "Massgeschneiderte Pläne für nachhaltiges Wachstum."
       },
       "designDevelopment": {
         "number": "03",
         "title": "Ausführung",
-        "description": "Präzise Umsetzung kreativer Lösungen zur Erreichung der Kundenziele."
+        "description": "Präzise Umsetzung kreativer Lösungen."
       },
       "testingOptimization": {
         "number": "04",
         "title": "Erfolg",
-        "description": "Leistungsmessung und Strategieoptimierung für langfristiges Wachstum."
+        "description": "Leistungsmessung und kontinuierliche Optimierung."
       }
     },
     "detailedServices": {
@@ -439,7 +439,7 @@
   "AboutPage": {
     "readyToWorkTogether": "Bereit zur Zusammenarbeit?",
     "letsCreateSomethingAmazing": "Lassen Sie uns etwas Erstaunliches für Ihr Unternehmen schaffen.",
-    "startYourProject": "Starten Sie Ihr Projekt",
+    "startYourProject": "Projekt starten",
     "discoverVision": {
       "title": {
         "part1": "Entdecken Sie die Vision hinter"
