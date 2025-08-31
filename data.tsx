@@ -53,7 +53,7 @@ export const useServicesData = (): ServiceItem[] => {
       gradientColors: ["#51218F", "#8A38F5"],
       gradientDirection: "to bottom",
       laptopImage: "/laptop-graphic-design.png",
-      backgroundMask: "/mask-group.png",
+      backgroundMask: "/mask-groupa.png",
       link: "/services/graphic-design",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +77,7 @@ export const useServicesData = (): ServiceItem[] => {
       gradientColors: ["#353689", "#5D5FEF"],
       gradientDirection: "to bottom",
       laptopImage: "/laptop-web-development.png",
-      backgroundMask: "/mask-group.png",
+      backgroundMask: "/mask-groupa.png",
       link: "/services/web-development",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -103,7 +103,7 @@ export const useServicesData = (): ServiceItem[] => {
       gradientColors: ["#810F1B", "#E71B30"],
       gradientDirection: "to bottom",
       laptopImage: "/rocket.png",
-      backgroundMask: "/mask-group.png",
+      backgroundMask: "/mask-groupa.png",
       link: "/services/social-media-management",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,7 +126,7 @@ export const useServicesData = (): ServiceItem[] => {
       gradientColors: ["#1A6660", "#26A297"],
       gradientDirection: "to bottom",
       laptopImage: "/laptop-seo-services.png",
-      backgroundMask: "/mask-group.png",
+      backgroundMask: "/mask-groupa.png",
       link: "/services/seo-services",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,7 +149,7 @@ export const useServicesData = (): ServiceItem[] => {
       gradientColors: ["#84259C", "#8B00D3"],
       gradientDirection: "to right",
       laptopImage: "/laptop-advertising.png",
-      backgroundMask: "/mask-group.png",
+      backgroundMask: "/mask-groupa.png",
       link: "/services/advertising-solutions",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -171,7 +171,7 @@ export const useServicesData = (): ServiceItem[] => {
       gradientColors: ["#26647B", "#45B6E1"],
       gradientDirection: "to bottom",
       laptopImage: "/idea.png",
-      backgroundMask: "/mask-group.png",
+      backgroundMask: "/mask-groupa.png",
       link: "/services/advertising-solutions",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -193,7 +193,7 @@ export const useServicesData = (): ServiceItem[] => {
       gradientColors: ["#A58C10", "#E0BC07"],
       gradientDirection: "to bottom",
       laptopImage: "/laptop-software-solution.png",
-      backgroundMask: "/mask-group.png",
+      backgroundMask: "/mask-groupa.png",
       link: "/services/software-solutions",
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

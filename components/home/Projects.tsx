@@ -129,7 +129,7 @@ const Projects = () => {
           </div>
 
           {/* Right Side - Stack Component */}
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center ml-0 md:mr-[200px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeCategory}

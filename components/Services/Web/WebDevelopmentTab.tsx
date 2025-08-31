@@ -25,7 +25,7 @@ const WebDevelopmentTab = () => {
     if (!container) return;
 
     // Header text animation - Split text effect
-    const headerTitle = headerRef.current?.querySelector('h1');
+    const headerTitle = headerRef.current?.querySelector('p');
     if (headerTitle) {
       const text = headerTitle.textContent || '';
       headerTitle.innerHTML = text.split(' ').map(word => 
@@ -323,7 +323,7 @@ const WebDevelopmentTab = () => {
     <div ref={containerRef} className="bg-[#424242] text-white min-h-screen">
       {/* Header Section */}
       <div ref={headerRef} className="text-center py-8 md:py-16 px-4 md:px-6">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 w-full md:w-[78%] leading-tight md:leading-20 text-center mx-auto">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 leading-tight text-center mx-auto break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
           {t('header.title')}
         </h1>
       </div>
@@ -333,10 +333,10 @@ const WebDevelopmentTab = () => {
         <div ref={websiteDesignRef} className="max-w-7xl mx-auto">
           {/* Header Row */}
           <div className="text-left mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
               {t('websiteDesign.title')}
             </h2>
-            <p className="text-gray-300 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl">
+            <p className="text-gray-300 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
               {t('websiteDesign.description')}
             </p>
           </div>
@@ -345,23 +345,23 @@ const WebDevelopmentTab = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="mb-6 md:mb-8">
-                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('websiteDesign.workIncludes.title')}
                 </h3>
                 <ul className="space-y-2 md:space-y-3 text-gray-300 text-lg sm:text-xl md:text-2xl">
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.ecommerce')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.restaurant')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.landing')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.corporate')}
                   </li>
@@ -376,7 +376,7 @@ const WebDevelopmentTab = () => {
                 <span className="text-red-500 group-hover:text-white text-lg sm:text-xl">
                   ✦
                 </span>
-                <span>{t('websiteDesign.cta.text')}</span>
+                <span className="break-words hyphens-auto">{t('websiteDesign.cta.text')}</span>
               </motion.button>
             </div>
 
@@ -398,10 +398,10 @@ const WebDevelopmentTab = () => {
         <div ref={systemDevRef} className="max-w-7xl mx-auto">
           {/* Header Row */}
           <div className="text-left mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
               {t('systemDevelopment.title')}
             </h2>
-            <p className="text-gray-300 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl">
+            <p className="text-gray-300 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
               {t('systemDevelopment.description')}
             </p>
           </div>
@@ -410,23 +410,23 @@ const WebDevelopmentTab = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="mb-6 md:mb-8">
-                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('systemDevelopment.workIncludes.title')}
                 </h3>
                 <ul className="space-y-2 md:space-y-3 text-gray-300 text-lg sm:text-xl md:text-2xl">
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('systemDevelopment.workIncludes.items.crm')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('systemDevelopment.workIncludes.items.hr')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('systemDevelopment.workIncludes.items.inventory')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('systemDevelopment.workIncludes.items.booking')}
                   </li>
@@ -441,7 +441,7 @@ const WebDevelopmentTab = () => {
                 <span className="text-red-500 group-hover:text-white text-lg sm:text-xl">
                   ✦
                 </span>
-                <span>{t('systemDevelopment.cta.text')}</span>
+                <span className="break-words hyphens-auto">{t('systemDevelopment.cta.text')}</span>
               </motion.button>
             </div>
 
@@ -461,7 +461,7 @@ const WebDevelopmentTab = () => {
       {/* Expertises Section */}
       <div className="px-4 md:px-6 py-8 md:py-16">
         <div ref={expertisesRef} className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 text-left">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-left break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
             {t('expertises.title')}
           </h2>
 
@@ -469,19 +469,19 @@ const WebDevelopmentTab = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-8 mb-8 md:mb-16">
             <button
               onClick={() => setActiveTab("nedx")}
-              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto break-words hyphens-auto ${
                 activeTab === "nedx"
                   ? "text-red-500 bg-white/10"
-                  : "text-gray-400 hover:text-red-400"
+                  : "bg-gray-600 text-white hover:bg-gray-500"
               }`}
             >
               {t('expertises.tabs.nedx')}
             </button>
             <button
               onClick={() => setActiveTab("nedswiss")}
-              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto break-words hyphens-auto ${
                 activeTab === "nedswiss"
-                  ? "bg-white text-black"
+                  ? "text-red-500 bg-white/10"
                   : "bg-gray-600 text-white hover:bg-gray-500"
               }`}
             >
@@ -498,10 +498,10 @@ const WebDevelopmentTab = () => {
                 transition={{ duration: 0.5 }}
                 className="rounded-2xl p-4 md:p-8 tab-content active"
               >
-                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.nedx.title')}
                 </h3>
-                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.nedx.description')}
                 </p>
 
@@ -516,51 +516,51 @@ const WebDevelopmentTab = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
+                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.nedx.subtitle')}
                   </h4>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     <div>
-                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
+                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                         {t('expertises.nedx.awards.title')}
                       </h5>
                       <ul className="space-y-2 text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                        <li>{t('expertises.nedx.awards.items.0')}</li>
-                        <li>{t('expertises.nedx.awards.items.1')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.awards.items.0')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.awards.items.1')}</li>
                       </ul>
 
-                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
+                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                         {t('expertises.nedx.expertises.title')}
                       </h5>
                       <ul className="space-y-2 text-gray-300 text-sm md:text-base">
-                        <li>{t('expertises.nedx.expertises.items.0')}</li>
-                        <li>{t('expertises.nedx.expertises.items.1')}</li>
-                        <li>{t('expertises.nedx.expertises.items.2')}</li>
-                        <li>{t('expertises.nedx.expertises.items.3')}</li>
-                        <li>{t('expertises.nedx.expertises.items.4')}</li>
-                        <li>{t('expertises.nedx.expertises.items.5')}</li>
-                        <li>{t('expertises.nedx.expertises.items.6')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.expertises.items.0')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.expertises.items.1')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.expertises.items.2')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.expertises.items.3')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.expertises.items.4')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.expertises.items.5')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.expertises.items.6')}</li>
                       </ul>
                     </div>
 
                     <div>
-                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
+                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                         {t('expertises.nedx.technologies.title')}
                       </h5>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                        <div>{t('expertises.nedx.technologies.items.0')}</div>
-                        <div>{t('expertises.nedx.technologies.items.1')}</div>
-                        <div>{t('expertises.nedx.technologies.items.2')}</div>
-                        <div>{t('expertises.nedx.technologies.items.3')}</div>
-                        <div>{t('expertises.nedx.technologies.items.4')}</div>
-                        <div>{t('expertises.nedx.technologies.items.5')}</div>
-                        <div>{t('expertises.nedx.technologies.items.6')}</div>
-                        <div>{t('expertises.nedx.technologies.items.7')}</div>
-                        <div>{t('expertises.nedx.technologies.items.8')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.technologies.items.0')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.technologies.items.1')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.technologies.items.2')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.technologies.items.3')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.technologies.items.4')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.technologies.items.5')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.technologies.items.6')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.technologies.items.7')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedx.technologies.items.8')}</div>
                       </div>
 
-                      <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+                      <p className="text-gray-300 leading-relaxed text-sm md:text-base break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                         {t('expertises.nedx.conclusion')}
                       </p>
                     </div>
@@ -576,10 +576,10 @@ const WebDevelopmentTab = () => {
                 transition={{ duration: 0.5 }}
                 className="rounded-2xl p-4 md:p-8 tab-content active"
               >
-                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.nedswiss.title')}
                 </h3>
-                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.nedswiss.description')}
                 </p>
 
@@ -594,51 +594,51 @@ const WebDevelopmentTab = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
+                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.nedswiss.subtitle')}
                   </h4>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     <div>
-                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
+                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                         {t('expertises.nedswiss.awards.title')}
                       </h5>
                       <ul className="space-y-2 text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                        <li>{t('expertises.nedswiss.awards.items.0')}</li>
-                        <li>{t('expertises.nedswiss.awards.items.1')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.awards.items.0')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.awards.items.1')}</li>
                       </ul>
 
-                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
+                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                         {t('expertises.nedswiss.expertises.title')}
                       </h5>
                       <ul className="space-y-2 text-gray-300 text-sm md:text-base">
-                        <li>{t('expertises.nedswiss.expertises.items.0')}</li>
-                        <li>{t('expertises.nedswiss.expertises.items.1')}</li>
-                        <li>{t('expertises.nedswiss.expertises.items.2')}</li>
-                        <li>{t('expertises.nedswiss.expertises.items.3')}</li>
-                        <li>{t('expertises.nedswiss.expertises.items.4')}</li>
-                        <li>{t('expertises.nedswiss.expertises.items.5')}</li>
-                        <li>{t('expertises.nedswiss.expertises.items.6')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.expertises.items.0')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.expertises.items.1')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.expertises.items.2')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.expertises.items.3')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.expertises.items.4')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.expertises.items.5')}</li>
+                        <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.expertises.items.6')}</li>
                       </ul>
                     </div>
 
                     <div>
-                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
+                      <h5 className="text-base md:text-lg font-semibold mb-2 md:mb-3 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                         {t('expertises.nedswiss.technologies.title')}
                       </h5>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                        <div>{t('expertises.nedswiss.technologies.items.0')}</div>
-                        <div>{t('expertises.nedswiss.technologies.items.1')}</div>
-                        <div>{t('expertises.nedswiss.technologies.items.2')}</div>
-                        <div>{t('expertises.nedswiss.technologies.items.3')}</div>
-                        <div>{t('expertises.nedswiss.technologies.items.4')}</div>
-                        <div>{t('expertises.nedswiss.technologies.items.5')}</div>
-                        <div>{t('expertises.nedswiss.technologies.items.6')}</div>
-                        <div>{t('expertises.nedswiss.technologies.items.7')}</div>
-                        <div>{t('expertises.nedswiss.technologies.items.8')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.technologies.items.0')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.technologies.items.1')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.technologies.items.2')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.technologies.items.3')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.technologies.items.4')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.technologies.items.5')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.technologies.items.6')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.technologies.items.7')}</div>
+                        <div className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.nedswiss.technologies.items.8')}</div>
                       </div>
 
-                      <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+                      <p className="text-gray-300 leading-relaxed text-sm md:text-base break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                         {t('expertises.nedswiss.conclusion')}
                       </p>
                     </div>

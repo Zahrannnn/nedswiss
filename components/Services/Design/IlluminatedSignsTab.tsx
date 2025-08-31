@@ -25,7 +25,7 @@ const IlluminatedSignsTab = () => {
     if (!container) return;
 
     // Header text animation - Split text effect
-    const headerTitle = headerRef.current?.querySelector('h1');
+    const headerTitle = headerRef.current?.querySelector('p');
     if (headerTitle) {
       const text = headerTitle.textContent || '';
       headerTitle.innerHTML = text.split(' ').map(word => 
@@ -323,7 +323,7 @@ const IlluminatedSignsTab = () => {
     <div ref={containerRef} className="bg-[#424242] text-white min-h-screen">
       {/* Header Section */}
       <div ref={headerRef} className="text-center py-8 md:py-16 px-4 md:px-6">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 w-full md:w-[78%] leading-tight md:leading-20 text-center mx-auto">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 leading-tight text-center mx-auto break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
           {t('header.title')}
         </h1>
       </div>
@@ -333,10 +333,10 @@ const IlluminatedSignsTab = () => {
         <div ref={signageSolutionsRef} className="max-w-7xl mx-auto">
           {/* Header Row */}
           <div className="text-left mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
               {t('signageSolutions.title')}
             </h2>
-            <p className="text-gray-300 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl">
+            <p className="text-gray-300 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
               {t('signageSolutions.description')}
             </p>
           </div>
@@ -345,23 +345,23 @@ const IlluminatedSignsTab = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="mb-6 md:mb-8">
-                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('signageSolutions.workIncludes.title')}
                 </h3>
                 <ul className="space-y-2 md:space-y-3 text-gray-300 text-lg sm:text-xl md:text-2xl">
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('signageSolutions.workIncludes.items.led')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('signageSolutions.workIncludes.items.neon')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('signageSolutions.workIncludes.items.channel')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('signageSolutions.workIncludes.items.backlit')}
                   </li>
@@ -376,7 +376,7 @@ const IlluminatedSignsTab = () => {
                 <span className="text-red-500 group-hover:text-white text-lg sm:text-xl">
                   ✦
                 </span>
-                <span>{t('signageSolutions.cta.text')}</span>
+                <span className="break-words hyphens-auto">{t('signageSolutions.cta.text')}</span>
               </motion.button>
             </div>
 
@@ -398,10 +398,10 @@ const IlluminatedSignsTab = () => {
         <div ref={installationsRef} className="max-w-7xl mx-auto">
           {/* Header Row */}
           <div className="text-left mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
               {t('installations.title')}
             </h2>
-            <p className="text-gray-300 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl">
+            <p className="text-gray-300 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
               {t('installations.description')}
             </p>
           </div>
@@ -410,23 +410,23 @@ const IlluminatedSignsTab = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="mb-6 md:mb-8">
-                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('installations.workIncludes.title')}
                 </h3>
                 <ul className="space-y-2 md:space-y-3 text-gray-300 text-lg sm:text-xl md:text-2xl">
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('installations.workIncludes.items.dimensional')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('installations.workIncludes.items.architectural')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('installations.workIncludes.items.digital')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('installations.workIncludes.items.interactive')}
                   </li>
@@ -441,7 +441,7 @@ const IlluminatedSignsTab = () => {
                 <span className="text-red-500 group-hover:text-white text-lg sm:text-xl">
                   ✦
                 </span>
-                <span>{t('installations.cta.text')}</span>
+                <span className="break-words hyphens-auto">{t('installations.cta.text')}</span>
               </motion.button>
             </div>
 
@@ -461,7 +461,7 @@ const IlluminatedSignsTab = () => {
       {/* Expertises Section */}
       <div className="px-4 md:px-6 py-8 md:py-16">
         <div ref={expertisesRef} className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 text-left">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-left break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
             {t('expertises.title')}
           </h2>
 
@@ -469,19 +469,19 @@ const IlluminatedSignsTab = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-8 mb-8 md:mb-16">
             <button
               onClick={() => setActiveTab("led")}
-              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto break-words hyphens-auto ${
                 activeTab === "led"
                   ? "text-red-500 bg-white/10"
-                  : "text-gray-400 hover:text-red-400"
+                  : "bg-gray-600 text-white hover:bg-gray-500"
               }`}
             >
               {t('expertises.tabs.led')}
             </button>
             <button
               onClick={() => setActiveTab("neon")}
-              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto break-words hyphens-auto ${
                 activeTab === "neon"
-                  ? "bg-white text-black"
+                  ? "text-red-500 bg-white/10"
                   : "bg-gray-600 text-white hover:bg-gray-500"
               }`}
             >
@@ -498,10 +498,10 @@ const IlluminatedSignsTab = () => {
                 transition={{ duration: 0.5 }}
                 className="rounded-2xl p-4 md:p-8 tab-content active"
               >
-                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.led.title')}
                 </h3>
-                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.led.description')}
                 </p>
 
@@ -516,27 +516,27 @@ const IlluminatedSignsTab = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
+                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.led.subtitle')}
                   </h4>
-                  <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl">
+                  <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.led.features.title')}
                   </h5>
                   <ul className="space-y-2 text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                    <li>{t('expertises.led.features.items.0')}</li>
-                    <li>{t('expertises.led.features.items.1')}</li>
-                    <li>{t('expertises.led.features.items.2')}</li>
-                    <li>{t('expertises.led.features.items.3')}</li>
+                    <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.led.features.items.0')}</li>
+                    <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.led.features.items.1')}</li>
+                    <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.led.features.items.2')}</li>
+                    <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.led.features.items.3')}</li>
                   </ul>
                   
-                  <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl">
+                  <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.led.applications.title')}
                   </h5>
-                  <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.led.applications.description')}
                   </p>
                   
-                  <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.led.footer.description')}
                   </p>
                 </div>
@@ -550,10 +550,10 @@ const IlluminatedSignsTab = () => {
              transition={{ duration: 0.5 }}
              className="rounded-2xl p-4 md:p-8 tab-content active"
            >
-             <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
+             <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                {t('expertises.neon.title')}
              </h3>
-             <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
+             <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                {t('expertises.neon.description')}
              </p>
 
@@ -575,26 +575,26 @@ const IlluminatedSignsTab = () => {
              </div>
 
              <div className="text-left">
-               <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
+               <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                  {t('expertises.neon.subtitle')}
                </h4>
-               <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl">
+               <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                  {t('expertises.neon.features.title')}
                </h5>
                <ul className="space-y-2 text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                 <li>{t('expertises.neon.features.items.0')}</li>
-                 <li>{t('expertises.neon.features.items.1')}</li>
-                 <li>{t('expertises.neon.features.items.2')}</li>
+                 <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.neon.features.items.0')}</li>
+                 <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.neon.features.items.1')}</li>
+                 <li className="break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">{t('expertises.neon.features.items.2')}</li>
                </ul>
                
-               <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl">
+               <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                  {t('expertises.neon.applications.title')}
                </h5>
-               <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
+               <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                  {t('expertises.neon.applications.description')}
                </p>
                
-               <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
+               <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                  {t('expertises.neon.footer.description')}
                </p>
              </div>

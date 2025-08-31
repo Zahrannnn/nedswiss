@@ -137,7 +137,7 @@ const ServicesTab = () => {
               transition={{ duration: 0.5 }}
               className=""
             >
-              {activeTab === 'design' && <GraphicDesignTab />}
+              {activeTab === 'design' &&   <GraphicDesignTab />}
               {activeTab === 'webDevelopment' && <WebDevelopmentTab />}
               {activeTab === 'socialMedia' && <IlluminatedSignsTab />}
               {activeTab === 'digitalMarketing' && <DigitalMarketingTab />}

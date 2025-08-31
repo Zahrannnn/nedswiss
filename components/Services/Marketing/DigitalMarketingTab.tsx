@@ -25,7 +25,7 @@ const DigitalMarketingTab = () => {
     if (!container) return;
 
     // Header text animation - Split text effect
-    const headerTitle = headerRef.current?.querySelector('h1');
+    const headerTitle = headerRef.current?.querySelector('p');
     if (headerTitle) {
       const text = headerTitle.textContent || '';
       headerTitle.innerHTML = text.split(' ').map(word => 
@@ -323,7 +323,7 @@ const DigitalMarketingTab = () => {
     <div ref={containerRef} className="bg-[#424242] text-white min-h-screen">
       {/* Header Section */}
       <div ref={headerRef} className="text-center py-8 md:py-16 px-4 md:px-6">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 w-full md:w-[78%] leading-tight md:leading-20 text-center mx-auto">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 leading-tight text-center mx-auto break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
           {t('header.title')}
         </h1>
       </div>
@@ -335,27 +335,27 @@ const DigitalMarketingTab = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="mb-6 md:mb-8">
-                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('websiteDesign.workIncludes.title')}
                 </h3>
                 <ul className="space-y-2 md:space-y-3 text-gray-300 text-lg sm:text-xl md:text-2xl">
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.ecommerce')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.restaurant')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.landing')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.corporate')}
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
                     {t('websiteDesign.workIncludes.items.paidAds')}
                   </li>
@@ -370,7 +370,7 @@ const DigitalMarketingTab = () => {
                 <span className="text-red-500 group-hover:text-white text-lg sm:text-xl">
                   ✦
                 </span>
-                <span>{t('websiteDesign.cta.text')}</span>
+                <span className="break-words hyphens-auto">{t('websiteDesign.cta.text')}</span>
               </motion.button>
             </div>
 
@@ -390,7 +390,7 @@ const DigitalMarketingTab = () => {
       {/* Expertises Section */}
       <div className="px-4 md:px-6 py-8 md:py-16">
         <div ref={expertisesRef} className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 text-left">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-left break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
             {t('expertises.title')}
           </h2>
 
@@ -398,19 +398,19 @@ const DigitalMarketingTab = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-8 mb-8 md:mb-16">
             <button
               onClick={() => setActiveTab("SEO")}
-              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto break-words hyphens-auto ${
                 activeTab === "SEO"
                   ? "text-red-500 bg-white/10"
-                  : "text-gray-400 hover:text-red-400"
+                  : "bg-gray-600 text-white hover:bg-gray-500"
               }`}
             >
               {t('expertises.tabs.seo')}
             </button>
             <button
               onClick={() => setActiveTab("socialMedia")}
-              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto break-words hyphens-auto ${
                 activeTab === "socialMedia"
-                  ? "bg-white text-black"
+                  ? "text-red-500 bg-white/10"
                   : "bg-gray-600 text-white hover:bg-gray-500"
               }`}
             >
@@ -418,9 +418,9 @@ const DigitalMarketingTab = () => {
             </button>
             <button
               onClick={() => setActiveTab("paidAds")}
-              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto ${
+              className={`text-lg sm:text-xl md:text-2xl font-bold px-4 md:px-6 py-2 rounded-full transition-all duration-300 w-full sm:w-auto break-words hyphens-auto ${
                 activeTab === "paidAds"
-                  ? "bg-white text-black"
+                  ? "text-red-500 bg-white/10"
                   : "bg-gray-600 text-white hover:bg-gray-500"
               }`}
             >
@@ -437,10 +437,10 @@ const DigitalMarketingTab = () => {
                 transition={{ duration: 0.5 }}
                 className="rounded-2xl p-4 md:p-8 tab-content active"
               >
-                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.seo.title')}
                 </h3>
-                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.seo.description')}
                 </p>
 
@@ -454,24 +454,24 @@ const DigitalMarketingTab = () => {
                   />
                 </div>
                 
-                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left max-w-4xl">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.seo.subtitle')}
                 </h3>
 
                 <div className="text-left">
-                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
+                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.seo.stageOne.title')}
                   </h4>
 
-                  <p className="text-gray-300 text-base md:text-xl mb-6 md:mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-base md:text-xl mb-6 md:mb-8 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.seo.stageOne.description')}
                   </p>
                   
-                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
+                  <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.seo.stageTwo.title')}
                   </h4>
 
-                  <p className="text-gray-300 text-base md:text-xl mb-6 md:mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-base md:text-xl mb-6 md:mb-8 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.seo.stageTwo.description')}
                   </p>
                 </div>
@@ -485,10 +485,10 @@ const DigitalMarketingTab = () => {
                 transition={{ duration: 0.5 }}
                 className="rounded-2xl p-4 md:p-8 tab-content active"
               >
-                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.socialMedia.title')}
                 </h3>
-                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.socialMedia.description')}
                 </p>
 
@@ -502,23 +502,23 @@ const DigitalMarketingTab = () => {
                   />
                 </div>
                 
-                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-left max-w-4xl">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-left max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.socialMedia.stageOne.title')}
                 </h3>
 
-                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.socialMedia.stageOne.description')}
                 </p>
 
-                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-left max-w-4xl">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-left max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.socialMedia.stageTwo.title')}
                 </h3>
-                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.socialMedia.stageTwo.description')}
                 </p>
 
                 <div className="text-left">
-                  <h4 className="text-lg md:text-2xl mb-3 md:mb-4 max-w-4xl leading-6 md:leading-8">
+                  <h4 className="text-lg md:text-2xl mb-3 md:mb-4 max-w-4xl leading-6 md:leading-8 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.socialMedia.subtitle')}
                   </h4>
                 </div>
@@ -532,10 +532,10 @@ const DigitalMarketingTab = () => {
                 transition={{ duration: 0.5 }}
                 className="rounded-2xl p-4 md:p-8 tab-content active"
               >
-                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-left break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.paidAds.title')}
                 </h3>
-                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8">
+                <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                   {t('expertises.paidAds.description')}
                 </p>
 
@@ -550,27 +550,27 @@ const DigitalMarketingTab = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="text-lg md:text-2xl mb-3 md:mb-4 max-w-4xl leading-6 md:leading-8">
+                  <h4 className="text-lg md:text-2xl mb-3 md:mb-4 max-w-4xl leading-6 md:leading-8 break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.paidAds.subtitle')}
                   </h4>
-                  <p className="text-gray-300 text-base md:text-xl mb-6 md:mb-8 max-w-4xl">
+                  <p className="text-gray-300 text-base md:text-xl mb-6 md:mb-8 max-w-4xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                     {t('expertises.paidAds.subtitle2')}
                   </p>
 
                   <ul className="space-y-3 text-gray-300 text-lg md:text-2xl">
-                    <li className="flex items-start">
+                    <li className="flex items-start break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                       {t('expertises.paidAds.keyBenefits.items.0')}
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-start break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                       {t('expertises.paidAds.keyBenefits.items.1')}
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-start break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                       {t('expertises.paidAds.keyBenefits.items.2')}
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-start break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                       {t('expertises.paidAds.keyBenefits.items.3')}
                     </li>
-                    <li className="flex items-start max-w-2xl">
+                    <li className="flex items-start max-w-2xl break-words hyphens-auto overflow-wrap-anywhere whitespace-normal">
                       {t('expertises.paidAds.keyBenefits.items.4')}
                     </li>
                   </ul>

@@ -188,17 +188,7 @@ const Card = ({
         </div>
 
         {/* Background Pattern using mask-group.png */}
-        {backgroundMask && (
-          <div className="absolute inset-0 opacity-60 pointer-events-none -z-10">
-            <Image 
-              src={backgroundMask}
-              alt="Background pattern"
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 768px) 320px, (max-width: 640px) 500px, 1200px"
-            />
-          </div>
-        )}
+        
       </motion.div>
     </div>
   )

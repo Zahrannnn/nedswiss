@@ -57,14 +57,8 @@ const Services = () => {
   return (
     <section id="services" className="min-h-screen rounded-t-4xl tracking-wide bg-[#252525]">
      <div className="px-6 pt-10 pb-4 lg:p-10 bg-[#252525] rounded-t-4xl">
-        
-     <AnimatedHeaderSection
-        subTitle={"Behind the scene, Beyond the screen"}
-        title={t('title')}
-        text={t('subtitle')}
-        textColor={"text-white"}
-        withScrollTrigger={true}
-      />
+          <h1 className="text-4xl pt-10 text-center lg:text-5xl font-bold text-white">{t('title')} <span className="text-red-500">{t('titleHighlight')}</span></h1>
+     
      </div>
       {servicesDataa.map((service: ProcessStep, index: number) => (
         <div

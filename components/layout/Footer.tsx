@@ -64,39 +64,18 @@ export const Footer = () => {
                   {t('contact')}
                 </Link>
               </li>
+              <li>
+                <Link href="/services" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
+                  <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
+                  {t('services')}
+                </Link>
+              </li>
+            
             </ul>
           </div>
           
           {/* Services */}
-          <div>
-            <h3 className="text-xl font-bold mb-6 text-white relative after:content-[''] after:block after:w-12 after:h-1 after:bg-[#DC2626] after:mt-2">{t('services')}</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/services" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
-                  <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
-                  {t('graphicDesign')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
-                  <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
-                  {t('webDevelopment')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
-                  <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
-                  {t('socialMediaManagement')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-white/70 hover:text-[#DC2626] transition-colors duration-300 flex items-center">
-                  <span className="inline-block w-2 h-2 bg-[#DC2626] mr-2 rounded-full"></span>
-                  {t('seoServices')}
-                </Link>
-              </li>
-            </ul>
-          </div>
+      
           
           {/* Contact Info */}
           <div>
