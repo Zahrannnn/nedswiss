@@ -1,4 +1,4 @@
-import { Blog, BlogFilters } from '../types/blog';
+import { Blog } from '../types/blog';
 
 const API_BASE_URL = '/api'; // Use local API routes
 
@@ -16,7 +16,11 @@ class BlogAPI {
         headers: {
           'Accept': 'application/json',
         },
-        cache: 'no-store', // Align with API route settings for instant updates
+        cache: 'force-cache', // Align with ISR strategy
+        next: {
+          revalidate: 300, // 5-minute revalidation to match ISR
+          tags: ['blogs-list']
+        }
       });
 
       if (!response.ok) {
@@ -38,7 +42,11 @@ class BlogAPI {
         headers: {
           'Accept': 'application/json',
         },
-        cache: 'no-store', // Disable caching for instant updates
+        cache: 'force-cache', // Align with ISR strategy
+        next: {
+          revalidate: 300, // 5-minute revalidation to match ISR
+          tags: ['blog-detail', `blog-${id}`]
+        }
       });
 
       if (!response.ok) {
@@ -48,7 +56,7 @@ class BlogAPI {
       const data: Blog = await response.json();
       return data;
     } catch (error) {
-      console.error(`Error fetching blog with id ${id}:`, error);
+      console.error('Error fetching blog by id:', error);
       throw error;
     }
   }
@@ -60,7 +68,11 @@ class BlogAPI {
         headers: {
           'Accept': 'application/json',
         },
-        cache: 'no-store', // Disable caching for instant updates
+        cache: 'force-cache', // Align with ISR strategy
+        next: {
+          revalidate: 300, // 5-minute revalidation to match ISR
+          tags: ['blog-detail', `blog-slug-${slug}`]
+        }
       });
 
       if (!response.ok) {
@@ -70,7 +82,7 @@ class BlogAPI {
       const data: Blog = await response.json();
       return data;
     } catch (error) {
-      console.error(`Error fetching blog with slug ${slug}:`, error);
+      console.error('Error fetching blog by slug:', error);
       throw error;
     }
   }
@@ -96,7 +108,7 @@ class BlogAPI {
   }
 
   // New method: Get blogs with client-side filtering for better performance
-  async getBlogsWithFilters(filters: BlogFilters): Promise<Blog[]> {
+  async getBlogsWithFilters(filters: any): Promise<Blog[]> {
     try {
       const allBlogs = await this.getAllBlogs();
       

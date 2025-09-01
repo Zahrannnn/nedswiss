@@ -14,31 +14,34 @@ export const blogQueryKeys = {
   slug: (slug: string) => [...blogQueryKeys.details(), 'slug', slug] as const,
 };
 
-// Hook to get all blogs with optimized caching for instant updates
+// Hook to get all blogs with ISR-aligned caching
 export const useBlogs = (): UseQueryResult<Blog[], Error> => {
   return useQuery({
     queryKey: blogQueryKeys.list({}),
     queryFn: () => blogAPI.getAllBlogs(),
-    staleTime: 0, // Always consider data stale for instant updates
-    gcTime: 5 * 60 * 1000, // 5 minutes garbage collection
+    staleTime: 5 * 60 * 1000, // 5 minutes - align with ISR revalidation
+    gcTime: 10 * 60 * 1000, // 10 minutes garbage collection
     retry: 2,
-    refetchOnWindowFocus: true, // Refetch when window gains focus
-    refetchOnMount: true, // Always refetch on mount to get latest data
-    refetchInterval: 30 * 1000, // Refetch every 30 seconds in background
+    refetchOnWindowFocus: false, // Reduce aggressive refetching since we have ISR
+    refetchOnMount: false, // Let ISR handle freshness
+    refetchInterval: false, // Disable background refetching - ISR handles this
   });
 };
 
-// Hook to get published blogs with optimized caching for instant updates
+// Hook to get published blogs with ISR-aligned caching
 export const usePublishedBlogs = (): UseQueryResult<Blog[], Error> => {
   return useQuery({
     queryKey: blogQueryKeys.list({ status: 1 }),
-    queryFn: () => blogAPI.getPublishedBlogs(),
-    staleTime: 0, // Always consider data stale for instant updates
-    gcTime: 5 * 60 * 1000, // 5 minutes garbage collection
+    queryFn: async () => {
+      const blogs = await blogAPI.getAllBlogs();
+      return blogs.filter(blog => blog.status === 1);
+    },
+    staleTime: 5 * 60 * 1000, // 5 minutes - align with ISR revalidation
+    gcTime: 10 * 60 * 1000, // 10 minutes garbage collection
     retry: 2,
-    refetchOnWindowFocus: true,
-    refetchOnMount: true,
-    refetchInterval: 30 * 1000, // Refetch every 30 seconds
+    refetchOnWindowFocus: false, // Reduce aggressive refetching since we have ISR
+    refetchOnMount: false, // Let ISR handle freshness
+    refetchInterval: false, // Disable background refetching - ISR handles this
   });
 };
 
@@ -57,31 +60,31 @@ export const useBlogsWithFilters = (filters: BlogFilters): UseQueryResult<Blog[]
   });
 };
 
-// Hook to get a single blog by ID with optimized caching for instant updates
+// Hook to get blog by ID with ISR-aligned caching
 export const useBlog = (id: number): UseQueryResult<Blog, Error> => {
   return useQuery({
     queryKey: blogQueryKeys.detail(id),
     queryFn: () => blogAPI.getBlogById(id),
-    staleTime: 0, // Always consider data stale for instant updates
-    gcTime: 10 * 60 * 1000, // 10 minutes for individual blogs
+    enabled: !!id,
+    staleTime: 5 * 60 * 1000, // 5 minutes - align with ISR revalidation
+    gcTime: 10 * 60 * 1000, // 10 minutes garbage collection
     retry: 2,
-    enabled: !!id, // Only run query if ID is provided
-    refetchOnWindowFocus: true,
-    refetchOnMount: true,
+    refetchOnWindowFocus: false, // Reduce aggressive refetching since we have ISR
+    refetchOnMount: false, // Let ISR handle freshness
   });
 };
 
-// Hook to get a single blog by slug with optimized caching for instant updates
+// Hook to get blog by slug with ISR-aligned caching
 export const useBlogBySlug = (slug: string): UseQueryResult<Blog, Error> => {
   return useQuery({
     queryKey: blogQueryKeys.slug(slug),
     queryFn: () => blogAPI.getBlogBySlug(slug),
-    staleTime: 0, // Always consider data stale for instant updates
-    gcTime: 10 * 60 * 1000, // 10 minutes for individual blogs
+    enabled: !!slug,
+    staleTime: 5 * 60 * 1000, // 5 minutes - align with ISR revalidation
+    gcTime: 10 * 60 * 1000, // 10 minutes garbage collection
     retry: 2,
-    enabled: !!slug, // Only run query if slug is provided
-    refetchOnWindowFocus: true,
-    refetchOnMount: true,
+    refetchOnWindowFocus: false, // Reduce aggressive refetching since we have ISR
+    refetchOnMount: false, // Let ISR handle freshness
   });
 };
 

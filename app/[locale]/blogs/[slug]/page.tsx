@@ -18,19 +18,19 @@ interface BlogItem {
   coverImage?: string;
 }
 
-// Enable ISR with optimized revalidation - 15 minutes for fresh content
-export const revalidate = 900;
+// Enable ISR with 5-minute revalidation for fresh content
+export const revalidate = 300; // 5 minutes in seconds
 
 // Enable static generation for published blogs
 export const dynamicParams = true;
 
-// Generate static params for all published blogs with caching
+// Generate static params for all published blogs with optimized caching
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   try {
     const response = await fetch('https://nedsite.runasp.net/api/Blog', {
       cache: 'force-cache',
       next: { 
-        revalidate: 1800, // Revalidate blog list every 30 minutes
+        revalidate: 300, // Revalidate blog list every 5 minutes
         tags: ['blog-list'] 
       }
     });
@@ -54,13 +54,13 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   }
 }
 
-// Optimized blog fetching with intelligent caching
+// Optimized blog fetching with 5-minute revalidation
 async function getBlogBySlug(slug: string) {
   try {
     const response = await fetch(`https://nedsite.runasp.net/api/Blog/slug/${slug}`, {
       cache: 'force-cache',
       next: { 
-        revalidate: 900, // Revalidate individual blogs every 15 minutes
+        revalidate: 300, // Revalidate individual blogs every 5 minutes
         tags: ['blog-detail', `blog-${slug}`] 
       }
     });

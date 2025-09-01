@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const API_BASE_URL = 'https://nedsite.runasp.net/api';
 
-// Enable ISR for blog slug routes
-export const revalidate = 900; // Revalidate every 15 minutes
+// Enable ISR for blog slug routes with 5-minute revalidation
+export const revalidate = 300; // 5 minutes in seconds
 
 export async function GET(
   request: NextRequest,
@@ -19,7 +19,7 @@ export async function GET(
       },
       cache: 'force-cache',
       next: { 
-        revalidate: 900, // Revalidate every 15 minutes
+        revalidate: 300, // Revalidate every 5 minutes
         tags: ['blog-detail', `blog-slug-${slug}`] 
       }
     });
@@ -36,7 +36,7 @@ export async function GET(
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-        'Cache-Control': 'public, s-maxage=900, stale-while-revalidate=3600', // Browser and CDN caching
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600', // Browser and CDN caching with 5-minute revalidation
       },
     });
   } catch (error) {

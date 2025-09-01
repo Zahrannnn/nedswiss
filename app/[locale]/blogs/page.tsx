@@ -6,11 +6,8 @@ interface BlogsPageProps {
   params: Promise<{ locale: string }>;
 }
 
-// Enable dynamic rendering for instant updates
-export const dynamic = 'force-dynamic';
-
-// Remove static revalidation to ensure fresh data on each request
-// export const revalidate = 600;
+// Enable ISR with 5-minute revalidation
+export const revalidate = 300; // 5 minutes in seconds
 
 // Enable dynamic params for better flexibility
 export const dynamicParams = true;
