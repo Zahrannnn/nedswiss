@@ -18,51 +18,14 @@ interface BlogItem {
   coverImage?: string;
 }
 
-// Enable ISR with 5-minute revalidation for fresh content
-export const revalidate = 300; // 5 minutes in seconds
+// Remove Next.js ISR - React Query will handle all caching and revalidation
+// This approach gives us more control over caching strategies and makes the app more responsive
 
-// Enable static generation for published blogs
-export const dynamicParams = true;
-
-// Generate static params for all published blogs with optimized caching
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  try {
-    const response = await fetch('https://nedsite.runasp.net/api/Blog', {
-      cache: 'force-cache',
-      next: { 
-        revalidate: 300, // Revalidate blog list every 5 minutes
-        tags: ['blog-list'] 
-      }
-    });
-    
-    if (!response.ok) {
-      console.error('Failed to fetch blogs for static generation');
-      return [];
-    }
-    
-    const blogs: BlogItem[] = await response.json();
-    
-    // Generate params for published blogs only
-    return blogs
-      .filter((blog: BlogItem) => blog.status === 1)
-      .map((blog: BlogItem) => ({
-        slug: blog.slug,
-      }));
-  } catch (error) {
-    console.error('Error generating static params:', error);
-    return [];
-  }
-}
-
-// Optimized blog fetching with 5-minute revalidation
+// Simple blog fetching without Next.js caching - React Query handles this
 async function getBlogBySlug(slug: string) {
   try {
     const response = await fetch(`https://nedsite.runasp.net/api/Blog/slug/${slug}`, {
-      cache: 'force-cache',
-      next: { 
-        revalidate: 300, // Revalidate individual blogs every 5 minutes
-        tags: ['blog-detail', `blog-${slug}`] 
-      }
+      cache: 'no-store', // Let React Query handle caching
     });
     
     if (!response.ok) {

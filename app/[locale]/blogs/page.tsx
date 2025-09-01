@@ -6,11 +6,8 @@ interface BlogsPageProps {
   params: Promise<{ locale: string }>;
 }
 
-// Enable ISR with 5-minute revalidation
-export const revalidate = 300; // 5 minutes in seconds
-
-// Enable dynamic params for better flexibility
-export const dynamicParams = true;
+// Remove ISR - let React Query handle all caching and revalidation
+// This makes the page fully dynamic and lets React Query control the caching strategy
 
 export async function generateMetadata({ params }: BlogsPageProps): Promise<Metadata> {
   const { locale } = await params;

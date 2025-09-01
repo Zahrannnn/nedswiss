@@ -62,10 +62,14 @@ export function Providers({ children, locale, messages }: ProvidersProps) {
   const [queryClient] = useState(() => new QueryClient({
     defaultOptions: {
       queries: {
+        // ISR-like behavior with React Query
         staleTime: 5 * 60 * 1000, // 5 minutes
-        gcTime: 10 * 60 * 1000, // 10 minutes
+        gcTime: 30 * 60 * 1000, // 30 minutes
         retry: 3,
-        refetchOnWindowFocus: false,
+        refetchOnWindowFocus: true,
+        refetchOnMount: true,
+        refetchInterval: 5 * 60 * 1000, // Background refetch every 5 minutes
+        refetchIntervalInBackground: true,
       },
     },
   }));

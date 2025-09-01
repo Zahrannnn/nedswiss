@@ -16,11 +16,7 @@ class BlogAPI {
         headers: {
           'Accept': 'application/json',
         },
-        cache: 'force-cache', // Align with ISR strategy
-        next: {
-          revalidate: 300, // 5-minute revalidation to match ISR
-          tags: ['blogs-list']
-        }
+        cache: 'no-store', // Let React Query handle all caching
       });
 
       if (!response.ok) {
@@ -42,11 +38,7 @@ class BlogAPI {
         headers: {
           'Accept': 'application/json',
         },
-        cache: 'force-cache', // Align with ISR strategy
-        next: {
-          revalidate: 300, // 5-minute revalidation to match ISR
-          tags: ['blog-detail', `blog-${id}`]
-        }
+        cache: 'no-store', // Let React Query handle all caching
       });
 
       if (!response.ok) {
@@ -68,11 +60,7 @@ class BlogAPI {
         headers: {
           'Accept': 'application/json',
         },
-        cache: 'force-cache', // Align with ISR strategy
-        next: {
-          revalidate: 300, // 5-minute revalidation to match ISR
-          tags: ['blog-detail', `blog-slug-${slug}`]
-        }
+        cache: 'no-store', // Let React Query handle all caching
       });
 
       if (!response.ok) {
@@ -112,21 +100,30 @@ class BlogAPI {
     try {
       const allBlogs = await this.getAllBlogs();
       
-      return allBlogs.filter(blog => {
-        // Filter by status (published only by default)
-        if (filters.status !== undefined && blog.status !== filters.status) {
-          return false;
-        }
-        
-        // Filter by tag if specified
-        if (filters.tag && !blog.tags.includes(filters.tag)) {
-          return false;
-        }
-        
-        return true;
-      });
+      // Apply filters client-side for better performance
+      let filteredBlogs = allBlogs;
+      
+      if (filters.status !== undefined) {
+        filteredBlogs = filteredBlogs.filter(blog => blog.status === filters.status);
+      }
+      
+      if (filters.tag) {
+        filteredBlogs = filteredBlogs.filter(blog => 
+          blog.tags && blog.tags.includes(filters.tag)
+        );
+      }
+      
+      if (filters.search) {
+        const searchTerm = filters.search.toLowerCase();
+        filteredBlogs = filteredBlogs.filter(blog =>
+          blog.title.toLowerCase().includes(searchTerm) ||
+          blog.excerpt.toLowerCase().includes(searchTerm)
+        );
+      }
+      
+      return filteredBlogs;
     } catch (error) {
-      console.error('Error fetching filtered blogs:', error);
+      console.error('Error fetching blogs with filters:', error);
       throw error;
     }
   }

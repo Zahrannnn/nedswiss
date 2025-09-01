@@ -14,21 +14,23 @@ export const blogQueryKeys = {
   slug: (slug: string) => [...blogQueryKeys.details(), 'slug', slug] as const,
 };
 
-// Hook to get all blogs with ISR-aligned caching
+// ISR-like behavior with React Query: Fresh data every 5 minutes, instant cache serving
 export const useBlogs = (): UseQueryResult<Blog[], Error> => {
   return useQuery({
     queryKey: blogQueryKeys.list({}),
     queryFn: () => blogAPI.getAllBlogs(),
-    staleTime: 5 * 60 * 1000, // 5 minutes - align with ISR revalidation
-    gcTime: 10 * 60 * 1000, // 10 minutes garbage collection
-    retry: 2,
-    refetchOnWindowFocus: false, // Reduce aggressive refetching since we have ISR
-    refetchOnMount: false, // Let ISR handle freshness
-    refetchInterval: false, // Disable background refetching - ISR handles this
+    staleTime: 5 * 60 * 1000, // 5 minutes - data is considered fresh for this duration
+    gcTime: 30 * 60 * 1000, // 30 minutes - keep in cache longer for better UX
+    retry: 3,
+    retryDelay: attemptIndex => Math.min(1000 * 2 ** attemptIndex, 30000),
+    refetchOnWindowFocus: true, // Refetch when user returns to tab
+    refetchOnMount: true, // Always check for updates on mount
+    refetchInterval: 5 * 60 * 1000, // Background refetch every 5 minutes (ISR-like)
+    refetchIntervalInBackground: true, // Continue refetching even when tab is not active
   });
 };
 
-// Hook to get published blogs with ISR-aligned caching
+// ISR-like behavior for published blogs with optimized filtering
 export const usePublishedBlogs = (): UseQueryResult<Blog[], Error> => {
   return useQuery({
     queryKey: blogQueryKeys.list({ status: 1 }),
@@ -36,98 +38,110 @@ export const usePublishedBlogs = (): UseQueryResult<Blog[], Error> => {
       const blogs = await blogAPI.getAllBlogs();
       return blogs.filter(blog => blog.status === 1);
     },
-    staleTime: 5 * 60 * 1000, // 5 minutes - align with ISR revalidation
-    gcTime: 10 * 60 * 1000, // 10 minutes garbage collection
-    retry: 2,
-    refetchOnWindowFocus: false, // Reduce aggressive refetching since we have ISR
-    refetchOnMount: false, // Let ISR handle freshness
-    refetchInterval: false, // Disable background refetching - ISR handles this
-  });
-};
-
-// Hook to get blogs with filters
-export const useBlogsWithFilters = (filters: BlogFilters): UseQueryResult<Blog[], Error> => {
-  return useQuery({
-    queryKey: blogQueryKeys.list(filters),
-    queryFn: () => blogAPI.getBlogsWithFilters(filters),
-    staleTime: 0, // Always consider data stale for instant updates
-    gcTime: 5 * 60 * 1000,
-    retry: 2,
+    staleTime: 5 * 60 * 1000, // 5 minutes fresh time
+    gcTime: 30 * 60 * 1000, // 30 minutes cache time
+    retry: 3,
+    retryDelay: attemptIndex => Math.min(1000 * 2 ** attemptIndex, 30000),
     refetchOnWindowFocus: true,
     refetchOnMount: true,
-    refetchInterval: 30 * 1000, // Refetch every 30 seconds
-    enabled: Object.keys(filters).length > 0, // Only run if filters are provided
+    refetchInterval: 5 * 60 * 1000, // Background refetch every 5 minutes
+    refetchIntervalInBackground: true,
   });
 };
 
-// Hook to get blog by ID with ISR-aligned caching
+// ISR-like behavior for individual blog posts
 export const useBlog = (id: number): UseQueryResult<Blog, Error> => {
   return useQuery({
     queryKey: blogQueryKeys.detail(id),
     queryFn: () => blogAPI.getBlogById(id),
     enabled: !!id,
-    staleTime: 5 * 60 * 1000, // 5 minutes - align with ISR revalidation
-    gcTime: 10 * 60 * 1000, // 10 minutes garbage collection
-    retry: 2,
-    refetchOnWindowFocus: false, // Reduce aggressive refetching since we have ISR
-    refetchOnMount: false, // Let ISR handle freshness
+    staleTime: 5 * 60 * 1000, // 5 minutes fresh time
+    gcTime: 60 * 60 * 1000, // 1 hour cache time (longer for individual posts)
+    retry: 3,
+    retryDelay: attemptIndex => Math.min(1000 * 2 ** attemptIndex, 30000),
+    refetchOnWindowFocus: true,
+    refetchOnMount: true,
+    refetchInterval: 5 * 60 * 1000, // Background refetch every 5 minutes
+    refetchIntervalInBackground: false, // Don't refetch individual posts in background
   });
 };
 
-// Hook to get blog by slug with ISR-aligned caching
+// ISR-like behavior for blog by slug with enhanced caching
 export const useBlogBySlug = (slug: string): UseQueryResult<Blog, Error> => {
   return useQuery({
     queryKey: blogQueryKeys.slug(slug),
     queryFn: () => blogAPI.getBlogBySlug(slug),
     enabled: !!slug,
-    staleTime: 5 * 60 * 1000, // 5 minutes - align with ISR revalidation
-    gcTime: 10 * 60 * 1000, // 10 minutes garbage collection
-    retry: 2,
-    refetchOnWindowFocus: false, // Reduce aggressive refetching since we have ISR
-    refetchOnMount: false, // Let ISR handle freshness
+    staleTime: 5 * 60 * 1000, // 5 minutes fresh time
+    gcTime: 60 * 60 * 1000, // 1 hour cache time (longer for individual posts)
+    retry: 3,
+    retryDelay: attemptIndex => Math.min(1000 * 2 ** attemptIndex, 30000),
+    refetchOnWindowFocus: true,
+    refetchOnMount: true,
+    refetchInterval: 5 * 60 * 1000, // Background refetch every 5 minutes
+    refetchIntervalInBackground: false, // Don't refetch individual posts in background
   });
 };
 
-// Hook to prefetch blogs (useful for preloading)
+// Hook for prefetching blogs (useful for server-side prefetching)
 export const usePrefetchBlogs = () => {
   const queryClient = useQueryClient();
 
+  const prefetchBlogs = async () => {
+    await queryClient.prefetchQuery({
+      queryKey: blogQueryKeys.list({}),
+      queryFn: () => blogAPI.getAllBlogs(),
+      staleTime: 5 * 60 * 1000,
+    });
+  };
+
+  const prefetchBlogBySlug = async (slug: string) => {
+    await queryClient.prefetchQuery({
+      queryKey: blogQueryKeys.slug(slug),
+      queryFn: () => blogAPI.getBlogBySlug(slug),
+      staleTime: 5 * 60 * 1000,
+    });
+  };
+
+  const prefetchBlogById = async (id: number) => {
+    await queryClient.prefetchQuery({
+      queryKey: blogQueryKeys.detail(id),
+      queryFn: () => blogAPI.getBlogById(id),
+      staleTime: 5 * 60 * 1000,
+    });
+  };
+
   return {
-    // Prefetch all blogs
-    prefetchAllBlogs: () => {
-      queryClient.prefetchQuery({
-        queryKey: blogQueryKeys.list({}),
-        queryFn: () => blogAPI.getAllBlogs(),
-        staleTime: 0,
-      });
-    },
-    
-    // Prefetch published blogs
-    prefetchPublishedBlogs: () => {
-      queryClient.prefetchQuery({
-        queryKey: blogQueryKeys.list({ status: 1 }),
-        queryFn: () => blogAPI.getPublishedBlogs(),
-        staleTime: 0,
-      });
-    },
-    
-    // Prefetch a specific blog by slug
-    prefetchBlogBySlug: (slug: string) => {
-      queryClient.prefetchQuery({
-        queryKey: blogQueryKeys.slug(slug),
-        queryFn: () => blogAPI.getBlogBySlug(slug),
-        staleTime: 0,
-      });
-    },
-    
-    // Invalidate cache for specific tags (useful after updates)
-    invalidateBlogCache: () => {
-      queryClient.invalidateQueries({ queryKey: blogQueryKeys.all });
-    },
-    
-    // Force refetch all blog queries
-    refetchAllBlogs: () => {
-      queryClient.refetchQueries({ queryKey: blogQueryKeys.all });
-    },
+    prefetchBlogs,
+    prefetchBlogBySlug,
+    prefetchBlogById,
+  };
+};
+
+// Hook for invalidating blog cache (useful for manual updates)
+export const useBlogCache = () => {
+  const queryClient = useQueryClient();
+
+  const invalidateAllBlogs = () => {
+    queryClient.invalidateQueries({ queryKey: blogQueryKeys.all });
+  };
+
+  const invalidateBlogLists = () => {
+    queryClient.invalidateQueries({ queryKey: blogQueryKeys.lists() });
+  };
+
+  const invalidateBlog = (id: number) => {
+    queryClient.invalidateQueries({ queryKey: blogQueryKeys.detail(id) });
+  };
+
+  const invalidateBlogBySlug = (slug: string) => {
+    queryClient.invalidateQueries({ queryKey: blogQueryKeys.slug(slug) });
+  };
+
+  return {
+    invalidateAllBlogs,
+    invalidateBlogLists,
+    invalidateBlog,
+    invalidateBlogBySlug,
   };
 }; 

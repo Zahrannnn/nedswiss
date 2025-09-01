@@ -1,20 +1,20 @@
 'use client';
 
-import { useBlogs, usePrefetchBlogs } from '@/lib/hooks/useBlog';
+import { useBlogs, useBlogCache } from '@/lib/hooks/useBlog';
 import { BlogHero } from './BlogHero';
 import { BlogGrid } from './BlogGrid';
 import { useTranslations } from 'next-intl';
 
 const Allblogs = () => {
   const t = useTranslations('AllBlogs');
-  const { data: blogs = [], isLoading, error } = useBlogs();
-  const { invalidateBlogCache, refetchAllBlogs } = usePrefetchBlogs();
+  const { data: blogs = [], isLoading, error, refetch } = useBlogs();
+  const { invalidateAllBlogs } = useBlogCache();
 
   const handleRefresh = async () => {
     try {
       // Invalidate the cache and refetch
-      invalidateBlogCache();
-      await refetchAllBlogs();
+      invalidateAllBlogs();
+      await refetch();
     } catch (error) {
       console.error('Error refreshing blogs:', error);
     }
@@ -32,7 +32,6 @@ const Allblogs = () => {
         isLoading={isLoading}
         error={error}
       />
-      
     </div>
   );
 };
