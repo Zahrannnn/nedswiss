@@ -158,14 +158,18 @@
         },
         "email": {
           "title": "E-mail",
-          "address": "info@nedswiss.com"
+          "address": "Info@ned-swiss.ch"
         },
-        "hours": {
-          "title": "Horaires d'ouverture",
-          "weekdays": "Lun - Ven : 9h00 - 18h00",
-          "saturday": "Sam : 10h00 - 16h00",
-          "sunday": "Dim : Fermé"
-        }
+          "hours": {
+            "title": "Horaires d'ouverture",
+            "monday": "Lundi : 9h00 - 18h00",
+            "tuesday": "Mardi : 9h00 - 18h00",
+            "wednesday": "Mercredi : 9h00 - 18h00",
+            "thursday": "Jeudi : 9h00 - 18h00",
+            "friday": "Vendredi : 9h00 - 19h00",
+            "saturday": "Samedi : 9h00 - 12h00",
+            "sunday": "Dimanche : Fermé"
+          }
       },
       "form": {
         "title": "Envoyer un message",

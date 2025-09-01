@@ -99,7 +99,7 @@ export const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <p className="text-white/70">info@nedswiss.com</p>
+                <p className="text-white/70">Info@ned-swiss.ch</p>
               </div>
               <div className="flex items-center">
                 <div className="bg-[#DC2626]/10 p-2 rounded-md mr-3">

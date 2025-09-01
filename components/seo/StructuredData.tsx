@@ -48,7 +48,7 @@ export function OrganizationSchema({ locale = 'en' }: { locale?: string }) {
       '@type': 'ContactPoint',
       telephone: '+41-44-123-45-67',
       contactType: 'customer service',
-      email: 'info@nedswiss.com',
+      email: 'Info@ned-swiss.ch',
       availableLanguage: ['en', 'de', 'fr'],
       areaServed: ['CH', 'DE', 'AT', 'FR', 'IT'],
     },
@@ -301,7 +301,7 @@ export function LocalBusinessSchema({ locale = 'en' }: { locale?: string }) {
     description: 'Swiss digital agency delivering exceptional web development, design, and digital marketing services',
     url: 'https://www.ned-swiss.ch',
     telephone: '+41-44-123-45-67',
-    email: 'info@nedswiss.com',
+    email: 'Info@ned-swiss.ch',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Bahnhofstrasse 123',

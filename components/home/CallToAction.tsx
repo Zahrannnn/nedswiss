@@ -289,7 +289,15 @@ export const CallToAction = () => {
               </div>
               <div>
                 <h4 className="font-bold text-sm text-black">{t('contact.hours.title')}</h4>
-                <p className="text-xs text-gray-600">{t('contact.hours.weekdays')}</p>
+                <div className="text-xs text-gray-600 space-y-0.5">
+                  <p>{t('contact.hours.monday')}</p>
+                  <p>{t('contact.hours.tuesday')}</p>
+                  <p>{t('contact.hours.wednesday')}</p>
+                  <p>{t('contact.hours.thursday')}</p>
+                  <p>{t('contact.hours.friday')}</p>
+                  <p>{t('contact.hours.saturday')}</p>
+                  <p>{t('contact.hours.sunday')}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -352,7 +360,11 @@ export const CallToAction = () => {
                 <div>
                   <h3 className="text-lg md:text-xl font-bold mb-1 text-black">{t('contact.hours.title')}</h3>
                   <div className="text-sm md:text-base text-gray-600 space-y-1">
-                    <p>{t('contact.hours.weekdays')}</p>
+                    <p>{t('contact.hours.monday')}</p>
+                    <p>{t('contact.hours.tuesday')}</p>
+                    <p>{t('contact.hours.wednesday')}</p>
+                    <p>{t('contact.hours.thursday')}</p>
+                    <p>{t('contact.hours.friday')}</p>
                     <p>{t('contact.hours.saturday')}</p>
                     <p>{t('contact.hours.sunday')}</p>
                   </div>

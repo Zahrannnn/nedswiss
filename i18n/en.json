@@ -158,13 +158,17 @@
         },
         "email": {
           "title": "Email",
-          "address": "info@nedswiss.com"
+          "address": "Info@ned-swiss.ch"
         },
         "hours": {
           "title": "Business Hours",
-          "weekdays": "Mon - Fri: 9:00 AM - 6:00 PM",
-          "saturday": "Sat: 10:00 AM - 4:00 PM",
-          "sunday": "Sun: Closed"
+          "monday": "Monday: 9:00 AM - 6:00 PM",
+          "tuesday": "Tuesday: 9:00 AM - 6:00 PM",
+          "wednesday": "Wednesday: 9:00 AM - 6:00 PM",
+          "thursday": "Thursday: 9:00 AM - 6:00 PM",
+          "friday": "Friday: 9:00 AM - 7:00 PM",
+          "saturday": "Saturday: 9:00 AM - 12:00 PM",
+          "sunday": "Sunday: Closed"
         }
       },
       "form": {
