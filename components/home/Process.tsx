@@ -12,9 +12,8 @@ const Services = () => {
     with smooth UX to drive growth 
     not headaches.`;
   const serviceRefs = useRef([]);
-  const isDesktop = useMediaQuery({ minWidth: "48rem" }); //768px
+  const isDesktop = useMediaQuery({ minWidth: "48rem" }); 
   const t = useTranslations('HomePage.processHeader');
-  // Use data from translation hook
   const servicesDataa = useProcessSteps();
 
   useGSAP(() => {

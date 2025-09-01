@@ -121,17 +121,20 @@
           {
             "quote": "NED Swiss a transformé notre présence numérique avec précision et créativité. Fortement recommandé !",
             "author": "Jane Smith",
-            "position": "CEO, TechCorp"
+            "position": "CEO, TechCorp",
+            "img": "/client-1.png"
           },
           {
             "quote": "Travailler avec NED Swiss a changé la donne pour notre marque. Ils ont livré au-delà de nos attentes.",
             "author": "John Davis",
-            "position": "Directeur Marketing, GrowthBrand"
+            "position": "Directeur Marketing, GrowthBrand",
+            "img": "/client-2.png"
           },
           {
             "quote": "L'attention aux détails et l'approche stratégique distinguent NED Swiss des autres agences.",
             "author": "Anna Miller",
-            "position": "Fondatrice, StartupSuccess"
+            "position": "Fondatrice, StartupSuccess",
+            "img": "/client-3.png"
           }
         ]
       }
@@ -146,12 +149,12 @@
       "contact": {
         "address": {
           "title": "Adresse",
-          "street": "Bahnhofstrasse 123",
-          "city": "8001 Zürich, Suisse"
+          "street": "Dörfliweg 3",
+          "city": "3098 Köniz, Switzerland"
         },
         "phone": {
           "title": "Téléphone",
-          "number": "+41 44 123 45 67"
+          "number": "+41 78 260 14 98"
         },
         "email": {
           "title": "E-mail",

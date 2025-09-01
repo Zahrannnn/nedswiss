@@ -121,17 +121,20 @@
           {
             "quote": "NED Swiss hat unsere digitale Präsenz mit Präzision und Kreativität transformiert. Sehr empfehlenswert!",
             "author": "Jane Smith",
-            "position": "CEO, TechCorp"
+            "position": "CEO, TechCorp",
+            "img": "/client-1.png"
           },
           {
             "quote": "Die Zusammenarbeit mit NED Swiss war ein Wendepunkt für unsere Marke. Sie haben unsere Erwartungen übertroffen.",
             "author": "John Davis",
-            "position": "Marketingdirektor, GrowthBrand"
+            "position": "Marketingdirektor, GrowthBrand",
+            "img": "/client-2.png"
           },
           {
             "quote": "Die Liebe zum Detail und der strategische Ansatz heben NED Swiss von anderen Agenturen ab.",
             "author": "Anna Miller",
-            "position": "Gründerin, StartupSuccess"
+            "position": "Gründerin, StartupSuccess",
+            "img": "/client-3.png"
           }
         ]
       }
@@ -146,12 +149,12 @@
       "contact": {
         "address": {
           "title": "Adresse",
-          "street": "Bahnhofstrasse 123",
-          "city": "8001 Zürich, Schweiz"
+          "street": "Dörfliweg 3",
+          "city": " 3098 Köniz, Switzerland"
         },
         "phone": {
           "title": "Telefon",
-          "number": "+41 44 123 45 67"
+          "number": "+41 78 260 14 98"
         },
         "email": {
           "title": "E-Mail",
@@ -372,7 +375,7 @@
           },
           {
             "title": "React Meisterschaft",
-            "description": "(TypeScript, Custom Hooks, State Management, Performance)"
+            "description": "(TypeScript, Custom Hooks, State Management, Performance)"  
           },
           {
             "title": "Performance-Optimierung",

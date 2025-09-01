@@ -21,16 +21,15 @@ const SocialProof = () => {
     quote: string;
     author: string;
     position: string;
-    location: string;
-    project: string;
+    img: string;
   }>;
 
   // Map to the expected format for AnimatedTestimonials
   const formattedTestimonials = testimonials.map((testimonial) => ({
     quote: testimonial.quote,
     name: testimonial.author,
-    designation: `${testimonial.position} • ${testimonial.location}`,
-    src: "/plac.jpg" // You can customize this per testimonial if needed
+    designation: testimonial.position,
+    src: testimonial.img
   }));
   
   useEffect(() => {
