@@ -34,7 +34,7 @@ export default function ServicesScrollStack() {
       </div>
       {
         services.map( (service: ServiceItem, i: number) => {
-          const targetScale = 1 - ( (services.length - i) * 0.05);
+          const targetScale = 1 - ( (services.length - i) * 0.0099);
           return (
             <Card 
               key={`service_${i}`} 
