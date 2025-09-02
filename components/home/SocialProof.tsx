@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
+import { TestimonialsSimple } from '@/components/ui/testimonials-apple';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,21 +15,18 @@ const SocialProof = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
-  
-  // Transform testimonials data to match AnimatedTestimonials interface
+
   const testimonials = t.raw('testimonials.items') as Array<{
     quote: string;
     author: string;
     position: string;
-    img: string;
   }>;
 
-  // Map to the expected format for AnimatedTestimonials
+
   const formattedTestimonials = testimonials.map((testimonial) => ({
     quote: testimonial.quote,
     name: testimonial.author,
-    designation: testimonial.position,
-    src: testimonial.img
+    role: testimonial.position,
   }));
   
   useEffect(() => {
@@ -83,9 +80,8 @@ const SocialProof = () => {
         </div>
 
         <div ref={testimonialsRef} className="relative">
-          <AnimatedTestimonials 
+          <TestimonialsSimple 
             testimonials={formattedTestimonials}
-            autoplay={true}
           />
         </div>
       </div>
