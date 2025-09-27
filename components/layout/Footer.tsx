@@ -90,7 +90,7 @@ export const Footer = () => {
                 </div>
                 <div className="text-white/70">
                   <p>Dörfliweg 3</p>
-                  <p>8001 Zürich, 3098 Köniz, Switzerland</p>
+                  <p>3098 Köniz</p>
                 </div>
               </div>
               <div className="flex items-center">
