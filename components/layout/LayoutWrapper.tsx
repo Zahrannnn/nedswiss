@@ -8,19 +8,18 @@ interface LayoutWrapperProps {
 }
 
 export default function LayoutWrapper({ children }: LayoutWrapperProps) {
-  // Splash screen is disabled
-  const [isSplashScreenVisible, setIsSplashScreenVisible] = useState(false);
+  const [isSplashScreenVisible, setIsSplashScreenVisible] = useState(true);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsSplashScreenVisible(false);
-  //   }, 15000);
-  //   return () => clearTimeout(timer);
-  // }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsSplashScreenVisible(false);
+    }, 15000);
+    return () => clearTimeout(timer);
+  }, []);
   
-  // if (isSplashScreenVisible) {
-  //   return <SplashScreen finishLoading={() => setIsSplashScreenVisible(false)} />;
-  // }
+  if (isSplashScreenVisible) {
+    return <SplashScreen finishLoading={() => setIsSplashScreenVisible(false)} />;
+  }
 
   return <>{children}</>;
 } 
