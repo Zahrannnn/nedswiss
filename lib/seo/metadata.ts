@@ -17,9 +17,9 @@ interface SEOProps {
   author?: string;
 }
 
-const defaultImageUrl = 'https://nedswiss.com/nedswiss.jpg';
+const defaultImageUrl = 'https://www.ned-swiss.ch/nedswiss.jpg';
 const defaultImageAlt = 'NED Swiss - Digital Excellence, Swiss Precision';
-const siteUrl = 'https://ned-swiss.ch';
+const siteUrl = 'https://www.ned-swiss.ch';
 
 export function generateMetadata({
   title,
