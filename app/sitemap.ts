@@ -16,11 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Define service sub-routes
   const serviceRoutes = [
     '/services',
-    '/services',
-    '/services',
-    '/services',
-    '/services',
-    '/services',
+    
   ];
 
   // Generate sitemap entries for German (de) locale only

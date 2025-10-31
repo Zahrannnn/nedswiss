@@ -9,7 +9,10 @@ export default createMiddleware({
   defaultLocale,
   
   // Always use locale prefix to ensure proper routing
-  localePrefix: 'always'
+  localePrefix: 'always',
+  
+  // Disable automatic locale detection - always use German (de) as default
+  localeDetection: false
 });
 
 export const config = {
