@@ -32,15 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // Add service routes for German locale
-  serviceRoutes.forEach((route) => {
-    sitemapEntries.push({
-      url: `${baseUrl}/${locale}${route}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    });
-  });
+  
 
   // Add additional important pages
   sitemapEntries.push(
