@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next';
-import { locales } from '@/app/i18n';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.ned-swiss.ch';
+  const locale = 'de'; // German locale only
   
   // Define all static routes
   const routes = [
@@ -23,39 +23,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services',
   ];
 
-  // Generate sitemap entries for all locales and routes
+  // Generate sitemap entries for German (de) locale only
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  // Add entries for each locale
-  locales.forEach((locale) => {
-    // Add main routes
-    routes.forEach((route) => {
-      sitemapEntries.push({
-        url: `${baseUrl}/${locale}${route}`,
-        lastModified: new Date(),
-        changeFrequency: route === '' ? 'daily' : 'weekly',
-        priority: route === '' ? 1 : 0.8,
-        alternates: {
-          languages: Object.fromEntries(
-            locales.map((lang) => [lang, `${baseUrl}/${lang}${route}`])
-          ),
-        },
-      });
+  // Add main routes for German locale
+  routes.forEach((route) => {
+    sitemapEntries.push({
+      url: `${baseUrl}/${locale}${route}`,
+      lastModified: new Date(),
+      changeFrequency: route === '' ? 'daily' : 'weekly',
+      priority: route === '' ? 1 : 0.8,
     });
+  });
 
-    // Add service routes
-    serviceRoutes.forEach((route) => {
-      sitemapEntries.push({
-        url: `${baseUrl}/${locale}${route}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.7,
-        alternates: {
-          languages: Object.fromEntries(
-            locales.map((lang) => [lang, `${baseUrl}/${lang}${route}`])
-          ),
-        },
-      });
+  // Add service routes for German locale
+  serviceRoutes.forEach((route) => {
+    sitemapEntries.push({
+      url: `${baseUrl}/${locale}${route}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
     });
   });
 
